@@ -1,0 +1,110 @@
+{
+  "app": {
+    "title": "全球购物计算器",
+    "description": "国际购物时一次性计算汇率、关税和小费。实时汇率！"
+  },
+  "header": {
+    "title": "💰 全球购物计算器",
+    "subtitle": "汇率、关税、小费一站式！"
+  },
+  "tabs": {
+    "exchange": "汇率计算",
+    "customs": "关税计算",
+    "tip": "小费计算"
+  },
+  "exchange": {
+    "title": "汇率计算器",
+    "info": "使用实时汇率信息准确计算",
+    "amountLabel": "金额",
+    "fromCurrency": "原币种",
+    "toCurrency": "目标币种",
+    "calculateBtn": "💱 计算汇率",
+    "resultTitle": "换算金额",
+    "rateInfo": "汇率",
+    "baseDate": "基准日期",
+    "calculating": "计算中...",
+    "error": "❌ 发生错误",
+    "warningMessage": "⚠️ 无法获取汇率信息。请检查网络连接后重试。",
+    "fallbackWarning": "⚠️ 无法获取实时汇率，使用大致汇率。仅供参考。"
+  },
+  "customs": {
+    "title": "关税计算器",
+    "info": "计算关税和税金（韩国标准）",
+    "productPrice": "商品价格（美元）",
+    "shippingCost": "运费（美元）",
+    "category": "商品分类",
+    "categoryGeneral": "一般商品",
+    "categoryClothes": "服装",
+    "categoryShoes": "鞋类/箱包",
+    "categoryCosmetics": "化妆品",
+    "categoryElectronics": "电子产品",
+    "categoryFood": "食品/保健品",
+    "calculateBtn": "📦 计算关税",
+    "resultTitle": "预计总费用",
+    "breakdown": "明细",
+    "productTotal": "商品总额（韩元）",
+    "customsRate": "关税率",
+    "customsDuty": "关税",
+    "vat": "增值税",
+    "finalTotal": "最终总额（韩元）",
+    "dutyFreeNotice": "💡 150美元以下免税"
+  },
+  "tip": {
+    "title": "小费计算器",
+    "info": "查看各国小费文化并计算",
+    "country": "选择国家",
+    "mealAmount": "用餐金额",
+    "tipPercentage": "小费比例（%）",
+    "partySize": "人数",
+    "calculateBtn": "💰 计算小费",
+    "resultTitle": "总支付金额",
+    "mealCost": "用餐费用",
+    "tipRate": "小费比例",
+    "tipAmount": "小费金额",
+    "perPerson": "人均金额",
+    "tipCultures": {
+      "USA": {
+        "name": "美国",
+        "info": "15-20%为常见比例，优质服务建议20%以上"
+      },
+      "CAN": {
+        "name": "加拿大",
+        "info": "15-20%为标准，根据服务调整"
+      },
+      "GBR": {
+        "name": "英国",
+        "info": "10-15%为常见比例，需确认是否已包含服务费"
+      },
+      "FRA": {
+        "name": "法国",
+        "info": "账单中已包含服务费，额外小费为可选项"
+      },
+      "JPN": {
+        "name": "日本",
+        "info": "无小费文化，给小费可能被视为不礼貌"
+      },
+      "CHN": {
+        "name": "中国",
+        "info": "大多数情况不需小费，高级餐厅可给10%左右"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 最近计算记录",
+    "empty": "暂无计算记录",
+    "clearBtn": "清除全部记录",
+    "typeExchange": "💱 汇率",
+    "typeCustoms": "📦 关税",
+    "typeTip": "💰 小费"
+  },
+  "language": {
+    "select": "选择语言"
+  },
+  "ads": {
+    "banner": "广告区域"
+  },
+  "common": {
+    "won": "韩元",
+    "dollar": "美元"
+  }
+}

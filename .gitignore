@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+server.log
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary
+*.tmp
+*.bak
+
+# Documentation (배포 관련 문서는 커밋하지 않음)
+DEPLOY.md
+TODO.md
+CHANGELOG.md
+NOTES.md
+
+# README.md는 프로젝트 소개용으로 허용
+/.git-rewrite/

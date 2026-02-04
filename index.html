@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="해외직구와 여행을 위한 환율, 관세, 팁 계산기">
+    <meta name="theme-color" content="#f39c12">
+    <title>글로벌 쇼핑 계산기</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <!-- 언어 선택 -->
+        <div class="language-selector">
+            <button id="lang-toggle" class="lang-btn" aria-label="Language">🌐</button>
+            <div id="lang-menu" class="lang-menu hidden">
+                <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
+                <button class="lang-option" data-lang="en">🇺🇸 English</button>
+                <button class="lang-option" data-lang="zh">🇨🇳 简体中文</button>
+                <button class="lang-option" data-lang="hi">🇮🇳 हिन्दी</button>
+            </div>
+        </div>
+
+        <!-- 앱 헤더 -->
+        <header class="app-header">
+            <h1 data-i18n="header.title">💰 글로벌 쇼핑 계산기</h1>
+            <p class="subtitle" data-i18n="header.subtitle">환율, 관세, 팁 한 번에!</p>
+        </header>
+
+        <!-- 계산기 영역 -->
+        <main class="calculator-container">
+            <!-- 탭 메뉴 -->
+            <div class="tab-menu">
+                <button class="tab-btn active" data-tab="exchange">환율 계산</button>
+                <button class="tab-btn" data-tab="customs">관세 계산</button>
+                <button class="tab-btn" data-tab="tip">팁 계산</button>
+            </div>
+
+            <!-- 환율 계산기 -->
+            <div id="exchange-tab" class="tab-content active">
+                <div class="calc-section">
+                    <h2>💱 환율 계산기</h2>
+                    <p class="info-text">실시간 환율로 정확하게 계산합니다</p>
+
+                    <div class="input-group">
+                        <label>금액</label>
+                        <input type="number" id="exchange-amount" placeholder="0" value="100">
+                    </div>
+
+                    <div class="currency-selector">
+                        <div class="currency-box">
+                            <label>변환</label>
+                            <select id="from-currency">
+                                <option value="USD">🇺🇸 미국 달러 (USD)</option>
+                                <option value="EUR">🇪🇺 유로 (EUR)</option>
+                                <option value="JPY">🇯🇵 일본 엔 (JPY)</option>
+                                <option value="CNY">🇨🇳 중국 위안 (CNY)</option>
+                                <option value="GBP">🇬🇧 영국 파운드 (GBP)</option>
+                            </select>
+                        </div>
+
+                        <div class="arrow">➡️</div>
+
+                        <div class="currency-box">
+                            <label>한국 원화</label>
+                            <select id="to-currency">
+                                <option value="KRW" selected>🇰🇷 한국 원 (KRW)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="calculateExchange()">환율 계산</button>
+
+                    <div id="exchange-result" class="result-box hidden">
+                        <div class="result-title">계산 결과</div>
+                        <div class="result-value" id="exchange-result-value">0 원</div>
+                        <div class="result-detail" id="exchange-rate-info"></div>
+                        <div class="result-timestamp" id="exchange-timestamp"></div>
+                        <div id="exchange-warning" class="result-warning hidden">
+                            ⚠️ 실시간 환율을 가져올 수 없어 고정 환율을 사용했습니다. 실제 환율과 차이가 있을 수 있습니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 관세 계산기 -->
+            <div id="customs-tab" class="tab-content">
+                <div class="calc-section">
+                    <h2>📦 관세 계산기</h2>
+                    <p class="info-text">해외직구 시 예상 관세를 계산합니다</p>
+
+                    <div class="input-group">
+                        <label>상품 가격 (USD)</label>
+                        <input type="number" id="product-price" placeholder="0" value="200">
+                    </div>
+
+                    <div class="input-group">
+                        <label>배송비 (USD)</label>
+                        <input type="number" id="shipping-cost" placeholder="0" value="20">
+                    </div>
+
+                    <div class="input-group">
+                        <label>구매 국가</label>
+                        <select id="purchase-country">
+                            <option value="USA">🇺🇸 미국</option>
+                            <option value="CHN">🇨🇳 중국</option>
+                            <option value="JPN">🇯🇵 일본</option>
+                            <option value="EUR">🇪🇺 유럽</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>상품 카테고리</label>
+                        <select id="product-category">
+                            <option value="general">일반 상품 (13%)</option>
+                            <option value="clothes">의류 (13%)</option>
+                            <option value="shoes">신발 (13%)</option>
+                            <option value="cosmetics">화장품 (8%)</option>
+                            <option value="electronics">전자제품 (8%)</option>
+                            <option value="food">식품 (8%)</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="calculateCustoms()">관세 계산</button>
+
+                    <div id="customs-result" class="result-box hidden">
+                        <div class="result-title">예상 총 비용</div>
+                        <div class="result-value" id="customs-total-value">0 원</div>
+                        <div class="customs-breakdown">
+                            <div class="breakdown-item">
+                                <span>상품 + 배송비</span>
+                                <span id="customs-base">0 원</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>관세 (<span id="customs-rate">13%</span>)</span>
+                                <span id="customs-duty">0 원</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>부가세 (10%)</span>
+                                <span id="customs-vat">0 원</span>
+                            </div>
+                        </div>
+                        <div class="result-note">※ 150달러 미만 면세, 실제 금액은 통관 시 달라질 수 있습니다</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 팁 계산기 -->
+            <div id="tip-tab" class="tab-content">
+                <div class="calc-section">
+                    <h2>💰 팁 계산기</h2>
+                    <p class="info-text">국가별 팁 문화에 맞게 계산합니다</p>
+
+                    <div class="input-group">
+                        <label>식사 금액</label>
+                        <input type="number" id="meal-amount" placeholder="0" value="50">
+                    </div>
+
+                    <div class="input-group">
+                        <label>국가 선택</label>
+                        <select id="tip-country" onchange="updateTipInfo()">
+                            <option value="USA">🇺🇸 미국</option>
+                            <option value="CAN">🇨🇦 캐나다</option>
+                            <option value="GBR">🇬🇧 영국</option>
+                            <option value="FRA">🇫🇷 프랑스</option>
+                            <option value="JPN">🇯🇵 일본</option>
+                            <option value="CHN">🇨🇳 중국</option>
+                        </select>
+                    </div>
+
+                    <div class="tip-info-box" id="tip-info">
+                        <strong>미국 팁 문화:</strong> 15-20%가 일반적이며, 좋은 서비스는 20% 이상 권장
+                    </div>
+
+                    <div class="input-group">
+                        <label>팁 비율</label>
+                        <div class="tip-buttons">
+                            <button class="tip-btn" onclick="selectTip(10)">10%</button>
+                            <button class="tip-btn active" onclick="selectTip(15)">15%</button>
+                            <button class="tip-btn" onclick="selectTip(18)">18%</button>
+                            <button class="tip-btn" onclick="selectTip(20)">20%</button>
+                        </div>
+                        <input type="number" id="tip-percentage" value="15" min="0" max="100">
+                    </div>
+
+                    <div class="input-group">
+                        <label>인원 수</label>
+                        <input type="number" id="party-size" value="2" min="1">
+                    </div>
+
+                    <button class="btn btn-primary" onclick="calculateTip()">팁 계산</button>
+
+                    <div id="tip-result" class="result-box hidden">
+                        <div class="result-title">총 결제 금액</div>
+                        <div class="result-value" id="tip-total-value">0</div>
+                        <div class="customs-breakdown">
+                            <div class="breakdown-item">
+                                <span>식사 금액</span>
+                                <span id="tip-meal">0</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>팁 (<span id="tip-rate">15%</span>)</span>
+                                <span id="tip-amount">0</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>1인당 금액</span>
+                                <span id="tip-per-person">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 히스토리 섹션 -->
+            <div class="history-section">
+                <h3>📋 최근 계산 내역</h3>
+                <div id="calc-history" class="history-list">
+                    <p class="empty-message">아직 계산 내역이 없습니다</p>
+                </div>
+                <button class="btn btn-secondary" onclick="clearHistory()" style="margin-top: 1rem;">내역 전체 삭제</button>
+            </div>
+        </main>
+
+        <!-- 하단 광고 영역 -->
+        <footer class="ad-banner-bottom">
+            <div class="ad-placeholder">
+                <!-- AdSense 광고 영역 -->
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/exchange-api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+{
+  "app": {
+    "title": "글로벌 쇼핑 계산기",
+    "description": "해외 쇼핑 시 환율, 관세, 팁을 한 번에 계산하세요. 실시간 환율 적용!"
+  },
+  "header": {
+    "title": "💰 글로벌 쇼핑 계산기",
+    "subtitle": "환율, 관세, 팁 한 번에!"
+  },
+  "tabs": {
+    "exchange": "환율 계산",
+    "customs": "관세 계산",
+    "tip": "팁 계산"
+  },
+  "exchange": {
+    "title": "환율 계산기",
+    "info": "실시간 환율 정보로 정확하게 계산하세요",
+    "amountLabel": "금액",
+    "fromCurrency": "변환할 통화",
+    "toCurrency": "받을 통화",
+    "calculateBtn": "💱 환율 계산하기",
+    "resultTitle": "환산 금액",
+    "rateInfo": "환율",
+    "baseDate": "기준일",
+    "calculating": "계산 중...",
+    "error": "❌ 오류 발생",
+    "warningMessage": "⚠️ 환율 정보를 가져올 수 없습니다. 인터넷 연결을 확인하고 다시 시도해주세요.",
+    "fallbackWarning": "⚠️ 실시간 환율을 가져올 수 없어 대략적인 환율을 사용합니다. 참고용으로만 활용하세요."
+  },
+  "customs": {
+    "title": "관세 계산기",
+    "info": "한국 기준 관세 및 세금을 계산합니다",
+    "productPrice": "상품 가격 (USD)",
+    "shippingCost": "배송비 (USD)",
+    "category": "상품 분류",
+    "categoryGeneral": "일반 상품",
+    "categoryClothes": "의류",
+    "categoryShoes": "신발/가방",
+    "categoryCosmetics": "화장품",
+    "categoryElectronics": "전자제품",
+    "categoryFood": "식품/건강식품",
+    "calculateBtn": "📦 관세 계산하기",
+    "resultTitle": "총 예상 비용",
+    "breakdown": "세부 내역",
+    "productTotal": "상품 총액 (원)",
+    "customsRate": "관세율",
+    "customsDuty": "관세",
+    "vat": "부가세",
+    "finalTotal": "최종 총액 (원)",
+    "dutyFreeNotice": "💡 150달러 미만은 면세입니다"
+  },
+  "tip": {
+    "title": "팁 계산기",
+    "info": "국가별 팁 문화를 확인하고 계산하세요",
+    "country": "국가 선택",
+    "mealAmount": "식사 금액",
+    "tipPercentage": "팁 비율 (%)",
+    "partySize": "인원 수",
+    "calculateBtn": "💰 팁 계산하기",
+    "resultTitle": "총 결제 금액",
+    "mealCost": "식사 금액",
+    "tipRate": "팁 비율",
+    "tipAmount": "팁 금액",
+    "perPerson": "1인당 금액",
+    "tipCultures": {
+      "USA": {
+        "name": "미국",
+        "info": "15-20%가 일반적이며, 좋은 서비스는 20% 이상 권장"
+      },
+      "CAN": {
+        "name": "캐나다",
+        "info": "15-20%가 표준이며, 서비스에 따라 조정"
+      },
+      "GBR": {
+        "name": "영국",
+        "info": "10-15%가 일반적이며, 서비스 요금 포함 여부 확인 필요"
+      },
+      "FRA": {
+        "name": "프랑스",
+        "info": "서비스 요금이 계산서에 포함되어 있으므로 추가 팁은 선택사항"
+      },
+      "JPN": {
+        "name": "일본",
+        "info": "팁 문화가 없으며, 팁을 주면 오히려 무례할 수 있음"
+      },
+      "CHN": {
+        "name": "중국",
+        "info": "대부분 팁이 필요 없으나, 고급 레스토랑에서는 10% 정도 가능"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 최근 계산 내역",
+    "empty": "아직 계산 내역이 없습니다",
+    "clearBtn": "내역 전체 삭제",
+    "typeExchange": "💱 환율",
+    "typeCustoms": "📦 관세",
+    "typeTip": "💰 팁"
+  },
+  "language": {
+    "select": "언어 선택"
+  },
+  "ads": {
+    "banner": "광고 영역"
+  },
+  "common": {
+    "won": "원",
+    "dollar": "달러"
+  }
+}

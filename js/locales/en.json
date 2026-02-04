@@ -1,0 +1,110 @@
+{
+  "app": {
+    "title": "Global Shopping Calculator",
+    "description": "Calculate exchange rates, customs, and tips for international shopping. Real-time exchange rates!"
+  },
+  "header": {
+    "title": "💰 Global Shopping Calculator",
+    "subtitle": "Exchange, Customs, Tips - All in One!"
+  },
+  "tabs": {
+    "exchange": "Exchange Rate",
+    "customs": "Customs Duty",
+    "tip": "Tip Calculator"
+  },
+  "exchange": {
+    "title": "Exchange Rate Calculator",
+    "info": "Calculate accurately with real-time exchange rates",
+    "amountLabel": "Amount",
+    "fromCurrency": "From Currency",
+    "toCurrency": "To Currency",
+    "calculateBtn": "💱 Calculate Exchange",
+    "resultTitle": "Converted Amount",
+    "rateInfo": "Exchange Rate",
+    "baseDate": "As of",
+    "calculating": "Calculating...",
+    "error": "❌ Error Occurred",
+    "warningMessage": "⚠️ Unable to fetch exchange rate data. Please check your internet connection and try again.",
+    "fallbackWarning": "⚠️ Unable to fetch real-time rates. Using approximate rates. For reference only."
+  },
+  "customs": {
+    "title": "Customs Duty Calculator",
+    "info": "Calculate customs and taxes (Korea standard)",
+    "productPrice": "Product Price (USD)",
+    "shippingCost": "Shipping Cost (USD)",
+    "category": "Product Category",
+    "categoryGeneral": "General Goods",
+    "categoryClothes": "Clothing",
+    "categoryShoes": "Shoes/Bags",
+    "categoryCosmetics": "Cosmetics",
+    "categoryElectronics": "Electronics",
+    "categoryFood": "Food/Supplements",
+    "calculateBtn": "📦 Calculate Customs",
+    "resultTitle": "Total Estimated Cost",
+    "breakdown": "Breakdown",
+    "productTotal": "Product Total (KRW)",
+    "customsRate": "Customs Rate",
+    "customsDuty": "Customs Duty",
+    "vat": "VAT",
+    "finalTotal": "Final Total (KRW)",
+    "dutyFreeNotice": "💡 Items under $150 are duty-free"
+  },
+  "tip": {
+    "title": "Tip Calculator",
+    "info": "Check tipping culture by country and calculate",
+    "country": "Select Country",
+    "mealAmount": "Meal Amount",
+    "tipPercentage": "Tip Percentage (%)",
+    "partySize": "Party Size",
+    "calculateBtn": "💰 Calculate Tip",
+    "resultTitle": "Total Payment",
+    "mealCost": "Meal Cost",
+    "tipRate": "Tip Rate",
+    "tipAmount": "Tip Amount",
+    "perPerson": "Per Person",
+    "tipCultures": {
+      "USA": {
+        "name": "United States",
+        "info": "15-20% is standard, 20%+ recommended for great service"
+      },
+      "CAN": {
+        "name": "Canada",
+        "info": "15-20% is standard, adjust based on service quality"
+      },
+      "GBR": {
+        "name": "United Kingdom",
+        "info": "10-15% is typical, check if service charge is included"
+      },
+      "FRA": {
+        "name": "France",
+        "info": "Service charge is included in the bill, additional tip is optional"
+      },
+      "JPN": {
+        "name": "Japan",
+        "info": "No tipping culture, tipping may be considered rude"
+      },
+      "CHN": {
+        "name": "China",
+        "info": "Tipping is not required, but 10% acceptable at upscale restaurants"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 Recent Calculations",
+    "empty": "No calculation history yet",
+    "clearBtn": "Clear All History",
+    "typeExchange": "💱 Exchange",
+    "typeCustoms": "📦 Customs",
+    "typeTip": "💰 Tip"
+  },
+  "language": {
+    "select": "Select Language"
+  },
+  "ads": {
+    "banner": "Advertisement"
+  },
+  "common": {
+    "won": "KRW",
+    "dollar": "USD"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "글로벌 쇼핑 계산기",
+  "short_name": "쇼핑계산기",
+  "description": "해외직구와 여행을 위한 환율, 관세, 팁 계산기",
+  "start_url": "/shopping-calc/",
+  "display": "standalone",
+  "background_color": "#f39c12",
+  "theme_color": "#f39c12",
+  "orientation": "portrait",
+  "icons": [],
+  "categories": ["utilities", "finance"],
+  "lang": "ko-KR"
+}
