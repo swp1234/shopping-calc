@@ -17,7 +17,7 @@
   <ellipse cx="216" cy="158" rx="10" ry="22" fill="none" stroke="#e67e22" stroke-width="1.5"/>
   <!-- Currency symbols -->
   <text x="265" y="168" font-family="Arial" font-size="36" font-weight="bold" fill="#e67e22">$</text>
-  <text x="300" y="168" font-family="Arial" font-size="28" font-weight="bold" fill="#e67e22" opacity="0.6">©</text>
+  <text x="300" y="168" font-family="Arial" font-size="28" font-weight="bold" fill="#e67e22" opacity="0.6">â‚©</text>
   <!-- Buttons grid -->
   <rect x="148" y="218" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>
   <rect x="212" y="218" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>

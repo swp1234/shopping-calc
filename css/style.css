@@ -514,7 +514,231 @@ body::after {
     margin-top: 6px;
 }
 
-/* 광고 영역 */
+/* 상단 광고 배너 */
+.ad-banner {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    text-align: center;
+    border-radius: 12px;
+    max-width: 620px;
+    margin: 0 auto 10px;
+}
+
+.ad-banner .ad-text {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* 전면 광고 오버레이 */
+.interstitial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.interstitial-overlay.hidden {
+    display: none;
+}
+
+.interstitial-content {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ad-label {
+    font-size: 0.8rem;
+    color: #95a5a6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.ad-placeholder-large {
+    background: rgba(243, 156, 18, 0.1);
+    padding: 60px 20px;
+    border-radius: 12px;
+    color: #95a5a6;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.close-ad-btn {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-ad-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.close-ad-btn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+}
+
+/* 프리미엄 버튼 */
+.premium-section {
+    padding: 20px 35px;
+    text-align: center;
+}
+
+.premium-btn {
+    background: linear-gradient(135deg, #ffd700, #ffb700);
+    color: #5a4000;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.premium-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+}
+
+.premium-badge {
+    background: rgba(90, 64, 0, 0.2);
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+/* 프리미엄 모달 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.premium-modal-content {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.modal-close {
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.premium-analysis {
+    text-align: left;
+}
+
+.premium-section-block {
+    margin-bottom: 16px;
+    padding: 15px;
+    background: rgba(243, 156, 18, 0.05);
+    border-radius: 12px;
+    border-left: 3px solid #f39c12;
+}
+
+.premium-section-block h4 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.premium-section-block p {
+    color: #34495e;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.premium-tips {
+    list-style: none;
+    padding: 0;
+}
+
+.premium-tips li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #34495e;
+}
+
+.premium-tips li:last-child {
+    border-bottom: none;
+}
+
+/* 하단 광고 영역 */
 .ad-banner-bottom {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);

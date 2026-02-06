@@ -22,6 +22,11 @@
             </div>
         </div>
 
+        <!-- 상단 광고 배너 -->
+        <div class="ad-banner ad-top">
+            <span class="ad-text">광고 영역</span>
+        </div>
+
         <!-- 앱 헤더 -->
         <header class="app-header">
             <h1 data-i18n="header.title">💰 글로벌 쇼핑 계산기</h1>
@@ -220,7 +225,37 @@
                 </div>
                 <button class="btn btn-secondary" onclick="clearHistory()" style="margin-top: 1rem;">내역 전체 삭제</button>
             </div>
+            <!-- 프리미엄 분석 버튼 -->
+            <div class="premium-section" id="premium-section" style="display:none;">
+                <button class="premium-btn" id="premium-analysis-btn">
+                    <span class="premium-badge">AI</span>
+                    🧠 AI 고급 분석 보기
+                </button>
+            </div>
         </main>
+
+        <!-- 프리미엄 분석 모달 -->
+        <div id="premium-modal" class="modal hidden">
+            <div class="modal-content premium-modal-content">
+                <div class="modal-header">
+                    <h3>🧠 AI 고급 쇼핑 분석</h3>
+                    <button class="modal-close" id="premium-close">✕</button>
+                </div>
+                <div class="modal-body" id="premium-body">
+                </div>
+            </div>
+        </div>
+
+        <!-- 전면 광고 오버레이 -->
+        <div id="interstitial-ad" class="interstitial-overlay hidden">
+            <div class="interstitial-content">
+                <p class="ad-label">광고</p>
+                <div class="ad-placeholder-large">광고 영역</div>
+                <button class="close-ad-btn" id="close-ad" disabled>
+                    닫기 (<span id="countdown">5</span>)
+                </button>
+            </div>
+        </div>
 
         <!-- 하단 광고 영역 -->
         <footer class="ad-banner-bottom">
