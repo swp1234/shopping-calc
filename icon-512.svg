@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12"/>
+      <stop offset="100%" style="stop-color:#e67e22"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+  <!-- Calculator body -->
+  <rect x="120" y="90" width="272" height="332" rx="36" fill="white"/>
+  <!-- Display -->
+  <rect x="148" y="118" width="216" height="80" rx="16" fill="#f39c12" opacity="0.2"/>
+  <!-- Globe -->
+  <circle cx="216" cy="158" r="22" fill="none" stroke="#e67e22" stroke-width="3"/>
+  <line x1="194" y1="158" x2="238" y2="158" stroke="#e67e22" stroke-width="2"/>
+  <line x1="216" y1="136" x2="216" y2="180" stroke="#e67e22" stroke-width="2"/>
+  <ellipse cx="216" cy="158" rx="10" ry="22" fill="none" stroke="#e67e22" stroke-width="1.5"/>
+  <!-- Currency symbols -->
+  <text x="265" y="168" font-family="Arial" font-size="36" font-weight="bold" fill="#e67e22">$</text>
+  <text x="300" y="168" font-family="Arial" font-size="28" font-weight="bold" fill="#e67e22" opacity="0.6">©</text>
+  <!-- Buttons grid -->
+  <rect x="148" y="218" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>
+  <rect x="212" y="218" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>
+  <rect x="276" y="218" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>
+  <rect x="148" y="272" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>
+  <rect x="212" y="272" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>
+  <rect x="276" y="272" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>
+  <rect x="148" y="326" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>
+  <rect x="212" y="326" width="52" height="40" rx="8" fill="#f39c12" opacity="0.3"/>
+  <rect x="276" y="326" width="52" height="40" rx="8" fill="#e67e22" opacity="0.6"/>
+  <rect x="148" y="380" width="116" height="28" rx="6" fill="#f39c12" opacity="0.2"/>
+  <rect x="276" y="380" width="52" height="28" rx="6" fill="#e67e22" opacity="0.5"/>
+</svg>

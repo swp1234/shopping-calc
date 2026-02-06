@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12"/>
+      <stop offset="100%" style="stop-color:#e67e22"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="40" fill="url(#bg)"/>
+  <!-- Calculator body -->
+  <rect x="46" y="36" width="100" height="120" rx="14" fill="white"/>
+  <!-- Display -->
+  <rect x="56" y="46" width="80" height="30" rx="6" fill="#f39c12" opacity="0.2"/>
+  <!-- Globe + $ -->
+  <circle cx="82" cy="61" r="8" fill="none" stroke="#e67e22" stroke-width="1.5"/>
+  <line x1="74" y1="61" x2="90" y2="61" stroke="#e67e22" stroke-width="1"/>
+  <line x1="82" y1="53" x2="82" y2="69" stroke="#e67e22" stroke-width="1"/>
+  <text x="100" y="66" font-family="Arial" font-size="14" font-weight="bold" fill="#e67e22">$</text>
+  <!-- Buttons grid -->
+  <rect x="56" y="84" width="18" height="14" rx="3" fill="#f39c12" opacity="0.3"/>
+  <rect x="80" y="84" width="18" height="14" rx="3" fill="#f39c12" opacity="0.3"/>
+  <rect x="104" y="84" width="18" height="14" rx="3" fill="#f39c12" opacity="0.3"/>
+  <rect x="56" y="104" width="18" height="14" rx="3" fill="#f39c12" opacity="0.3"/>
+  <rect x="80" y="104" width="18" height="14" rx="3" fill="#f39c12" opacity="0.3"/>
+  <rect x="104" y="104" width="18" height="14" rx="3" fill="#f39c12" opacity="0.3"/>
+  <rect x="56" y="124" width="18" height="14" rx="3" fill="#f39c12" opacity="0.3"/>
+  <rect x="80" y="124" width="18" height="14" rx="3" fill="#f39c12" opacity="0.3"/>
+  <rect x="104" y="124" width="18" height="14" rx="3" fill="#e67e22" opacity="0.6"/>
+</svg>
