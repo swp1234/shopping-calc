@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "Calculatrice de Shopping Global",
+    "description": "Calcule les taux de change, les tarifs douaniers et les pourboires pour les achats internationaux. Taux de change en temps réel!"
+  },
+  "header": {
+    "title": "💰 Calculatrice de Shopping Global",
+    "subtitle": "Change, Tarifs Douaniers, Pourboires - Tout en Un!"
+  },
+  "tabs": {
+    "exchange": "Taux de Change",
+    "customs": "Tarif Douanier",
+    "tip": "Calculatrice de Pourboire"
+  },
+  "exchange": {
+    "title": "Calculatrice de Taux de Change",
+    "info": "Calcule avec précision avec les taux de change en temps réel",
+    "amountLabel": "Montant",
+    "fromCurrency": "De la Devise",
+    "toCurrency": "À la Devise",
+    "calculateBtn": "💱 Calculer le Change",
+    "resultTitle": "Montant Converti",
+    "rateInfo": "Taux de Change",
+    "baseDate": "Au",
+    "calculating": "Calcul en cours...",
+    "error": "❌ Erreur Survenue",
+    "warningMessage": "⚠️ Impossible de récupérer les données de taux de change. S'il te plaît, vérifie ta connexion Internet et réessaie.",
+    "fallbackWarning": "⚠️ Impossible de récupérer les taux en temps réel. Utilisation des taux approximatifs. Pour référence seulement."
+  },
+  "customs": {
+    "title": "Calculatrice de Tarif Douanier",
+    "info": "Calcule les tarifs douaniers et les taxes (standard coréen)",
+    "productPrice": "Prix du Produit (USD)",
+    "shippingCost": "Frais d'Expédition (USD)",
+    "category": "Catégorie de Produit",
+    "categoryGeneral": "Articles Généraux",
+    "categoryClothes": "Vêtements",
+    "categoryShoes": "Chaussures/Sacs",
+    "categoryCosmetics": "Cosmétiques",
+    "categoryElectronics": "Électronique",
+    "categoryFood": "Nourriture/Suppléments",
+    "calculateBtn": "📦 Calculer les Tarifs Douaniers",
+    "resultTitle": "Coût Total Estimé",
+    "breakdown": "Ventilation",
+    "productTotal": "Total du Produit (KRW)",
+    "customsRate": "Taux Douanier",
+    "customsDuty": "Tarif Douanier",
+    "vat": "TVA",
+    "finalTotal": "Total Final (KRW)",
+    "dutyFreeNotice": "💡 Les articles sous $150 sont en franchise de droits"
+  },
+  "tip": {
+    "title": "Calculatrice de Pourboire",
+    "info": "Vérifiez la culture des pourboires par pays et calculez",
+    "country": "Sélectionner le Pays",
+    "mealAmount": "Montant du Repas",
+    "tipPercentage": "Pourcentage de Pourboire (%)",
+    "partySize": "Taille du Groupe",
+    "calculateBtn": "💰 Calculer le Pourboire",
+    "resultTitle": "Paiement Total",
+    "mealCost": "Coût du Repas",
+    "tipRate": "Taux de Pourboire",
+    "tipAmount": "Montant du Pourboire",
+    "perPerson": "Par Personne",
+    "tipCultures": {
+      "USA": {
+        "name": "États-Unis",
+        "info": "15-20% est standard, 20%+ recommandé pour un excellent service"
+      },
+      "CAN": {
+        "name": "Canada",
+        "info": "15-20% est standard, ajuste en fonction de la qualité du service"
+      },
+      "GBR": {
+        "name": "Royaume-Uni",
+        "info": "10-15% est typique, vérifie si les frais de service sont inclus"
+      },
+      "FRA": {
+        "name": "France",
+        "info": "Les frais de service sont inclus dans la facture, un pourboire supplémentaire est facultatif"
+      },
+      "JPN": {
+        "name": "Japon",
+        "info": "Pas de culture des pourboires, donner un pourboire peut être considéré comme grossier"
+      },
+      "CHN": {
+        "name": "Chine",
+        "info": "Les pourboires ne sont pas obligatoires, mais 10% acceptable dans les restaurants haut de gamme"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 Calculs Récents",
+    "empty": "Pas d'historique de calcul encore",
+    "clearBtn": "Effacer Tout l'Historique",
+    "typeExchange": "💱 Change",
+    "typeCustoms": "📦 Tarifs Douaniers",
+    "typeTip": "💰 Pourboire"
+  },
+  "language": {
+    "select": "Sélectionner la Langue"
+  },
+  "ads": {
+    "banner": "Publicité"
+  },
+  "common": {
+    "won": "KRW",
+    "dollar": "USD"
+  },
+  "premium": {
+    "title": "🧠 Analyse Shopping Avancée par IA",
+    "btn": "🧠 Voir l'Analyse Avancée par IA"
+  },
+  "ads": {
+    "label": "Publicité",
+    "banner": "Zone Publicitaire",
+    "closeBtn": "Fermer"
+  },
+  "recommendations": "Essaie aussi"
+}

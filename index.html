@@ -47,7 +47,14 @@
             <div id="lang-menu" class="lang-menu hidden">
                 <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
                 <button class="lang-option" data-lang="en">🇺🇸 English</button>
+                <button class="lang-option" data-lang="ja">🇯🇵 日本語</button>
+                <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+                <button class="lang-option" data-lang="pt">🇧🇷 Português</button>
                 <button class="lang-option" data-lang="zh">🇨🇳 简体中文</button>
+                <button class="lang-option" data-lang="id">🇮🇩 Bahasa Indonesia</button>
+                <button class="lang-option" data-lang="tr">🇹🇷 Türkçe</button>
+                <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+                <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
                 <button class="lang-option" data-lang="hi">🇮🇳 हिन्दी</button>
                 <button class="lang-option" data-lang="ru">🇷🇺 Русский</button>
             </div>
@@ -68,52 +75,60 @@
         <main class="calculator-container">
             <!-- 탭 메뉴 -->
             <div class="tab-menu">
-                <button class="tab-btn active" data-tab="exchange">환율 계산</button>
-                <button class="tab-btn" data-tab="customs">관세 계산</button>
-                <button class="tab-btn" data-tab="tip">팁 계산</button>
+                <button class="tab-btn active" data-tab="exchange" data-i18n="tabs.exchange">환율 계산</button>
+                <button class="tab-btn" data-tab="customs" data-i18n="tabs.customs">관세 계산</button>
+                <button class="tab-btn" data-tab="tip" data-i18n="tabs.tip">팁 계산</button>
             </div>
 
             <!-- 환율 계산기 -->
             <div id="exchange-tab" class="tab-content active">
                 <div class="calc-section">
-                    <h2>💱 환율 계산기</h2>
-                    <p class="info-text">실시간 환율로 정확하게 계산합니다</p>
+                    <h2 data-i18n="exchange.title">💱 환율 계산기</h2>
+                    <p class="info-text" data-i18n="exchange.info">실시간 환율로 정확하게 계산합니다</p>
 
                     <div class="input-group">
-                        <label>금액</label>
+                        <label data-i18n="exchange.amountLabel">금액</label>
                         <input type="number" id="exchange-amount" placeholder="0" value="100">
                     </div>
 
                     <div class="currency-selector">
                         <div class="currency-box">
-                            <label>변환</label>
+                            <label data-i18n="exchange.fromCurrency">변환</label>
                             <select id="from-currency">
                                 <option value="USD">🇺🇸 미국 달러 (USD)</option>
                                 <option value="EUR">🇪🇺 유로 (EUR)</option>
                                 <option value="JPY">🇯🇵 일본 엔 (JPY)</option>
                                 <option value="CNY">🇨🇳 중국 위안 (CNY)</option>
                                 <option value="GBP">🇬🇧 영국 파운드 (GBP)</option>
+                                <option value="AUD">🇦🇺 호주 달러 (AUD)</option>
+                                <option value="CAD">🇨🇦 캐나다 달러 (CAD)</option>
+                                <option value="THB">🇹🇭 태국 바트 (THB)</option>
+                                <option value="VND">🇻🇳 베트남 동 (VND)</option>
+                                <option value="SGD">🇸🇬 싱가포르 달러 (SGD)</option>
                             </select>
                         </div>
 
-                        <div class="arrow">➡️</div>
+                        <button class="swap-btn" onclick="swapCurrencies()" title="통화 스왑">🔄</button>
 
                         <div class="currency-box">
-                            <label>한국 원화</label>
+                            <label data-i18n="exchange.toCurrency">목표 통화</label>
                             <select id="to-currency">
                                 <option value="KRW" selected>🇰🇷 한국 원 (KRW)</option>
+                                <option value="USD">🇺🇸 미국 달러 (USD)</option>
+                                <option value="EUR">🇪🇺 유로 (EUR)</option>
+                                <option value="JPY">🇯🇵 일본 엔 (JPY)</option>
                             </select>
                         </div>
                     </div>
 
-                    <button class="btn btn-primary" onclick="calculateExchange()">환율 계산</button>
+                    <button class="btn btn-primary" onclick="calculateExchange()" data-i18n="exchange.calculateBtn">환율 계산</button>
 
                     <div id="exchange-result" class="result-box hidden">
-                        <div class="result-title">계산 결과</div>
+                        <div class="result-title" data-i18n="exchange.resultTitle">계산 결과</div>
                         <div class="result-value" id="exchange-result-value">0 원</div>
                         <div class="result-detail" id="exchange-rate-info"></div>
                         <div class="result-timestamp" id="exchange-timestamp"></div>
-                        <div id="exchange-warning" class="result-warning hidden">
+                        <div id="exchange-warning" class="result-warning hidden" data-i18n="exchange.fallbackWarning">
                             ⚠️ 실시간 환율을 가져올 수 없어 고정 환율을 사용했습니다. 실제 환율과 차이가 있을 수 있습니다.
                         </div>
                     </div>
@@ -123,21 +138,21 @@
             <!-- 관세 계산기 -->
             <div id="customs-tab" class="tab-content">
                 <div class="calc-section">
-                    <h2>📦 관세 계산기</h2>
-                    <p class="info-text">해외직구 시 예상 관세를 계산합니다</p>
+                    <h2 data-i18n="customs.title">📦 관세 계산기</h2>
+                    <p class="info-text" data-i18n="customs.info">해외직구 시 예상 관세를 계산합니다</p>
 
                     <div class="input-group">
-                        <label>상품 가격 (USD)</label>
+                        <label data-i18n="customs.productPrice">상품 가격 (USD)</label>
                         <input type="number" id="product-price" placeholder="0" value="200">
                     </div>
 
                     <div class="input-group">
-                        <label>배송비 (USD)</label>
+                        <label data-i18n="customs.shippingCost">배송비 (USD)</label>
                         <input type="number" id="shipping-cost" placeholder="0" value="20">
                     </div>
 
                     <div class="input-group">
-                        <label>구매 국가</label>
+                        <label data-i18n="customs.category">구매 국가</label>
                         <select id="purchase-country">
                             <option value="USA">🇺🇸 미국</option>
                             <option value="CHN">🇨🇳 중국</option>
@@ -147,37 +162,37 @@
                     </div>
 
                     <div class="input-group">
-                        <label>상품 카테고리</label>
+                        <label data-i18n="customs.category">상품 카테고리</label>
                         <select id="product-category">
-                            <option value="general">일반 상품 (13%)</option>
-                            <option value="clothes">의류 (13%)</option>
-                            <option value="shoes">신발 (13%)</option>
-                            <option value="cosmetics">화장품 (8%)</option>
-                            <option value="electronics">전자제품 (8%)</option>
-                            <option value="food">식품 (8%)</option>
+                            <option value="general" data-i18n="customs.categoryGeneral">일반 상품 (13%)</option>
+                            <option value="clothes" data-i18n="customs.categoryClothes">의류 (13%)</option>
+                            <option value="shoes" data-i18n="customs.categoryShoes">신발 (13%)</option>
+                            <option value="cosmetics" data-i18n="customs.categoryCosmetics">화장품 (8%)</option>
+                            <option value="electronics" data-i18n="customs.categoryElectronics">전자제품 (8%)</option>
+                            <option value="food" data-i18n="customs.categoryFood">식품 (8%)</option>
                         </select>
                     </div>
 
-                    <button class="btn btn-primary" onclick="calculateCustoms()">관세 계산</button>
+                    <button class="btn btn-primary" onclick="calculateCustoms()" data-i18n="customs.calculateBtn">관세 계산</button>
 
                     <div id="customs-result" class="result-box hidden">
-                        <div class="result-title">예상 총 비용</div>
+                        <div class="result-title" data-i18n="customs.resultTitle">예상 총 비용</div>
                         <div class="result-value" id="customs-total-value">0 원</div>
                         <div class="customs-breakdown">
                             <div class="breakdown-item">
-                                <span>상품 + 배송비</span>
+                                <span data-i18n="customs.productTotal">상품 + 배송비</span>
                                 <span id="customs-base">0 원</span>
                             </div>
                             <div class="breakdown-item">
-                                <span>관세 (<span id="customs-rate">13%</span>)</span>
+                                <span data-i18n="customs.customsRate">관세</span> (<span id="customs-rate">13%</span>)
                                 <span id="customs-duty">0 원</span>
                             </div>
                             <div class="breakdown-item">
-                                <span>부가세 (10%)</span>
+                                <span data-i18n="customs.vat">부가세 (10%)</span>
                                 <span id="customs-vat">0 원</span>
                             </div>
                         </div>
-                        <div class="result-note">※ 150달러 미만 면세, 실제 금액은 통관 시 달라질 수 있습니다</div>
+                        <div class="result-note" data-i18n="customs.dutyFreeNotice">※ 150달러 미만 면세, 실제 금액은 통관 시 달라질 수 있습니다</div>
                     </div>
                 </div>
             </div>
@@ -185,16 +200,16 @@
             <!-- 팁 계산기 -->
             <div id="tip-tab" class="tab-content">
                 <div class="calc-section">
-                    <h2>💰 팁 계산기</h2>
-                    <p class="info-text">국가별 팁 문화에 맞게 계산합니다</p>
+                    <h2 data-i18n="tip.title">💰 팁 계산기</h2>
+                    <p class="info-text" data-i18n="tip.info">국가별 팁 문화에 맞게 계산합니다</p>
 
                     <div class="input-group">
-                        <label>식사 금액</label>
+                        <label data-i18n="tip.mealAmount">식사 금액</label>
                         <input type="number" id="meal-amount" placeholder="0" value="50">
                     </div>
 
                     <div class="input-group">
-                        <label>국가 선택</label>
+                        <label data-i18n="tip.country">국가 선택</label>
                         <select id="tip-country" onchange="updateTipInfo()">
                             <option value="USA">🇺🇸 미국</option>
                             <option value="CAN">🇨🇦 캐나다</option>
@@ -206,11 +221,11 @@
                     </div>
 
                     <div class="tip-info-box" id="tip-info">
-                        <strong>미국 팁 문화:</strong> 15-20%가 일반적이며, 좋은 서비스는 20% 이상 권장
+                        <strong data-i18n="tip.tipCultures.USA.name">미국</strong>: <span data-i18n="tip.tipCultures.USA.info">15-20%가 일반적이며, 좋은 서비스는 20% 이상 권장</span>
                     </div>
 
                     <div class="input-group">
-                        <label>팁 비율</label>
+                        <label data-i18n="tip.tipPercentage">팁 비율</label>
                         <div class="tip-buttons">
                             <button class="tip-btn" onclick="selectTip(10)">10%</button>
                             <button class="tip-btn active" onclick="selectTip(15)">15%</button>
@@ -221,26 +236,26 @@
                     </div>
 
                     <div class="input-group">
-                        <label>인원 수</label>
+                        <label data-i18n="tip.partySize">인원 수</label>
                         <input type="number" id="party-size" value="2" min="1">
                     </div>
 
-                    <button class="btn btn-primary" onclick="calculateTip()">팁 계산</button>
+                    <button class="btn btn-primary" onclick="calculateTip()" data-i18n="tip.calculateBtn">팁 계산</button>
 
                     <div id="tip-result" class="result-box hidden">
-                        <div class="result-title">총 결제 금액</div>
+                        <div class="result-title" data-i18n="tip.resultTitle">총 결제 금액</div>
                         <div class="result-value" id="tip-total-value">0</div>
                         <div class="customs-breakdown">
                             <div class="breakdown-item">
-                                <span>식사 금액</span>
+                                <span data-i18n="tip.mealCost">식사 금액</span>
                                 <span id="tip-meal">0</span>
                             </div>
                             <div class="breakdown-item">
-                                <span>팁 (<span id="tip-rate">15%</span>)</span>
+                                <span data-i18n="tip.tipRate">팁</span> (<span id="tip-rate">15%</span>)
                                 <span id="tip-amount">0</span>
                             </div>
                             <div class="breakdown-item">
-                                <span>1인당 금액</span>
+                                <span data-i18n="tip.perPerson">1인당 금액</span>
                                 <span id="tip-per-person">0</span>
                             </div>
                         </div>
@@ -250,23 +265,23 @@
 
             <!-- 히스토리 섹션 -->
             <div class="history-section">
-                <h3>📋 최근 계산 내역</h3>
+                <h3 data-i18n="history.title">📋 최근 계산 내역</h3>
                 <div id="calc-history" class="history-list">
-                    <p class="empty-message">아직 계산 내역이 없습니다</p>
+                    <p class="empty-message" data-i18n="history.empty">아직 계산 내역이 없습니다</p>
                 </div>
-                <button class="btn btn-secondary" onclick="clearHistory()" style="margin-top: 1rem;">내역 전체 삭제</button>
+                <button class="btn btn-secondary" onclick="clearHistory()" style="margin-top: 1rem;" data-i18n="history.clearBtn">내역 전체 삭제</button>
             </div>
             <!-- 프리미엄 분석 버튼 -->
             <div class="premium-section" id="premium-section" style="display:none;">
                 <button class="premium-btn" id="premium-analysis-btn">
                     <span class="premium-badge">AI</span>
-                    🧠 AI 고급 분석 보기
+                    <span data-i18n="premium.btn">🧠 AI 고급 분석 보기</span>
                 </button>
             </div>
 
             <!-- 크로스 프로모션 추천 섹션 -->
             <div class="recommendations-section">
-                <div class="rec-title">이것도 해보세요</div>
+                <div class="rec-title" data-i18n="recommendations">이것도 해보세요</div>
                 <div class="rec-grid">
                     <a href="https://dopabrain.com/tax-refund-preview/" class="rec-card" target="_blank">
                         <span class="rec-icon">💰</span>
@@ -304,7 +319,7 @@
         <div id="premium-modal" class="modal hidden">
             <div class="modal-content premium-modal-content">
                 <div class="modal-header">
-                    <h3>🧠 AI 고급 쇼핑 분석</h3>
+                    <h3 data-i18n="premium.title">🧠 AI 고급 쇼핑 분석</h3>
                     <button class="modal-close" id="premium-close">✕</button>
                 </div>
                 <div class="modal-body" id="premium-body">
@@ -315,10 +330,10 @@
         <!-- 전면 광고 오버레이 -->
         <div id="interstitial-ad" class="interstitial-overlay hidden">
             <div class="interstitial-content">
-                <p class="ad-label">광고</p>
-                <div class="ad-placeholder-large">광고 영역</div>
+                <p class="ad-label" data-i18n="ads.label">광고</p>
+                <div class="ad-placeholder-large" data-i18n="ads.banner">광고 영역</div>
                 <button class="close-ad-btn" id="close-ad" disabled>
-                    닫기 (<span id="countdown">5</span>)
+                    <span data-i18n="ads.closeBtn">닫기</span> (<span id="countdown">5</span>)
                 </button>
             </div>
         </div>

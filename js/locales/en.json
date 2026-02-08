@@ -101,10 +101,17 @@
     "select": "Select Language"
   },
   "ads": {
-    "banner": "Advertisement"
+    "banner": "Advertisement",
+    "label": "Ad",
+    "closeBtn": "Close"
   },
   "common": {
     "won": "KRW",
     "dollar": "USD"
-  }
+  },
+  "premium": {
+    "title": "🧠 AI Advanced Shopping Analysis",
+    "btn": "🧠 View AI Advanced Analysis"
+  },
+  "recommendations": "Try These Too"
 }

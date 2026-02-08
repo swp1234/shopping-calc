@@ -74,7 +74,19 @@ const ExchangeAPI = {
             'EUR_KRW': 1580,
             'JPY_KRW': 9.8,
             'CNY_KRW': 200,
-            'GBP_KRW': 1820
+            'GBP_KRW': 1820,
+            'AUD_KRW': 920,
+            'CAD_KRW': 1030,
+            'THB_KRW': 42,
+            'VND_KRW': 0.058,
+            'SGD_KRW': 1080,
+            'KRW_USD': 0.00069,
+            'KRW_EUR': 0.00063,
+            'KRW_JPY': 0.102,
+            'USD_EUR': 0.92,
+            'USD_JPY': 148,
+            'EUR_USD': 1.09,
+            'EUR_JPY': 161
         };
 
         const key = `${from}_${to}`;

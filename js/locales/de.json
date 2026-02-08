@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "Globaler Shopping Rechner",
+    "description": "Berechne Wechselkurse, Zölle und Trinkgelder für internationales Einkaufen. Echtzeit-Wechselkurse!"
+  },
+  "header": {
+    "title": "💰 Globaler Shopping Rechner",
+    "subtitle": "Wechselkurs, Zoll, Trinkgeld - Alles in einem!"
+  },
+  "tabs": {
+    "exchange": "Wechselkurs",
+    "customs": "Zoll",
+    "tip": "Trinkgeld Rechner"
+  },
+  "exchange": {
+    "title": "Wechselkurs Rechner",
+    "info": "Berechne genau mit Echtzeit-Wechselkursen",
+    "amountLabel": "Betrag",
+    "fromCurrency": "Von Währung",
+    "toCurrency": "Zu Währung",
+    "calculateBtn": "💱 Wechsel berechnen",
+    "resultTitle": "Umgerechneter Betrag",
+    "rateInfo": "Wechselkurs",
+    "baseDate": "Stand",
+    "calculating": "Berechnung läuft...",
+    "error": "❌ Fehler aufgetreten",
+    "warningMessage": "⚠️ Wechselkurs-Daten können nicht abgerufen werden. Überprüfe deine Internetverbindung und versuche es erneut.",
+    "fallbackWarning": "⚠️ Echtzeit-Kurse können nicht abgerufen werden. Verwende ungefähre Kurse. Nur zur Information."
+  },
+  "customs": {
+    "title": "Zoll Rechner",
+    "info": "Berechne Zoll und Steuern (Koreanischer Standard)",
+    "productPrice": "Produktpreis (USD)",
+    "shippingCost": "Versandkosten (USD)",
+    "category": "Produktkategorie",
+    "categoryGeneral": "Allgemeine Waren",
+    "categoryClothes": "Kleidung",
+    "categoryShoes": "Schuhe/Taschen",
+    "categoryCosmetics": "Kosmetik",
+    "categoryElectronics": "Elektronik",
+    "categoryFood": "Lebensmittel/Nahrungsergänzung",
+    "calculateBtn": "📦 Zoll berechnen",
+    "resultTitle": "Gesamtgeschätzte Kosten",
+    "breakdown": "Aufschlüsselung",
+    "productTotal": "Produktgesamt (KRW)",
+    "customsRate": "Zollsatz",
+    "customsDuty": "Zoll",
+    "vat": "Mehrwertsteuer",
+    "finalTotal": "Endsumme (KRW)",
+    "dutyFreeNotice": "💡 Artikel unter $150 sind zollfrei"
+  },
+  "tip": {
+    "title": "Trinkgeld Rechner",
+    "info": "Überprüfe Trinkgeld-Kultur nach Land und berechne",
+    "country": "Wähle Land",
+    "mealAmount": "Mahlzeitbetrag",
+    "tipPercentage": "Trinkgeld-Prozentsatz (%)",
+    "partySize": "Gruppengröße",
+    "calculateBtn": "💰 Trinkgeld berechnen",
+    "resultTitle": "Gesamtzahlung",
+    "mealCost": "Mahlzeitkosten",
+    "tipRate": "Trinkgeld-Satz",
+    "tipAmount": "Trinkgeldbetrag",
+    "perPerson": "Pro Person",
+    "tipCultures": {
+      "USA": {
+        "name": "Vereinigte Staaten",
+        "info": "15-20% ist Standard, 20%+ empfohlen für guten Service"
+      },
+      "CAN": {
+        "name": "Kanada",
+        "info": "15-20% ist Standard, anpassen basierend auf Servicequalität"
+      },
+      "GBR": {
+        "name": "Vereinigtes Königreich",
+        "info": "10-15% ist typisch, überprüfe ob Servicegebühr enthalten ist"
+      },
+      "FRA": {
+        "name": "Frankreich",
+        "info": "Servicegebühr ist in der Rechnung enthalten, zusätzliches Trinkgeld ist optional"
+      },
+      "JPN": {
+        "name": "Japan",
+        "info": "Keine Trinkgeld-Kultur, Trinkgeld kann als unhöflich angesehen werden"
+      },
+      "CHN": {
+        "name": "China",
+        "info": "Trinkgeld ist nicht erforderlich, aber 10% akzeptabel in gehobenen Restaurants"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 Kürzliche Berechnungen",
+    "empty": "Noch kein Berechnungsverlauf",
+    "clearBtn": "Gesamten Verlauf löschen",
+    "typeExchange": "💱 Wechselkurs",
+    "typeCustoms": "📦 Zoll",
+    "typeTip": "💰 Trinkgeld"
+  },
+  "language": {
+    "select": "Sprache auswählen"
+  },
+  "ads": {
+    "banner": "Werbung"
+  },
+  "common": {
+    "won": "KRW",
+    "dollar": "USD"
+  },
+  "premium": {
+    "title": "🧠 KI-fortgeschrittene Shopping-Analyse",
+    "btn": "🧠 KI-fortgeschrittene Analyse anzeigen"
+  },
+  "ads": {
+    "label": "Werbung",
+    "banner": "Werbefläche",
+    "closeBtn": "Schließen"
+  },
+  "recommendations": "Probiere auch diese"
+}

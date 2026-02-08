@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "Calculadora de Compras Global",
+    "description": "Calcula tasas de cambio, aranceles aduanales y propinas para compras internacionales. ¡Tasas de cambio en tiempo real!"
+  },
+  "header": {
+    "title": "💰 Calculadora de Compras Global",
+    "subtitle": "Cambio, Aranceles, Propinas - ¡Todo en Uno!"
+  },
+  "tabs": {
+    "exchange": "Tasa de Cambio",
+    "customs": "Arancel Aduanal",
+    "tip": "Calculadora de Propina"
+  },
+  "exchange": {
+    "title": "Calculadora de Tasa de Cambio",
+    "info": "Calcula con precisión usando tasas de cambio en tiempo real",
+    "amountLabel": "Cantidad",
+    "fromCurrency": "Desde Moneda",
+    "toCurrency": "A Moneda",
+    "calculateBtn": "💱 Calcular Cambio",
+    "resultTitle": "Cantidad Convertida",
+    "rateInfo": "Tasa de Cambio",
+    "baseDate": "Según el",
+    "calculating": "Calculando...",
+    "error": "❌ Ocurrió un Error",
+    "warningMessage": "⚠️ No se puede obtener los datos de tasa de cambio. Por favor, verifica tu conexión a internet e intenta de nuevo.",
+    "fallbackWarning": "⚠️ No se puede obtener tasas en tiempo real. Usando tasas aproximadas. Solo para referencia."
+  },
+  "customs": {
+    "title": "Calculadora de Arancel Aduanal",
+    "info": "Calcula aranceles e impuestos (estándar de Corea)",
+    "productPrice": "Precio del Producto (USD)",
+    "shippingCost": "Costo de Envío (USD)",
+    "category": "Categoría de Producto",
+    "categoryGeneral": "Bienes Generales",
+    "categoryClothes": "Ropa",
+    "categoryShoes": "Zapatos/Bolsas",
+    "categoryCosmetics": "Cosméticos",
+    "categoryElectronics": "Electrónica",
+    "categoryFood": "Alimentos/Suplementos",
+    "calculateBtn": "📦 Calcular Aranceles",
+    "resultTitle": "Costo Total Estimado",
+    "breakdown": "Desglose",
+    "productTotal": "Total del Producto (KRW)",
+    "customsRate": "Tasa de Arancel",
+    "customsDuty": "Arancel Aduanal",
+    "vat": "IVA",
+    "finalTotal": "Total Final (KRW)",
+    "dutyFreeNotice": "💡 Los artículos por debajo de $150 están libres de derechos"
+  },
+  "tip": {
+    "title": "Calculadora de Propina",
+    "info": "Verifica la cultura de propina por país y calcula",
+    "country": "Seleccionar País",
+    "mealAmount": "Monto de la Comida",
+    "tipPercentage": "Porcentaje de Propina (%)",
+    "partySize": "Tamaño del Grupo",
+    "calculateBtn": "💰 Calcular Propina",
+    "resultTitle": "Pago Total",
+    "mealCost": "Costo de la Comida",
+    "tipRate": "Tasa de Propina",
+    "tipAmount": "Monto de Propina",
+    "perPerson": "Por Persona",
+    "tipCultures": {
+      "USA": {
+        "name": "Estados Unidos",
+        "info": "15-20% es estándar, se recomienda 20%+ para un excelente servicio"
+      },
+      "CAN": {
+        "name": "Canadá",
+        "info": "15-20% es estándar, ajusta según la calidad del servicio"
+      },
+      "GBR": {
+        "name": "Reino Unido",
+        "info": "10-15% es típico, verifica si la propina está incluida en la factura"
+      },
+      "FRA": {
+        "name": "Francia",
+        "info": "El cargo de servicio está incluido en la factura, la propina adicional es opcional"
+      },
+      "JPN": {
+        "name": "Japón",
+        "info": "No hay cultura de propina, la propina puede considerarse grosera"
+      },
+      "CHN": {
+        "name": "China",
+        "info": "La propina no es obligatoria, pero 10% es aceptable en restaurantes de lujo"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 Cálculos Recientes",
+    "empty": "Sin historial de cálculos aún",
+    "clearBtn": "Limpiar Todo el Historial",
+    "typeExchange": "💱 Cambio",
+    "typeCustoms": "📦 Aranceles",
+    "typeTip": "💰 Propina"
+  },
+  "language": {
+    "select": "Seleccionar Idioma"
+  },
+  "ads": {
+    "banner": "Publicidad"
+  },
+  "common": {
+    "won": "KRW",
+    "dollar": "USD"
+  },
+  "premium": {
+    "title": "🧠 Análisis Avanzado de Compras de IA",
+    "btn": "🧠 Ver Análisis Avanzado de IA"
+  },
+  "ads": {
+    "label": "Anuncio",
+    "banner": "Área de Anuncio",
+    "closeBtn": "Cerrar"
+  },
+  "recommendations": "Prueba Estos También"
+}

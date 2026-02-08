@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "Küresel Alışveriş Hesaplayıcısı",
+    "description": "Uluslararası alışveriş için döviz kuru, gümrük ve bahşiş hesapla. Gerçek zamanlı döviz kurları!"
+  },
+  "header": {
+    "title": "💰 Küresel Alışveriş Hesaplayıcısı",
+    "subtitle": "Döviz, Gümrük, Bahşiş - Hepsi Bir Yerde!"
+  },
+  "tabs": {
+    "exchange": "Döviz Kuru",
+    "customs": "Gümrük Vergisi",
+    "tip": "Bahşiş Hesaplayıcı"
+  },
+  "exchange": {
+    "title": "Döviz Kuru Hesaplayıcı",
+    "info": "Gerçek zamanlı döviz kurları ile doğru hesapla",
+    "amountLabel": "Tutar",
+    "fromCurrency": "Hangi Para Biriminden",
+    "toCurrency": "Hangi Para Birimine",
+    "calculateBtn": "💱 Döviz Hesapla",
+    "resultTitle": "Dönüştürülmüş Tutar",
+    "rateInfo": "Döviz Kuru",
+    "baseDate": "Tarih İtibarıyla",
+    "calculating": "Hesaplanıyor...",
+    "error": "❌ Hata Oluştu",
+    "warningMessage": "⚠️ Döviz kuru verilerine ulaşılamıyor. İnternet bağlantını kontrol et ve tekrar dene.",
+    "fallbackWarning": "⚠️ Gerçek zamanlı kurlar alınamıyor. Yaklaşık kurları kullanılıyor. Sadece referans amaçlıdır."
+  },
+  "customs": {
+    "title": "Gümrük Vergisi Hesaplayıcı",
+    "info": "Gümrük ve vergi hesapla (Türkiye standardı)",
+    "productPrice": "Ürün Fiyatı (USD)",
+    "shippingCost": "Kargo Ücreti (USD)",
+    "category": "Ürün Kategorisi",
+    "categoryGeneral": "Genel Ürünler",
+    "categoryClothes": "Giyim",
+    "categoryShoes": "Ayakkabı/Çantalar",
+    "categoryCosmetics": "Kozmetik",
+    "categoryElectronics": "Elektronik",
+    "categoryFood": "Gıda/Takviyeler",
+    "calculateBtn": "📦 Gümrük Hesapla",
+    "resultTitle": "Tahmini Toplam Maliyet",
+    "breakdown": "Detay",
+    "productTotal": "Ürün Toplam (TRY)",
+    "customsRate": "Gümrük Oranı",
+    "customsDuty": "Gümrük Vergisi",
+    "vat": "KDV",
+    "finalTotal": "Final Toplam (TRY)",
+    "dutyFreeNotice": "💡 $150 altındaki ürünler gümrük vergisizdir"
+  },
+  "tip": {
+    "title": "Bahşiş Hesaplayıcı",
+    "info": "Ülkeye göre bahşiş kültürünü kontrol et ve hesapla",
+    "country": "Ülke Seç",
+    "mealAmount": "Yemek Ücreti",
+    "tipPercentage": "Bahşiş Yüzdesi (%)",
+    "partySize": "Grup Büyüklüğü",
+    "calculateBtn": "💰 Bahşiş Hesapla",
+    "resultTitle": "Toplam Ödeme",
+    "mealCost": "Yemek Maliyeti",
+    "tipRate": "Bahşiş Oranı",
+    "tipAmount": "Bahşiş Tutarı",
+    "perPerson": "Kişi Başına",
+    "tipCultures": {
+      "USA": {
+        "name": "Amerika Birleşik Devletleri",
+        "info": "%15-20 standarttır, harika hizmet için %20+ önerilir"
+      },
+      "CAN": {
+        "name": "Kanada",
+        "info": "%15-20 standarttır, hizmet kalitesine göre ayarla"
+      },
+      "GBR": {
+        "name": "Birleşik Krallık",
+        "info": "%10-15 tipiktir, servis ücreti eklenip eklenmediğini kontrol et"
+      },
+      "FRA": {
+        "name": "Fransa",
+        "info": "Hizmet ücreti faturaya dahildir, ek bahşiş isteğe bağlıdır"
+      },
+      "JPN": {
+        "name": "Japonya",
+        "info": "Bahşiş kültürü yok, bahşiş saygısızlık olarak değerlendirilebilir"
+      },
+      "CHN": {
+        "name": "Çin",
+        "info": "Bahşiş gerekli değildir, lüks restoranlarda %10 kabul edilebilir"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 Son Hesaplamalar",
+    "empty": "Henüz hesaplama geçmişi yok",
+    "clearBtn": "Tüm Geçmişi Temizle",
+    "typeExchange": "💱 Döviz",
+    "typeCustoms": "📦 Gümrük",
+    "typeTip": "💰 Bahşiş"
+  },
+  "language": {
+    "select": "Dil Seç"
+  },
+  "ads": {
+    "banner": "Reklam"
+  },
+  "common": {
+    "won": "TRY",
+    "dollar": "USD"
+  },
+  "premium": {
+    "title": "🧠 AI Gelişmiş Alışveriş Analizi",
+    "btn": "🧠 AI Gelişmiş Analizini Görüntüle"
+  },
+  "ads": {
+    "label": "Reklam",
+    "banner": "Reklam Alanı",
+    "closeBtn": "Kapat"
+  },
+  "recommendations": "Bunları da Dene"
+}

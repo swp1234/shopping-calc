@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "Calculadora de Compras Global",
+    "description": "Calcule taxas de câmbio, taxas alfandegárias e gorjetas para compras internacionais. Taxas de câmbio em tempo real!"
+  },
+  "header": {
+    "title": "💰 Calculadora de Compras Global",
+    "subtitle": "Câmbio, Taxas Alfandegárias, Gorjetas - Tudo em Um!"
+  },
+  "tabs": {
+    "exchange": "Taxa de Câmbio",
+    "customs": "Tarifa Alfandegária",
+    "tip": "Calculadora de Gorjeta"
+  },
+  "exchange": {
+    "title": "Calculadora de Taxa de Câmbio",
+    "info": "Calcule com precisão usando taxas de câmbio em tempo real",
+    "amountLabel": "Valor",
+    "fromCurrency": "De Moeda",
+    "toCurrency": "Para Moeda",
+    "calculateBtn": "💱 Calcular Câmbio",
+    "resultTitle": "Valor Convertido",
+    "rateInfo": "Taxa de Câmbio",
+    "baseDate": "A partir de",
+    "calculating": "Calculando...",
+    "error": "❌ Erro Ocorreu",
+    "warningMessage": "⚠️ Não foi possível buscar dados de taxa de câmbio. Verifique sua conexão com a internet e tente novamente.",
+    "fallbackWarning": "⚠️ Não foi possível buscar taxas em tempo real. Usando taxas aproximadas. Apenas para referência."
+  },
+  "customs": {
+    "title": "Calculadora de Tarifa Alfandegária",
+    "info": "Calcule taxas alfandegárias e impostos (padrão da Coreia)",
+    "productPrice": "Preço do Produto (USD)",
+    "shippingCost": "Custo de Envio (USD)",
+    "category": "Categoria de Produto",
+    "categoryGeneral": "Bens Gerais",
+    "categoryClothes": "Vestuário",
+    "categoryShoes": "Sapatos/Bolsas",
+    "categoryCosmetics": "Cosméticos",
+    "categoryElectronics": "Eletrônicos",
+    "categoryFood": "Alimentos/Suplementos",
+    "calculateBtn": "📦 Calcular Taxas",
+    "resultTitle": "Custo Total Estimado",
+    "breakdown": "Detalhamento",
+    "productTotal": "Total do Produto (KRW)",
+    "customsRate": "Taxa Alfandegária",
+    "customsDuty": "Tarifa Alfandegária",
+    "vat": "IVA",
+    "finalTotal": "Total Final (KRW)",
+    "dutyFreeNotice": "💡 Itens abaixo de $150 estão livres de tarifa"
+  },
+  "tip": {
+    "title": "Calculadora de Gorjeta",
+    "info": "Verifique a cultura de gorjeta por país e calcule",
+    "country": "Selecionar País",
+    "mealAmount": "Valor da Refeição",
+    "tipPercentage": "Percentual de Gorjeta (%)",
+    "partySize": "Tamanho do Grupo",
+    "calculateBtn": "💰 Calcular Gorjeta",
+    "resultTitle": "Pagamento Total",
+    "mealCost": "Custo da Refeição",
+    "tipRate": "Taxa de Gorjeta",
+    "tipAmount": "Valor da Gorjeta",
+    "perPerson": "Por Pessoa",
+    "tipCultures": {
+      "USA": {
+        "name": "Estados Unidos",
+        "info": "15-20% é padrão, 20%+ recomendado para ótimo serviço"
+      },
+      "CAN": {
+        "name": "Canadá",
+        "info": "15-20% é padrão, ajuste com base na qualidade do serviço"
+      },
+      "GBR": {
+        "name": "Reino Unido",
+        "info": "10-15% é típico, verifique se a taxa de serviço está incluída"
+      },
+      "FRA": {
+        "name": "França",
+        "info": "Taxa de serviço está incluída na conta, gorjeta adicional é opcional"
+      },
+      "JPN": {
+        "name": "Japão",
+        "info": "Nenhuma cultura de gorjeta, gorjeta pode ser considerada rude"
+      },
+      "CHN": {
+        "name": "China",
+        "info": "Gorjeta não é necessária, mas 10% aceitável em restaurantes requintados"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 Cálculos Recentes",
+    "empty": "Nenhum histórico de cálculos ainda",
+    "clearBtn": "Limpar Todo Histórico",
+    "typeExchange": "💱 Câmbio",
+    "typeCustoms": "📦 Taxas",
+    "typeTip": "💰 Gorjeta"
+  },
+  "language": {
+    "select": "Selecionar Idioma"
+  },
+  "ads": {
+    "banner": "Publicidade"
+  },
+  "common": {
+    "won": "KRW",
+    "dollar": "USD"
+  },
+  "premium": {
+    "title": "🧠 Análise Avançada de Compras de IA",
+    "btn": "🧠 Ver Análise Avançada de IA"
+  },
+  "ads": {
+    "label": "Anúncio",
+    "banner": "Área de Anúncio",
+    "closeBtn": "Fechar"
+  },
+  "recommendations": "Experimente Também"
+}

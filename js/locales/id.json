@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "Kalkulator Belanja Global",
+    "description": "Hitung nilai tukar, bea cukai, dan tip untuk belanja internasional. Nilai tukar real-time!"
+  },
+  "header": {
+    "title": "💰 Kalkulator Belanja Global",
+    "subtitle": "Pertukaran, Bea Cukai, Tip - Semua Dalam Satu!"
+  },
+  "tabs": {
+    "exchange": "Nilai Tukar",
+    "customs": "Bea Cukai",
+    "tip": "Kalkulator Tip"
+  },
+  "exchange": {
+    "title": "Kalkulator Nilai Tukar",
+    "info": "Hitung dengan akurat menggunakan nilai tukar real-time",
+    "amountLabel": "Jumlah",
+    "fromCurrency": "Dari Mata Uang",
+    "toCurrency": "Ke Mata Uang",
+    "calculateBtn": "💱 Hitung Pertukaran",
+    "resultTitle": "Jumlah yang Dikonversi",
+    "rateInfo": "Nilai Tukar",
+    "baseDate": "Pada tanggal",
+    "calculating": "Menghitung...",
+    "error": "❌ Kesalahan Terjadi",
+    "warningMessage": "⚠️ Tidak dapat mengambil data nilai tukar. Silakan periksa koneksi internet Anda dan coba lagi.",
+    "fallbackWarning": "⚠️ Tidak dapat mengambil nilai real-time. Menggunakan nilai perkiraan. Hanya untuk referensi."
+  },
+  "customs": {
+    "title": "Kalkulator Bea Cukai",
+    "info": "Hitung bea cukai dan pajak (standar Korea)",
+    "productPrice": "Harga Produk (USD)",
+    "shippingCost": "Biaya Pengiriman (USD)",
+    "category": "Kategori Produk",
+    "categoryGeneral": "Barang Umum",
+    "categoryClothes": "Pakaian",
+    "categoryShoes": "Sepatu/Tas",
+    "categoryCosmetics": "Kosmetik",
+    "categoryElectronics": "Elektronik",
+    "categoryFood": "Makanan/Suplemen",
+    "calculateBtn": "📦 Hitung Bea Cukai",
+    "resultTitle": "Total Biaya Perkiraan",
+    "breakdown": "Rincian",
+    "productTotal": "Total Produk (KRW)",
+    "customsRate": "Tarif Bea Cukai",
+    "customsDuty": "Bea Cukai",
+    "vat": "PPN",
+    "finalTotal": "Total Akhir (KRW)",
+    "dutyFreeNotice": "💡 Barang di bawah $150 bebas bea cukai"
+  },
+  "tip": {
+    "title": "Kalkulator Tip",
+    "info": "Periksa budaya pemberian tip menurut negara dan hitung",
+    "country": "Pilih Negara",
+    "mealAmount": "Jumlah Makanan",
+    "tipPercentage": "Persentase Tip (%)",
+    "partySize": "Jumlah Orang",
+    "calculateBtn": "💰 Hitung Tip",
+    "resultTitle": "Total Pembayaran",
+    "mealCost": "Biaya Makanan",
+    "tipRate": "Tarif Tip",
+    "tipAmount": "Jumlah Tip",
+    "perPerson": "Per Orang",
+    "tipCultures": {
+      "USA": {
+        "name": "Amerika Serikat",
+        "info": "15-20% adalah standar, 20%+ direkomendasikan untuk layanan luar biasa"
+      },
+      "CAN": {
+        "name": "Kanada",
+        "info": "15-20% adalah standar, sesuaikan berdasarkan kualitas layanan"
+      },
+      "GBR": {
+        "name": "Inggris",
+        "info": "10-15% adalah khas, periksa apakah biaya layanan sudah termasuk"
+      },
+      "FRA": {
+        "name": "Prancis",
+        "info": "Biaya layanan sudah termasuk dalam tagihan, tip tambahan bersifat opsional"
+      },
+      "JPN": {
+        "name": "Jepang",
+        "info": "Tidak ada budaya pemberian tip, pemberian tip mungkin dianggap kasar"
+      },
+      "CHN": {
+        "name": "Cina",
+        "info": "Pemberian tip tidak diperlukan, tetapi 10% dapat diterima di restoran mewah"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 Perhitungan Terbaru",
+    "empty": "Belum ada riwayat perhitungan",
+    "clearBtn": "Hapus Semua Riwayat",
+    "typeExchange": "💱 Pertukaran",
+    "typeCustoms": "📦 Bea Cukai",
+    "typeTip": "💰 Tip"
+  },
+  "language": {
+    "select": "Pilih Bahasa"
+  },
+  "ads": {
+    "banner": "Iklan"
+  },
+  "common": {
+    "won": "KRW",
+    "dollar": "USD"
+  },
+  "premium": {
+    "title": "🧠 Analisis Belanja AI Lanjutan",
+    "btn": "🧠 Lihat Analisis AI Lanjutan"
+  },
+  "ads": {
+    "label": "Iklan",
+    "banner": "Area Iklan",
+    "closeBtn": "Tutup"
+  },
+  "recommendations": "Coba Juga"
+}

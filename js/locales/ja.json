@@ -1,0 +1,120 @@
+{
+  "app": {
+    "title": "グローバルショッピング計算機",
+    "description": "国際ショッピングの為替、関税、チップを計算します。リアルタイム為替レート！"
+  },
+  "header": {
+    "title": "💰 グローバルショッピング計算機",
+    "subtitle": "為替・関税・チップ - すべて一緒に！"
+  },
+  "tabs": {
+    "exchange": "為替レート",
+    "customs": "関税",
+    "tip": "チップ計算"
+  },
+  "exchange": {
+    "title": "為替レート計算機",
+    "info": "リアルタイム為替レートで正確に計算",
+    "amountLabel": "金額",
+    "fromCurrency": "元の通貨",
+    "toCurrency": "換算先通貨",
+    "calculateBtn": "💱 為替を計算",
+    "resultTitle": "換算金額",
+    "rateInfo": "為替レート",
+    "baseDate": "現在",
+    "calculating": "計算中...",
+    "error": "❌ エラーが発生しました",
+    "warningMessage": "⚠️ 為替レートデータを取得できません。インターネット接続を確認してもう一度試してください。",
+    "fallbackWarning": "⚠️ リアルタイムレートを取得できません。おおよそのレートを使用しています。参考までに。"
+  },
+  "customs": {
+    "title": "関税計算機",
+    "info": "関税と税金を計算（韓国基準）",
+    "productPrice": "商品価格（USD）",
+    "shippingCost": "送料（USD）",
+    "category": "商品カテゴリー",
+    "categoryGeneral": "一般商品",
+    "categoryClothes": "衣類",
+    "categoryShoes": "靴/バッグ",
+    "categoryCosmetics": "コスメ",
+    "categoryElectronics": "電子機器",
+    "categoryFood": "食品/サプリメント",
+    "calculateBtn": "📦 関税を計算",
+    "resultTitle": "推定合計費用",
+    "breakdown": "内訳",
+    "productTotal": "商品合計（KRW）",
+    "customsRate": "関税率",
+    "customsDuty": "関税",
+    "vat": "付加価値税",
+    "finalTotal": "最終合計（KRW）",
+    "dutyFreeNotice": "💡 150ドル以下の商品は関税が免除されます"
+  },
+  "tip": {
+    "title": "チップ計算機",
+    "info": "国別のチップ文化を確認し、計算します",
+    "country": "国を選択",
+    "mealAmount": "食事代",
+    "tipPercentage": "チップ率（％）",
+    "partySize": "人数",
+    "calculateBtn": "💰 チップを計算",
+    "resultTitle": "合計支払額",
+    "mealCost": "食事代",
+    "tipRate": "チップ率",
+    "tipAmount": "チップ額",
+    "perPerson": "1人当たり",
+    "tipCultures": {
+      "USA": {
+        "name": "アメリカ",
+        "info": "15～20％が標準、素晴らしいサービスの場合は20％以上推奨"
+      },
+      "CAN": {
+        "name": "カナダ",
+        "info": "15～20％が標準、サービス品質に基づいて調整"
+      },
+      "GBR": {
+        "name": "イギリス",
+        "info": "10～15％が一般的、サービス料が含まれているか確認"
+      },
+      "FRA": {
+        "name": "フランス",
+        "info": "サービス料が請求書に含まれています、追加チップはオプション"
+      },
+      "JPN": {
+        "name": "日本",
+        "info": "チップ文化がない、チップは失礼と見なされることがあります"
+      },
+      "CHN": {
+        "name": "中国",
+        "info": "チップは不要ですが、高級レストランでは10％まで受け入れられます"
+      }
+    }
+  },
+  "history": {
+    "title": "📋 最近の計算",
+    "empty": "まだ計算履歴がありません",
+    "clearBtn": "履歴をすべてクリア",
+    "typeExchange": "💱 為替",
+    "typeCustoms": "📦 関税",
+    "typeTip": "💰 チップ"
+  },
+  "language": {
+    "select": "言語を選択"
+  },
+  "ads": {
+    "banner": "広告"
+  },
+  "common": {
+    "won": "KRW",
+    "dollar": "USD"
+  },
+  "premium": {
+    "title": "🧠 AI高度なショッピング分析",
+    "btn": "🧠 AI高度な分析を表示"
+  },
+  "ads": {
+    "label": "広告",
+    "banner": "広告エリア",
+    "closeBtn": "閉じる"
+  },
+  "recommendations": "これも試してみてください"
+}
