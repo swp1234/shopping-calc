@@ -959,3 +959,25 @@ body::after {
 .rec-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .rec-name { font-size: 14px; font-weight: 600; }
 .rec-desc { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+/* Game Footer & Back Link */
+.game-footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.back-link, .home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 12px 0;
+    transition: color 0.2s;
+}
+
+.back-link:hover, .home-link:hover {
+    color: rgba(255,255,255,0.7);
+}
