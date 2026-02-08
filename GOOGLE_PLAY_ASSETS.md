@@ -311,7 +311,7 @@ exchange rate, customs, tip, calculator, international shopping, travel, currenc
    ```
 
 2. **Digital Asset Links 설정**
-   - TWA URL: https://swp1234.github.io/shopping-calc/
+   - TWA URL: https://dopabrain.com/shopping-calc/
    - Theme color: #f39c12
 
 3. **AdMob 통합**

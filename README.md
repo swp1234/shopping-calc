@@ -8,7 +8,7 @@
 ![PWA](https://img.shields.io/badge/PWA-enabled-success)
 ![Status](https://img.shields.io/badge/status-active-success)
 
-[데모 보기](https://swp1234.github.io/shopping-calc/) | [기능](#-주요-기능) | [사용법](#-사용-방법)
+[데모 보기](https://dopabrain.com/shopping-calc/) | [기능](#-주요-기능) | [사용법](#-사용-방법)
 
 </div>
 
@@ -69,7 +69,7 @@
 ## 📱 사용 방법
 
 ### 온라인 사용
-👉 **https://swp1234.github.io/shopping-calc/**
+👉 **https://dopabrain.com/shopping-calc/**
 
 ### 모바일 설치 (PWA)
 1. 위 링크를 모바일 브라우저에서 열기
