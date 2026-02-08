@@ -1,7 +1,8 @@
 // 글로벌 쇼핑 계산기 메인 앱 로직
 
 // 히스토리 관리
-let calcHistory = JSON.parse(localStorage.getItem('calc_history') || '[]');
+let calcHistory;
+try { calcHistory = JSON.parse(localStorage.getItem('calc_history') || '[]'); } catch(e) { calcHistory = []; }
 
 // 다국어 지원 초기화
 document.addEventListener('DOMContentLoaded', async function() {
@@ -74,6 +75,45 @@ function setupTabs() {
     });
 }
 
+// ==================== 통화 스왑 ====================
+
+function swapCurrencies() {
+    const fromSelect = document.getElementById('from-currency');
+    const toSelect = document.getElementById('to-currency');
+    const fromVal = fromSelect.value;
+    const toVal = toSelect.value;
+
+    // Check if the target value exists in each select
+    const fromHasTo = Array.from(fromSelect.options).some(o => o.value === toVal);
+    const toHasFrom = Array.from(toSelect.options).some(o => o.value === fromVal);
+
+    if (fromHasTo && toHasFrom) {
+        fromSelect.value = toVal;
+        toSelect.value = fromVal;
+    }
+}
+
+// ==================== 실시간 입력 계산 ====================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const amountInput = document.getElementById('exchange-amount');
+    const fromSelect = document.getElementById('from-currency');
+    const toSelect = document.getElementById('to-currency');
+
+    let debounceTimer;
+    function debouncedCalc() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            const val = parseFloat(amountInput.value);
+            if (val > 0) calculateExchange();
+        }, 500);
+    }
+
+    amountInput.addEventListener('input', debouncedCalc);
+    fromSelect.addEventListener('change', debouncedCalc);
+    toSelect.addEventListener('change', debouncedCalc);
+});
+
 // ==================== 환율 계산기 ====================
 
 async function calculateExchange() {
@@ -101,11 +141,14 @@ async function calculateExchange() {
         // 경고 메시지 요소
         const warningBox = document.getElementById('exchange-warning');
 
-        // 결과 표시
-        resultValue.textContent = `${convertedAmount.toLocaleString('ko-KR', {maximumFractionDigits: 0})} 원`;
+        // 결과 표시 (통화에 맞게)
+        const currencySymbols = { KRW: '원', USD: '$', EUR: '€', JPY: '¥' };
+        const sym = currencySymbols[toCurrency] || toCurrency;
+        const fracDigits = toCurrency === 'KRW' || toCurrency === 'JPY' ? 0 : 2;
+        resultValue.textContent = `${convertedAmount.toLocaleString('ko-KR', {maximumFractionDigits: fracDigits})} ${sym}`;
 
         const rateInfo = document.getElementById('exchange-rate-info');
-        rateInfo.textContent = `환율: 1 ${fromCurrency} = ${rate.toLocaleString('ko-KR', {maximumFractionDigits: 2})} ${toCurrency}`;
+        rateInfo.textContent = `환율: 1 ${fromCurrency} = ${rate.toLocaleString('ko-KR', {maximumFractionDigits: 4})} ${toCurrency}`;
 
         const timestamp = document.getElementById('exchange-timestamp');
         timestamp.textContent = `기준일: ${rateData.date}`;
