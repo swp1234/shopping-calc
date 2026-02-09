@@ -701,14 +701,16 @@ function generatePremiumContent() {
         container.appendChild(analysis);
     }
 
-    return html;
+    return container;
 }
 
 function showPremiumAnalysis() {
     showInterstitialAd().then(() => {
         const premiumModal = document.getElementById('premium-modal');
         const premiumBody = document.getElementById('premium-body');
-        premiumBody.innerHTML = generatePremiumContent();
+        premiumBody.innerHTML = '';
+        const content = generatePremiumContent();
+        premiumBody.appendChild(content);
         premiumModal.classList.remove('hidden');
     });
 }
