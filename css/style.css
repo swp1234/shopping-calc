@@ -1512,3 +1512,34 @@ button,a[href],input[type="button"],input[type="submit"],[role="button"]{min-wid
 @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}}
 @media (prefers-contrast: more){button{border:2px solid #f39c12;}}
 .rec-card:focus-visible,.currency-option:focus-visible{outline:3px solid #f39c12;outline-offset:4px;}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark, var(--bg-primary, var(--background, #0f0f23)));
+}
+
+::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 5px;
+    border: 2px solid var(--bg-dark, var(--bg-primary, var(--background, #0f0f23)));
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8497ee;
+    opacity: 0.8;
+}
+
+/* Selection Color */
+::selection {
+    background: #f39c12;
+    color: white;
+}
+
+::-moz-selection {
+    background: #f39c12;
+    color: white;
+}
