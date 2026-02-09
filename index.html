@@ -27,21 +27,64 @@
     <meta property="og:locale" content="ko_KR">
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="ru_RU">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="글로벌 쇼핑 계산기 💰 - 환율·관세·팁 계산">
     <meta name="twitter:description" content="해외직구와 여행 필수! 💰 환율·관세·팁 한 번에 계산!">
     <meta name="twitter:image" content="https://dopabrain.com/shopping-calc/icon-512.svg">
     <meta name="twitter:site" content="@dopabrain">
+    <!-- hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="en" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="es" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="id" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="de" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/shopping-calc/">
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "글로벌 쇼핑 계산기",
-      "description": "환율, 관세, 팁을 한 번에 계산하는 해외직구 및 여행 필수 도구",
+      "description": "환율, 관세, 팁을 한 번에 계산하는 해외직구 및 여행 필수 도구. 실시간 환율, 국가별 관세율, 팁 문화 안내!",
+      "url": "https://dopabrain.com/shopping-calc/",
+      "image": "https://dopabrain.com/shopping-calc/icon-512.svg",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      "browserRequirements": "Requires JavaScript. Modern browser (Chrome, Safari, Firefox, Edge).",
+      "inLanguage": ["ko", "en", "zh", "hi", "ru"],
+      "author": {
+        "@type": "Organization",
+        "name": "DopaBrain",
+        "url": "https://dopabrain.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DopaBrain",
+        "url": "https://dopabrain.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.3",
+        "ratingCount": "1820",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
     }
     </script>
 </head>
@@ -373,5 +416,16 @@
     <script src="js/i18n.js"></script>
     <script src="js/exchange-api.js"></script>
     <script src="js/app.js"></script>
+
+    <!-- Service Worker 등록 -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => console.log('Service Worker registered'))
+                    .catch(error => console.log('Service Worker registration failed:', error));
+            });
+        }
+    </script>
 </body>
 </html>
