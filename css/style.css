@@ -154,6 +154,37 @@ body::after {
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
+/* 히어로 배지 */
+.hero-badge-section {
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 20px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(243, 156, 18, 0.2);
+    border: 1px solid rgba(243, 156, 18, 0.4);
+    color: #f39c12;
+    padding: 10px 18px;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Glassmorphism 탭 메뉴 */
 .tab-menu {
     display: flex;

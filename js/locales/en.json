@@ -13,6 +13,7 @@
     "tip": "Tip Calculator"
   },
   "exchange": {
+    "heroTitle": "💱 Real-time Exchange Rate",
     "title": "Exchange Rate Calculator",
     "info": "Calculate accurately with real-time exchange rates",
     "amountLabel": "Amount",
