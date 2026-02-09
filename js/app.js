@@ -324,8 +324,14 @@ function updateTipInfo() {
     const culture = tipCultures[country];
 
     if (culture) {
-        document.getElementById('tip-info').innerHTML =
-            `<strong>${culture.name} 팁 문화:</strong> ${culture.info}`;
+        const tipInfoEl = document.getElementById('tip-info');
+        tipInfoEl.innerHTML = '';
+        const strong = document.createElement('strong');
+        strong.textContent = `${culture.name} 팁 문화: `;
+        const span = document.createElement('span');
+        span.textContent = culture.info;
+        tipInfoEl.appendChild(strong);
+        tipInfoEl.appendChild(span);
 
         // 기본 팁 비율 설정
         document.getElementById('tip-percentage').value = culture.defaultRate;
@@ -433,22 +439,42 @@ function renderHistory() {
         return;
     }
 
-    let html = '';
+    container.innerHTML = '';
     calcHistory.forEach((item, index) => {
         const typeEmoji = item.type === '환율' ? '💱' : item.type === '관세' ? '📦' : '💰';
-        html += `
-            <div class="history-item" style="animation-delay: ${index * 0.05}s">
-                <div class="history-header">
-                    <span class="history-type">${typeEmoji} ${item.type}</span>
-                    <span class="history-time">${item.timestamp}</span>
-                </div>
-                <div class="history-title">${item.title}</div>
-                <div class="history-result">${item.result}</div>
-            </div>
-        `;
-    });
 
-    container.innerHTML = html;
+        const historyItem = document.createElement('div');
+        historyItem.className = 'history-item';
+        historyItem.style.animationDelay = `${index * 0.05}s`;
+
+        const header = document.createElement('div');
+        header.className = 'history-header';
+
+        const typeSpan = document.createElement('span');
+        typeSpan.className = 'history-type';
+        typeSpan.textContent = `${typeEmoji} ${item.type}`;
+
+        const timeSpan = document.createElement('span');
+        timeSpan.className = 'history-time';
+        timeSpan.textContent = item.timestamp;
+
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'history-title';
+        titleDiv.textContent = item.title;
+
+        const resultDiv = document.createElement('div');
+        resultDiv.className = 'history-result';
+        resultDiv.textContent = item.result;
+
+        header.appendChild(typeSpan);
+        header.appendChild(timeSpan);
+
+        historyItem.appendChild(header);
+        historyItem.appendChild(titleDiv);
+        historyItem.appendChild(resultDiv);
+
+        container.appendChild(historyItem);
+    });
 }
 
 function clearHistory() {
@@ -506,80 +532,173 @@ function showPremiumSection(type, data) {
 }
 
 function generatePremiumContent() {
-    let html = '';
+    const container = document.createElement('div');
 
     if (lastCalcType === 'exchange') {
-        html = `
-            <div class="premium-analysis">
-                <div class="premium-section-block">
-                    <h4>💹 환율 트렌드 분석</h4>
-                    <p>현재 <strong>${lastCalcData.from}</strong> → <strong>${lastCalcData.to}</strong> 환율: <strong>${lastCalcData.rate}</strong></p>
-                    <p>변환 금액: <strong>${lastCalcData.amount} ${lastCalcData.from}</strong> = <strong>${lastCalcData.result}</strong></p>
-                </div>
-                <div class="premium-section-block">
-                    <h4>📊 환전 팁</h4>
-                    <ul class="premium-tips">
-                        <li>은행 창구보다 인터넷/모바일 환전이 약 50~80% 우대 적용</li>
-                        <li>주요 통화(USD, EUR, JPY)는 공항보다 시중 은행이 유리</li>
-                        <li>카드 결제 시 현지 통화(DCC 거절) 선택이 유리</li>
-                        <li>대금액 환전 시 환율 우대 쿠폰 활용 권장</li>
-                    </ul>
-                </div>
-                <div class="premium-section-block">
-                    <h4>🔔 환전 최적 타이밍</h4>
-                    <p>일반적으로 월초와 주초에 환율이 안정적인 경향이 있습니다. 급격한 변동이 없다면 여행 2~3주 전 분할 환전을 추천합니다.</p>
-                </div>
-            </div>
-        `;
+        const analysis = document.createElement('div');
+        analysis.className = 'premium-analysis';
+
+        // Block 1: Rate Analysis
+        const block1 = document.createElement('div');
+        block1.className = 'premium-section-block';
+        const h4_1 = document.createElement('h4');
+        h4_1.textContent = '💹 환율 트렌드 분석';
+        const p1_1 = document.createElement('p');
+        p1_1.textContent = `현재 ${lastCalcData.from} → ${lastCalcData.to} 환율: ${lastCalcData.rate}`;
+        const p1_2 = document.createElement('p');
+        p1_2.textContent = `변환 금액: ${lastCalcData.amount} ${lastCalcData.from} = ${lastCalcData.result}`;
+        block1.appendChild(h4_1);
+        block1.appendChild(p1_1);
+        block1.appendChild(p1_2);
+
+        // Block 2: Tips
+        const block2 = document.createElement('div');
+        block2.className = 'premium-section-block';
+        const h4_2 = document.createElement('h4');
+        h4_2.textContent = '📊 환전 팁';
+        const ul = document.createElement('ul');
+        ul.className = 'premium-tips';
+        const tips = [
+            '은행 창구보다 인터넷/모바일 환전이 약 50~80% 우대 적용',
+            '주요 통화(USD, EUR, JPY)는 공항보다 시중 은행이 유리',
+            '카드 결제 시 현지 통화(DCC 거절) 선택이 유리',
+            '대금액 환전 시 환율 우대 쿠폰 활용 권장'
+        ];
+        tips.forEach(tip => {
+            const li = document.createElement('li');
+            li.textContent = tip;
+            ul.appendChild(li);
+        });
+        block2.appendChild(h4_2);
+        block2.appendChild(ul);
+
+        // Block 3: Timing
+        const block3 = document.createElement('div');
+        block3.className = 'premium-section-block';
+        const h4_3 = document.createElement('h4');
+        h4_3.textContent = '🔔 환전 최적 타이밍';
+        const p3 = document.createElement('p');
+        p3.textContent = '일반적으로 월초와 주초에 환율이 안정적인 경향이 있습니다. 급격한 변동이 없다면 여행 2~3주 전 분할 환전을 추천합니다.';
+        block3.appendChild(h4_3);
+        block3.appendChild(p3);
+
+        analysis.appendChild(block1);
+        analysis.appendChild(block2);
+        analysis.appendChild(block3);
+        container.appendChild(analysis);
     } else if (lastCalcType === 'customs') {
         const isFree = lastCalcData.totalUSD < 150;
-        html = `
-            <div class="premium-analysis">
-                <div class="premium-section-block">
-                    <h4>📦 관세 상세 분석</h4>
-                    <p>상품가: <strong>$${lastCalcData.price}</strong> | 배송비: <strong>$${lastCalcData.shipping}</strong></p>
-                    <p>총 과세가격: <strong>$${lastCalcData.totalUSD}</strong></p>
-                    ${isFree ? '<p style="color: #27ae60; font-weight: 700;">✅ 면세 대상 (150달러 미만)</p>' : `<p style="color: #e74c3c; font-weight: 700;">⚠️ 과세 대상 (150달러 이상)</p>`}
-                </div>
-                <div class="premium-section-block">
-                    <h4>💡 절세 팁</h4>
-                    <ul class="premium-tips">
-                        ${isFree ? '<li>현재 면세 범위 내입니다. 추가 구매 시 $150 초과 여부를 확인하세요.</li>' : '<li>가능하다면 주문을 나누어 건당 $150 미만으로 맞추는 것이 유리합니다.</li>'}
-                        <li>FTA 적용 국가 상품은 관세율이 달라질 수 있습니다</li>
-                        <li>목록통관 대상 품목은 $200까지 면세 적용됩니다</li>
-                        <li>화장품, 건강기능식품은 별도 수량 제한이 있을 수 있습니다</li>
-                    </ul>
-                </div>
-                <div class="premium-section-block">
-                    <h4>📋 카테고리별 관세율 참고</h4>
-                    <p>의류/신발/일반: 13% | 전자제품/화장품/식품: 8%</p>
-                    <p>※ 실제 관세율은 HS코드에 따라 다를 수 있습니다.</p>
-                </div>
-            </div>
-        `;
+        const analysis = document.createElement('div');
+        analysis.className = 'premium-analysis';
+
+        // Block 1: Analysis
+        const block1 = document.createElement('div');
+        block1.className = 'premium-section-block';
+        const h4_c1 = document.createElement('h4');
+        h4_c1.textContent = '📦 관세 상세 분석';
+        const p_c1_1 = document.createElement('p');
+        p_c1_1.textContent = `상품가: $${lastCalcData.price} | 배송비: $${lastCalcData.shipping}`;
+        const p_c1_2 = document.createElement('p');
+        p_c1_2.textContent = `총 과세가격: $${lastCalcData.totalUSD}`;
+        const p_c1_3 = document.createElement('p');
+        p_c1_3.style.color = isFree ? '#27ae60' : '#e74c3c';
+        p_c1_3.style.fontWeight = '700';
+        p_c1_3.textContent = isFree ? '✅ 면세 대상 (150달러 미만)' : '⚠️ 과세 대상 (150달러 이상)';
+        block1.appendChild(h4_c1);
+        block1.appendChild(p_c1_1);
+        block1.appendChild(p_c1_2);
+        block1.appendChild(p_c1_3);
+
+        // Block 2: Tax Tips
+        const block2 = document.createElement('div');
+        block2.className = 'premium-section-block';
+        const h4_c2 = document.createElement('h4');
+        h4_c2.textContent = '💡 절세 팁';
+        const ul_c = document.createElement('ul');
+        ul_c.className = 'premium-tips';
+        const customsTips = [
+            isFree ? '현재 면세 범위 내입니다. 추가 구매 시 $150 초과 여부를 확인하세요.' : '가능하다면 주문을 나누어 건당 $150 미만으로 맞추는 것이 유리합니다.',
+            'FTA 적용 국가 상품은 관세율이 달라질 수 있습니다',
+            '목록통관 대상 품목은 $200까지 면세 적용됩니다',
+            '화장품, 건강기능식품은 별도 수량 제한이 있을 수 있습니다'
+        ];
+        customsTips.forEach(tip => {
+            const li = document.createElement('li');
+            li.textContent = tip;
+            ul_c.appendChild(li);
+        });
+        block2.appendChild(h4_c2);
+        block2.appendChild(ul_c);
+
+        // Block 3: Reference
+        const block3 = document.createElement('div');
+        block3.className = 'premium-section-block';
+        const h4_c3 = document.createElement('h4');
+        h4_c3.textContent = '📋 카테고리별 관세율 참고';
+        const p_c3_1 = document.createElement('p');
+        p_c3_1.textContent = '의류/신발/일반: 13% | 전자제품/화장품/식품: 8%';
+        const p_c3_2 = document.createElement('p');
+        p_c3_2.textContent = '※ 실제 관세율은 HS코드에 따라 다를 수 있습니다.';
+        block3.appendChild(h4_c3);
+        block3.appendChild(p_c3_1);
+        block3.appendChild(p_c3_2);
+
+        analysis.appendChild(block1);
+        analysis.appendChild(block2);
+        analysis.appendChild(block3);
+        container.appendChild(analysis);
     } else if (lastCalcType === 'tip') {
-        html = `
-            <div class="premium-analysis">
-                <div class="premium-section-block">
-                    <h4>💰 팁 상세 분석</h4>
-                    <p>국가: <strong>${lastCalcData.country}</strong> | 식사금액: <strong>${lastCalcData.symbol}${lastCalcData.meal}</strong></p>
-                    <p>팁: <strong>${lastCalcData.symbol}${lastCalcData.tip}</strong> (${lastCalcData.rate}%)</p>
-                </div>
-                <div class="premium-section-block">
-                    <h4>🌍 해외 팁 에티켓 가이드</h4>
-                    <ul class="premium-tips">
-                        <li><strong>미국/캐나다:</strong> 레스토랑 15-20%, 바 $1/음료, 택시 15%, 호텔 짐 $1-2/개</li>
-                        <li><strong>유럽:</strong> 서비스료 포함이 일반적, 소액 거스름돈 남기기</li>
-                        <li><strong>일본:</strong> 팁 불필요, 오히려 무례하게 느낄 수 있음</li>
-                        <li><strong>동남아:</strong> 관광지 5-10%, 현지 식당은 불필요</li>
-                    </ul>
-                </div>
-                <div class="premium-section-block">
-                    <h4>💳 결제 팁</h4>
-                    <p>카드 결제 시 팁은 영수증에 직접 기재합니다. 현금 팁은 테이블 위에 놓고 나가면 됩니다.</p>
-                </div>
-            </div>
-        `;
+        const analysis = document.createElement('div');
+        analysis.className = 'premium-analysis';
+
+        // Block 1: Analysis
+        const block1 = document.createElement('div');
+        block1.className = 'premium-section-block';
+        const h4_t1 = document.createElement('h4');
+        h4_t1.textContent = '💰 팁 상세 분석';
+        const p_t1_1 = document.createElement('p');
+        p_t1_1.textContent = `국가: ${lastCalcData.country} | 식사금액: ${lastCalcData.symbol}${lastCalcData.meal}`;
+        const p_t1_2 = document.createElement('p');
+        p_t1_2.textContent = `팁: ${lastCalcData.symbol}${lastCalcData.tip} (${lastCalcData.rate}%)`;
+        block1.appendChild(h4_t1);
+        block1.appendChild(p_t1_1);
+        block1.appendChild(p_t1_2);
+
+        // Block 2: Etiquette
+        const block2 = document.createElement('div');
+        block2.className = 'premium-section-block';
+        const h4_t2 = document.createElement('h4');
+        h4_t2.textContent = '🌍 해외 팁 에티켓 가이드';
+        const ul_t = document.createElement('ul');
+        ul_t.className = 'premium-tips';
+        const tipEtiquettes = [
+            '미국/캐나다: 레스토랑 15-20%, 바 $1/음료, 택시 15%, 호텔 짐 $1-2/개',
+            '유럽: 서비스료 포함이 일반적, 소액 거스름돈 남기기',
+            '일본: 팁 불필요, 오히려 무례하게 느낄 수 있음',
+            '동남아: 관광지 5-10%, 현지 식당은 불필요'
+        ];
+        tipEtiquettes.forEach(etiquette => {
+            const li = document.createElement('li');
+            li.textContent = etiquette;
+            ul_t.appendChild(li);
+        });
+        block2.appendChild(h4_t2);
+        block2.appendChild(ul_t);
+
+        // Block 3: Payment
+        const block3 = document.createElement('div');
+        block3.className = 'premium-section-block';
+        const h4_t3 = document.createElement('h4');
+        h4_t3.textContent = '💳 결제 팁';
+        const p_t3 = document.createElement('p');
+        p_t3.textContent = '카드 결제 시 팁은 영수증에 직접 기재합니다. 현금 팁은 테이블 위에 놓고 나가면 됩니다.';
+        block3.appendChild(h4_t3);
+        block3.appendChild(p_t3);
+
+        analysis.appendChild(block1);
+        analysis.appendChild(block2);
+        analysis.appendChild(block3);
+        container.appendChild(analysis);
     }
 
     return html;
