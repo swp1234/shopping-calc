@@ -25,7 +25,8 @@
     "calculating": "Calculando...",
     "error": "❌ Ocurrió un Error",
     "warningMessage": "⚠️ No se puede obtener los datos de tasa de cambio. Por favor, verifica tu conexión a internet e intenta de nuevo.",
-    "fallbackWarning": "⚠️ No se puede obtener tasas en tiempo real. Usando tasas aproximadas. Solo para referencia."
+    "fallbackWarning": "⚠️ No se puede obtener tasas en tiempo real. Usando tasas aproximadas. Solo para referencia.",
+    "heroTitle": "💱 실시간 환율 계산"
   },
   "customs": {
     "title": "Calculadora de Arancel Aduanal",
@@ -101,7 +102,9 @@
     "select": "Seleccionar Idioma"
   },
   "ads": {
-    "banner": "Publicidad"
+    "label": "Anuncio",
+    "banner": "Área de Anuncio",
+    "closeBtn": "Cerrar"
   },
   "common": {
     "won": "KRW",
@@ -110,11 +113,6 @@
   "premium": {
     "title": "🧠 Análisis Avanzado de Compras de IA",
     "btn": "🧠 Ver Análisis Avanzado de IA"
-  },
-  "ads": {
-    "label": "Anuncio",
-    "banner": "Área de Anuncio",
-    "closeBtn": "Cerrar"
   },
   "recommendations": "Prueba Estos También"
 }

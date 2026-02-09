@@ -25,7 +25,8 @@
     "calculating": "計算中...",
     "error": "❌ エラーが発生しました",
     "warningMessage": "⚠️ 為替レートデータを取得できません。インターネット接続を確認してもう一度試してください。",
-    "fallbackWarning": "⚠️ リアルタイムレートを取得できません。おおよそのレートを使用しています。参考までに。"
+    "fallbackWarning": "⚠️ リアルタイムレートを取得できません。おおよそのレートを使用しています。参考までに。",
+    "heroTitle": "💱 실시간 환율 계산"
   },
   "customs": {
     "title": "関税計算機",
@@ -101,7 +102,9 @@
     "select": "言語を選択"
   },
   "ads": {
-    "banner": "広告"
+    "label": "広告",
+    "banner": "広告エリア",
+    "closeBtn": "閉じる"
   },
   "common": {
     "won": "KRW",
@@ -110,11 +113,6 @@
   "premium": {
     "title": "🧠 AI高度なショッピング分析",
     "btn": "🧠 AI高度な分析を表示"
-  },
-  "ads": {
-    "label": "広告",
-    "banner": "広告エリア",
-    "closeBtn": "閉じる"
   },
   "recommendations": "これも試してみてください"
 }
