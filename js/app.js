@@ -21,6 +21,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     setupTabs();
     updateTipInfo(); // 초기 팁 정보 표시
     renderHistory(); // 히스토리 표시
+
+    // Hide app loader
+    const loader = document.getElementById('app-loader');
+    if (loader) {
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 300);
+    }
 });
 
 // 언어 선택 UI 설정
