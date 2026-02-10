@@ -122,14 +122,14 @@ async function calculateExchange() {
     const toCurrency = document.getElementById('to-currency').value;
 
     if (!amount || amount <= 0) {
-        alert('금액을 입력해주세요');
+        alert(window.i18n?.t('exchange.alertNoAmount') || 'Please enter an amount');
         return;
     }
 
     // 로딩 상태 표시
     const resultBox = document.getElementById('exchange-result');
     const resultValue = document.getElementById('exchange-result-value');
-    resultValue.textContent = '계산 중...';
+    resultValue.textContent = window.i18n?.t('exchange.calculating') || 'Calculating...';
     resultBox.classList.remove('hidden');
 
     try {
@@ -148,10 +148,12 @@ async function calculateExchange() {
         resultValue.textContent = `${convertedAmount.toLocaleString('ko-KR', {maximumFractionDigits: fracDigits})} ${sym}`;
 
         const rateInfo = document.getElementById('exchange-rate-info');
-        rateInfo.textContent = `환율: 1 ${fromCurrency} = ${rate.toLocaleString('ko-KR', {maximumFractionDigits: 4})} ${toCurrency}`;
+        const rateLabel = window.i18n?.t('exchange.rateLabel') || 'Exchange Rate:';
+        rateInfo.textContent = `${rateLabel} 1 ${fromCurrency} = ${rate.toLocaleString('ko-KR', {maximumFractionDigits: 4})} ${toCurrency}`;
 
         const timestamp = document.getElementById('exchange-timestamp');
-        timestamp.textContent = `기준일: ${rateData.date}`;
+        const baseDateLabel = window.i18n?.t('exchange.baseDateLabel') || 'As of:';
+        timestamp.textContent = `${baseDateLabel} ${rateData.date}`;
 
         // 폴백 환율 사용 시 경고 표시
         if (rateData.fallback) {
@@ -175,12 +177,12 @@ async function calculateExchange() {
 
     } catch (error) {
         console.error('Exchange calculation error:', error);
-        resultValue.textContent = '❌ 오류 발생';
+        resultValue.textContent = window.i18n?.t('exchange.error') || '❌ Error Occurred';
 
         const warningBox = document.getElementById('exchange-warning');
         warningBox.classList.remove('hidden');
         warningBox.className = 'result-error';
-        warningBox.textContent = '⚠️ 환율 정보를 가져올 수 없습니다. 인터넷 연결을 확인하고 다시 시도해주세요.';
+        warningBox.textContent = window.i18n?.t('exchange.warningMessage') || '⚠️ Unable to fetch exchange rate data. Please check your internet connection and try again.';
     }
 }
 
@@ -192,7 +194,7 @@ async function calculateCustoms() {
     const category = document.getElementById('product-category').value;
 
     if (!productPrice || productPrice <= 0) {
-        alert('상품 가격을 입력해주세요');
+        alert(window.i18n?.t('customs.alertNoPrice') || 'Please enter a product price');
         return;
     }
 
@@ -267,7 +269,7 @@ async function calculateCustoms() {
 
     } catch (error) {
         console.error('Customs calculation error:', error);
-        alert('관세 계산 중 오류가 발생했습니다.');
+        alert(window.i18n?.t('customs.alertError') || 'An error occurred while calculating customs.');
     }
 }
 
@@ -363,12 +365,12 @@ function calculateTip() {
     const culture = tipCultures[country];
 
     if (!mealAmount || mealAmount <= 0) {
-        alert('식사 금액을 입력해주세요');
+        alert(window.i18n?.t('tip.alertNoMeal') || 'Please enter a meal amount');
         return;
     }
 
     if (!partySize || partySize <= 0) {
-        alert('인원 수를 입력해주세요');
+        alert(window.i18n?.t('tip.alertNoPartySize') || 'Please enter the party size');
         return;
     }
 
@@ -435,7 +437,8 @@ function renderHistory() {
     const container = document.getElementById('calc-history');
 
     if (calcHistory.length === 0) {
-        container.innerHTML = '<p class="empty-message">아직 계산 내역이 없습니다</p>';
+        const emptyMsg = window.i18n?.t('history.empty') || 'No calculation history yet';
+        container.innerHTML = `<p class="empty-message">${emptyMsg}</p>`;
         return;
     }
 
@@ -478,7 +481,8 @@ function renderHistory() {
 }
 
 function clearHistory() {
-    if (confirm('모든 계산 내역을 삭제하시겠습니까?')) {
+    const confirmMsg = window.i18n?.t('history.clearConfirm') || 'Are you sure you want to delete all calculation history?';
+    if (confirm(confirmMsg)) {
         calcHistory = [];
         localStorage.setItem('calc_history', JSON.stringify(calcHistory));
         renderHistory();
@@ -498,17 +502,18 @@ function showInterstitialAd() {
 
         let seconds = 5;
         countdown.textContent = seconds;
-        closeBtn.textContent = `닫기 (${seconds})`;
+        const closeLabel = window.i18n?.t('ads.closeBtn') || 'Close';
+        closeBtn.textContent = `${closeLabel} (${seconds})`;
 
         const timer = setInterval(() => {
             seconds--;
             countdown.textContent = seconds;
-            closeBtn.textContent = `닫기 (${seconds})`;
+            closeBtn.textContent = `${closeLabel} (${seconds})`;
 
             if (seconds <= 0) {
                 clearInterval(timer);
                 closeBtn.disabled = false;
-                closeBtn.textContent = '닫기';
+                closeBtn.textContent = closeLabel;
 
                 closeBtn.onclick = () => {
                     adOverlay.classList.add('hidden');
@@ -542,7 +547,7 @@ function generatePremiumContent() {
         const block1 = document.createElement('div');
         block1.className = 'premium-section-block';
         const h4_1 = document.createElement('h4');
-        h4_1.textContent = '💹 환율 트렌드 분석';
+        h4_1.textContent = window.i18n?.t('premium.exchangeAnalysis') || '💹 Exchange Rate Trend Analysis';
         const p1_1 = document.createElement('p');
         p1_1.textContent = `현재 ${lastCalcData.from} → ${lastCalcData.to} 환율: ${lastCalcData.rate}`;
         const p1_2 = document.createElement('p');
@@ -555,14 +560,14 @@ function generatePremiumContent() {
         const block2 = document.createElement('div');
         block2.className = 'premium-section-block';
         const h4_2 = document.createElement('h4');
-        h4_2.textContent = '📊 환전 팁';
+        h4_2.textContent = window.i18n?.t('premium.exchangeTips') || '📊 Exchange Tips';
         const ul = document.createElement('ul');
         ul.className = 'premium-tips';
         const tips = [
-            '은행 창구보다 인터넷/모바일 환전이 약 50~80% 우대 적용',
-            '주요 통화(USD, EUR, JPY)는 공항보다 시중 은행이 유리',
-            '카드 결제 시 현지 통화(DCC 거절) 선택이 유리',
-            '대금액 환전 시 환율 우대 쿠폰 활용 권장'
+            window.i18n?.t('premium.exchangeTip1') || 'Internet/mobile exchanges offer 50-80% better rates than bank counters',
+            window.i18n?.t('premium.exchangeTip2') || 'Major currencies (USD, EUR, JPY) are more favorable at local banks than airports',
+            window.i18n?.t('premium.exchangeTip3') || 'When paying by card, choose local currency (decline DCC) for better rates',
+            window.i18n?.t('premium.exchangeTip4') || 'For large amounts, use exchange rate coupons for better deals'
         ];
         tips.forEach(tip => {
             const li = document.createElement('li');
@@ -576,9 +581,9 @@ function generatePremiumContent() {
         const block3 = document.createElement('div');
         block3.className = 'premium-section-block';
         const h4_3 = document.createElement('h4');
-        h4_3.textContent = '🔔 환전 최적 타이밍';
+        h4_3.textContent = window.i18n?.t('premium.exchangeTiming') || '🔔 Optimal Exchange Timing';
         const p3 = document.createElement('p');
-        p3.textContent = '일반적으로 월초와 주초에 환율이 안정적인 경향이 있습니다. 급격한 변동이 없다면 여행 2~3주 전 분할 환전을 추천합니다.';
+        p3.textContent = window.i18n?.t('premium.exchangeTimingText') || 'Exchange rates tend to be stable at the beginning of months and weeks. If there are no drastic fluctuations, split exchanges 2-3 weeks before your trip are recommended.';
         block3.appendChild(h4_3);
         block3.appendChild(p3);
 
@@ -595,7 +600,7 @@ function generatePremiumContent() {
         const block1 = document.createElement('div');
         block1.className = 'premium-section-block';
         const h4_c1 = document.createElement('h4');
-        h4_c1.textContent = '📦 관세 상세 분석';
+        h4_c1.textContent = window.i18n?.t('premium.customsAnalysis') || '📦 Detailed Customs Analysis';
         const p_c1_1 = document.createElement('p');
         p_c1_1.textContent = `상품가: $${lastCalcData.price} | 배송비: $${lastCalcData.shipping}`;
         const p_c1_2 = document.createElement('p');
@@ -603,7 +608,7 @@ function generatePremiumContent() {
         const p_c1_3 = document.createElement('p');
         p_c1_3.style.color = isFree ? '#27ae60' : '#e74c3c';
         p_c1_3.style.fontWeight = '700';
-        p_c1_3.textContent = isFree ? '✅ 면세 대상 (150달러 미만)' : '⚠️ 과세 대상 (150달러 이상)';
+        p_c1_3.textContent = isFree ? (window.i18n?.t('premium.dutyfreeTarget') || '✅ Duty-free (Under $150)') : (window.i18n?.t('premium.dutySubject') || '⚠️ Subject to Duty (Over $150)');
         block1.appendChild(h4_c1);
         block1.appendChild(p_c1_1);
         block1.appendChild(p_c1_2);
@@ -613,14 +618,14 @@ function generatePremiumContent() {
         const block2 = document.createElement('div');
         block2.className = 'premium-section-block';
         const h4_c2 = document.createElement('h4');
-        h4_c2.textContent = '💡 절세 팁';
+        h4_c2.textContent = window.i18n?.t('premium.customsTaxTips') || '💡 Tax Saving Tips';
         const ul_c = document.createElement('ul');
         ul_c.className = 'premium-tips';
         const customsTips = [
-            isFree ? '현재 면세 범위 내입니다. 추가 구매 시 $150 초과 여부를 확인하세요.' : '가능하다면 주문을 나누어 건당 $150 미만으로 맞추는 것이 유리합니다.',
-            'FTA 적용 국가 상품은 관세율이 달라질 수 있습니다',
-            '목록통관 대상 품목은 $200까지 면세 적용됩니다',
-            '화장품, 건강기능식품은 별도 수량 제한이 있을 수 있습니다'
+            isFree ? (window.i18n?.t('premium.customsTip1') || 'Currently within duty-free range. Verify when making additional purchases.') : (window.i18n?.t('premium.customsTip1Alternative') || 'If possible, split orders to stay under $150 per order to avoid duties.'),
+            window.i18n?.t('premium.customsTip2') || 'Products from FTA countries may have different customs rates',
+            window.i18n?.t('premium.customsTip3') || 'Listed clearance items are duty-free up to $200',
+            window.i18n?.t('premium.customsTip4') || 'Cosmetics and supplements may have additional quantity restrictions'
         ];
         customsTips.forEach(tip => {
             const li = document.createElement('li');
@@ -634,11 +639,11 @@ function generatePremiumContent() {
         const block3 = document.createElement('div');
         block3.className = 'premium-section-block';
         const h4_c3 = document.createElement('h4');
-        h4_c3.textContent = '📋 카테고리별 관세율 참고';
+        h4_c3.textContent = window.i18n?.t('premium.customsReference') || '📋 Customs Rate by Category';
         const p_c3_1 = document.createElement('p');
-        p_c3_1.textContent = '의류/신발/일반: 13% | 전자제품/화장품/식품: 8%';
+        p_c3_1.textContent = window.i18n?.t('premium.customsRateRef') || 'Clothing/Shoes/General: 13% | Electronics/Cosmetics/Food: 8%';
         const p_c3_2 = document.createElement('p');
-        p_c3_2.textContent = '※ 실제 관세율은 HS코드에 따라 다를 수 있습니다.';
+        p_c3_2.textContent = window.i18n?.t('premium.customsRateNote') || '※ Actual customs rates may vary depending on HS code.';
         block3.appendChild(h4_c3);
         block3.appendChild(p_c3_1);
         block3.appendChild(p_c3_2);
@@ -655,7 +660,7 @@ function generatePremiumContent() {
         const block1 = document.createElement('div');
         block1.className = 'premium-section-block';
         const h4_t1 = document.createElement('h4');
-        h4_t1.textContent = '💰 팁 상세 분석';
+        h4_t1.textContent = window.i18n?.t('premium.tipAnalysis') || '💰 Detailed Tip Analysis';
         const p_t1_1 = document.createElement('p');
         p_t1_1.textContent = `국가: ${lastCalcData.country} | 식사금액: ${lastCalcData.symbol}${lastCalcData.meal}`;
         const p_t1_2 = document.createElement('p');
@@ -668,14 +673,14 @@ function generatePremiumContent() {
         const block2 = document.createElement('div');
         block2.className = 'premium-section-block';
         const h4_t2 = document.createElement('h4');
-        h4_t2.textContent = '🌍 해외 팁 에티켓 가이드';
+        h4_t2.textContent = window.i18n?.t('premium.tipEtiquette') || '🌍 International Tipping Etiquette Guide';
         const ul_t = document.createElement('ul');
         ul_t.className = 'premium-tips';
         const tipEtiquettes = [
-            '미국/캐나다: 레스토랑 15-20%, 바 $1/음료, 택시 15%, 호텔 짐 $1-2/개',
-            '유럽: 서비스료 포함이 일반적, 소액 거스름돈 남기기',
-            '일본: 팁 불필요, 오히려 무례하게 느낄 수 있음',
-            '동남아: 관광지 5-10%, 현지 식당은 불필요'
+            window.i18n?.t('premium.tipEtiquette1') || 'USA/Canada: Restaurant 15-20%, Bar $1/drink, Taxi 15%, Hotel staff $1-2/bag',
+            window.i18n?.t('premium.tipEtiquette2') || 'Europe: Service charge typically included, leave small change',
+            window.i18n?.t('premium.tipEtiquette3') || 'Japan: Tipping not necessary, may be considered rude',
+            window.i18n?.t('premium.tipEtiquette4') || 'Southeast Asia: Tourist areas 5-10%, local restaurants not required'
         ];
         tipEtiquettes.forEach(etiquette => {
             const li = document.createElement('li');
@@ -689,9 +694,9 @@ function generatePremiumContent() {
         const block3 = document.createElement('div');
         block3.className = 'premium-section-block';
         const h4_t3 = document.createElement('h4');
-        h4_t3.textContent = '💳 결제 팁';
+        h4_t3.textContent = window.i18n?.t('premium.tipPayment') || '💳 Payment Tips';
         const p_t3 = document.createElement('p');
-        p_t3.textContent = '카드 결제 시 팁은 영수증에 직접 기재합니다. 현금 팁은 테이블 위에 놓고 나가면 됩니다.';
+        p_t3.textContent = window.i18n?.t('premium.tipPaymentText') || 'For card payments, write the tip amount directly on the receipt. For cash, leave it on the table when you leave.';
         block3.appendChild(h4_t3);
         block3.appendChild(p_t3);
 

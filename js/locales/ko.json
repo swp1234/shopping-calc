@@ -26,7 +26,10 @@
     "calculating": "계산 중...",
     "error": "❌ 오류 발생",
     "warningMessage": "⚠️ 환율 정보를 가져올 수 없습니다. 인터넷 연결을 확인하고 다시 시도해주세요.",
-    "fallbackWarning": "⚠️ 실시간 환율을 가져올 수 없어 대략적인 환율을 사용합니다. 참고용으로만 활용하세요."
+    "fallbackWarning": "⚠️ 실시간 환율을 가져올 수 없어 대략적인 환율을 사용합니다. 참고용으로만 활용하세요.",
+    "alertNoAmount": "금액을 입력해주세요",
+    "rateLabel": "환율:",
+    "baseDateLabel": "기준일:"
   },
   "customs": {
     "title": "관세 계산기",
@@ -48,7 +51,9 @@
     "customsDuty": "관세",
     "vat": "부가세",
     "finalTotal": "최종 총액 (원)",
-    "dutyFreeNotice": "💡 150달러 미만은 면세입니다"
+    "dutyFreeNotice": "💡 150달러 미만은 면세입니다",
+    "alertNoPrice": "상품 가격을 입력해주세요",
+    "alertError": "관세 계산 중 오류가 발생했습니다."
   },
   "tip": {
     "title": "팁 계산기",
@@ -63,6 +68,8 @@
     "tipRate": "팁 비율",
     "tipAmount": "팁 금액",
     "perPerson": "1인당 금액",
+    "alertNoMeal": "식사 금액을 입력해주세요",
+    "alertNoPartySize": "인원 수를 입력해주세요",
     "tipCultures": {
       "USA": {
         "name": "미국",
@@ -94,6 +101,7 @@
     "title": "📋 최근 계산 내역",
     "empty": "아직 계산 내역이 없습니다",
     "clearBtn": "내역 전체 삭제",
+    "clearConfirm": "모든 계산 내역을 삭제하시겠습니까?",
     "typeExchange": "💱 환율",
     "typeCustoms": "📦 관세",
     "typeTip": "💰 팁"
@@ -102,7 +110,9 @@
     "select": "언어 선택"
   },
   "ads": {
-    "banner": "광고 영역"
+    "label": "광고",
+    "banner": "광고 영역",
+    "closeBtn": "닫기"
   },
   "common": {
     "won": "원",
@@ -110,12 +120,35 @@
   },
   "premium": {
     "title": "🧠 AI 고급 쇼핑 분석",
-    "btn": "🧠 AI 고급 분석 보기"
-  },
-  "ads": {
-    "label": "광고",
-    "banner": "광고 영역",
-    "closeBtn": "닫기"
+    "btn": "🧠 AI 고급 분석 보기",
+    "exchangeAnalysis": "💹 환율 트렌드 분석",
+    "exchangeTips": "📊 환전 팁",
+    "exchangeTiming": "🔔 환전 최적 타이밍",
+    "exchangeTip1": "은행 창구보다 인터넷/모바일 환전이 약 50~80% 우대 적용",
+    "exchangeTip2": "주요 통화(USD, EUR, JPY)는 공항보다 시중 은행이 유리",
+    "exchangeTip3": "카드 결제 시 현지 통화(DCC 거절) 선택이 유리",
+    "exchangeTip4": "대금액 환전 시 환율 우대 쿠폰 활용 권장",
+    "exchangeTimingText": "일반적으로 월초와 주초에 환율이 안정적인 경향이 있습니다. 급격한 변동이 없다면 여행 2~3주 전 분할 환전을 추천합니다.",
+    "customsAnalysis": "📦 관세 상세 분석",
+    "customsTaxTips": "💡 절세 팁",
+    "customsReference": "📋 카테고리별 관세율 참고",
+    "dutyfreeTarget": "✅ 면세 대상 (150달러 미만)",
+    "dutySubject": "⚠️ 과세 대상 (150달러 이상)",
+    "customsTip1": "현재 면세 범위 내입니다. 추가 구매 시 $150 초과 여부를 확인하세요.",
+    "customsTip1Alternative": "가능하다면 주문을 나누어 건당 $150 미만으로 맞추는 것이 유리합니다.",
+    "customsTip2": "FTA 적용 국가 상품은 관세율이 달라질 수 있습니다",
+    "customsTip3": "목록통관 대상 품목은 $200까지 면세 적용됩니다",
+    "customsTip4": "화장품, 건강기능식품은 별도 수량 제한이 있을 수 있습니다",
+    "customsRateRef": "의류/신발/일반: 13% | 전자제품/화장품/식품: 8%",
+    "customsRateNote": "※ 실제 관세율은 HS코드에 따라 다를 수 있습니다.",
+    "tipAnalysis": "💰 팁 상세 분석",
+    "tipEtiquette": "🌍 해외 팁 에티켓 가이드",
+    "tipPayment": "💳 결제 팁",
+    "tipEtiquette1": "미국/캐나다: 레스토랑 15-20%, 바 $1/음료, 택시 15%, 호텔 짐 $1-2/개",
+    "tipEtiquette2": "유럽: 서비스료 포함이 일반적, 소액 거스름돈 남기기",
+    "tipEtiquette3": "일본: 팁 불필요, 오히려 무례하게 느낄 수 있음",
+    "tipEtiquette4": "동남아: 관광지 5-10%, 현지 식당은 불필요",
+    "tipPaymentText": "카드 결제 시 팁은 영수증에 직접 기재합니다. 현금 팁은 테이블 위에 놓고 나가면 됩니다."
   },
   "recommendations": "이것도 해보세요"
 }

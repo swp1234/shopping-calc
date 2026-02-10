@@ -26,7 +26,10 @@
     "calculating": "Calculating...",
     "error": "❌ Error Occurred",
     "warningMessage": "⚠️ Unable to fetch exchange rate data. Please check your internet connection and try again.",
-    "fallbackWarning": "⚠️ Unable to fetch real-time rates. Using approximate rates. For reference only."
+    "fallbackWarning": "⚠️ Unable to fetch real-time rates. Using approximate rates. For reference only.",
+    "alertNoAmount": "Please enter an amount",
+    "rateLabel": "Exchange Rate:",
+    "baseDateLabel": "As of:"
   },
   "customs": {
     "title": "Customs Duty Calculator",
@@ -48,7 +51,9 @@
     "customsDuty": "Customs Duty",
     "vat": "VAT",
     "finalTotal": "Final Total (KRW)",
-    "dutyFreeNotice": "💡 Items under $150 are duty-free"
+    "dutyFreeNotice": "💡 Items under $150 are duty-free",
+    "alertNoPrice": "Please enter a product price",
+    "alertError": "An error occurred while calculating customs."
   },
   "tip": {
     "title": "Tip Calculator",
@@ -63,6 +68,8 @@
     "tipRate": "Tip Rate",
     "tipAmount": "Tip Amount",
     "perPerson": "Per Person",
+    "alertNoMeal": "Please enter a meal amount",
+    "alertNoPartySize": "Please enter the party size",
     "tipCultures": {
       "USA": {
         "name": "United States",
@@ -94,6 +101,7 @@
     "title": "📋 Recent Calculations",
     "empty": "No calculation history yet",
     "clearBtn": "Clear All History",
+    "clearConfirm": "Are you sure you want to delete all calculation history?",
     "typeExchange": "💱 Exchange",
     "typeCustoms": "📦 Customs",
     "typeTip": "💰 Tip"
@@ -102,8 +110,8 @@
     "select": "Select Language"
   },
   "ads": {
-    "banner": "Advertisement",
     "label": "Ad",
+    "banner": "Advertisement",
     "closeBtn": "Close"
   },
   "common": {
@@ -112,7 +120,35 @@
   },
   "premium": {
     "title": "🧠 AI Advanced Shopping Analysis",
-    "btn": "🧠 View AI Advanced Analysis"
+    "btn": "🧠 View AI Advanced Analysis",
+    "exchangeAnalysis": "💹 Exchange Rate Trend Analysis",
+    "exchangeTips": "📊 Exchange Tips",
+    "exchangeTiming": "🔔 Optimal Exchange Timing",
+    "exchangeTip1": "Internet/mobile exchanges offer 50-80% better rates than bank counters",
+    "exchangeTip2": "Major currencies (USD, EUR, JPY) are more favorable at local banks than airports",
+    "exchangeTip3": "When paying by card, choose local currency (decline DCC) for better rates",
+    "exchangeTip4": "For large amounts, use exchange rate coupons for better deals",
+    "exchangeTimingText": "Exchange rates tend to be stable at the beginning of months and weeks. If there are no drastic fluctuations, split exchanges 2-3 weeks before your trip are recommended.",
+    "customsAnalysis": "📦 Detailed Customs Analysis",
+    "customsTaxTips": "💡 Tax Saving Tips",
+    "customsReference": "📋 Customs Rate by Category",
+    "dutyfreeTarget": "✅ Duty-free (Under $150)",
+    "dutySubject": "⚠️ Subject to Duty (Over $150)",
+    "customsTip1": "Currently within duty-free range. Verify when making additional purchases.",
+    "customsTip1Alternative": "If possible, split orders to stay under $150 per order to avoid duties.",
+    "customsTip2": "Products from FTA countries may have different customs rates",
+    "customsTip3": "Listed clearance items are duty-free up to $200",
+    "customsTip4": "Cosmetics and supplements may have additional quantity restrictions",
+    "customsRateRef": "Clothing/Shoes/General: 13% | Electronics/Cosmetics/Food: 8%",
+    "customsRateNote": "※ Actual customs rates may vary depending on HS code.",
+    "tipAnalysis": "💰 Detailed Tip Analysis",
+    "tipEtiquette": "🌍 International Tipping Etiquette Guide",
+    "tipPayment": "💳 Payment Tips",
+    "tipEtiquette1": "USA/Canada: Restaurant 15-20%, Bar $1/drink, Taxi 15%, Hotel staff $1-2/bag",
+    "tipEtiquette2": "Europe: Service charge typically included, leave small change",
+    "tipEtiquette3": "Japan: Tipping not necessary, may be considered rude",
+    "tipEtiquette4": "Southeast Asia: Tourist areas 5-10%, local restaurants not required",
+    "tipPaymentText": "For card payments, write the tip amount directly on the receipt. For cash, leave it on the table when you leave."
   },
   "recommendations": "Try These Too"
 }
