@@ -6,23 +6,22 @@ try { calcHistory = JSON.parse(localStorage.getItem('calc_history') || '[]'); } 
 
 // 다국어 지원 초기화
 document.addEventListener('DOMContentLoaded', async function() {
-    // i18n 초기화
-    await i18n.loadTranslations(i18n.getCurrentLanguage());
-    i18n.updateUI();
+    try {
+        await i18n.loadTranslations(i18n.getCurrentLanguage());
+        i18n.updateUI();
 
-    // 현재 언어 활성화 표시
-    const currentLang = i18n.getCurrentLanguage();
-    document.querySelector(`[data-lang="${currentLang}"]`)?.classList.add('active');
+        const currentLang = i18n.getCurrentLanguage();
+        document.querySelector(`[data-lang="${currentLang}"]`)?.classList.add('active');
 
-    // 언어 선택 이벤트 설정
-    setupLanguageSelector();
+        setupLanguageSelector();
+    } catch (e) {
+        console.warn('i18n init failed:', e);
+    }
 
-    // 기존 기능 초기화
     setupTabs();
-    updateTipInfo(); // 초기 팁 정보 표시
-    renderHistory(); // 히스토리 표시
+    updateTipInfo();
+    renderHistory();
 
-    // Hide app loader
     const loader = document.getElementById('app-loader');
     if (loader) {
         loader.classList.add('hidden');
