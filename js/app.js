@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const currentLang = i18n.getCurrentLanguage();
         document.querySelector(`[data-lang="${currentLang}"]`)?.classList.add('active');
 
+        setupThemeToggle();
         setupLanguageSelector();
     } catch (e) {
         console.warn('i18n init failed:', e);
@@ -28,6 +29,26 @@ document.addEventListener('DOMContentLoaded', async function() {
         setTimeout(() => loader.remove(), 300);
     }
 });
+
+// 테마 토글 설정
+function setupThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) return;
+
+    // Load saved theme or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+
+    // Toggle theme on click
+    themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
+    });
+}
 
 // 언어 선택 UI 설정
 function setupLanguageSelector() {
