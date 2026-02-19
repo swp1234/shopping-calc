@@ -118,6 +118,31 @@
     "won": "원",
     "dollar": "달러"
   },
+  "currency": {
+    "usd": "🇺🇸 미국 달러 (USD)",
+    "eur": "🇪🇺 유로 (EUR)",
+    "jpy": "🇯🇵 일본 엔 (JPY)",
+    "cny": "🇨🇳 중국 위안 (CNY)",
+    "gbp": "🇬🇧 영국 파운드 (GBP)",
+    "aud": "🇦🇺 호주 달러 (AUD)",
+    "cad": "🇨🇦 캐나다 달러 (CAD)",
+    "thb": "🇹🇭 태국 바트 (THB)",
+    "vnd": "🇻🇳 베트남 동 (VND)",
+    "sgd": "🇸🇬 싱가포르 달러 (SGD)",
+    "krw": "🇰🇷 한국 원 (KRW)"
+  },
+  "country": {
+    "usa": "🇺🇸 미국",
+    "chn": "🇨🇳 중국",
+    "jpn": "🇯🇵 일본",
+    "eur": "🇪🇺 유럽",
+    "usa_tip": "🇺🇸 미국",
+    "can_tip": "🇨🇦 캐나다",
+    "gbr_tip": "🇬🇧 영국",
+    "fra_tip": "🇫🇷 프랑스",
+    "jpn_tip": "🇯🇵 일본",
+    "chn_tip": "🇨🇳 중국"
+  },
   "premium": {
     "title": "🧠 AI 고급 쇼핑 분석",
     "btn": "🧠 AI 고급 분석 보기",

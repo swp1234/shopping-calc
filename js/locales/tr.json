@@ -110,6 +110,31 @@
     "won": "TRY",
     "dollar": "USD"
   },
+  "currency": {
+    "usd": "🇺🇸 ABD Doları (USD)",
+    "eur": "🇪🇺 Euro (EUR)",
+    "jpy": "🇯🇵 Japon Yeni (JPY)",
+    "cny": "🇨🇳 Çin Yuanı (CNY)",
+    "gbp": "🇬🇧 İngiliz Sterlini (GBP)",
+    "aud": "🇦🇺 Avustralya Doları (AUD)",
+    "cad": "🇨🇦 Kanada Doları (CAD)",
+    "thb": "🇹🇭 Tayland Bahtı (THB)",
+    "vnd": "🇻🇳 Vietnam Dongu (VND)",
+    "sgd": "🇸🇬 Singapur Doları (SGD)",
+    "krw": "🇰🇷 Kore Wonu (KRW)"
+  },
+  "country": {
+    "usa": "🇺🇸 Amerika",
+    "chn": "🇨🇳 Çin",
+    "jpn": "🇯🇵 Japonya",
+    "eur": "🇪🇺 Avrupa",
+    "usa_tip": "🇺🇸 Amerika",
+    "can_tip": "🇨🇦 Kanada",
+    "gbr_tip": "🇬🇧 Birleşik Krallık",
+    "fra_tip": "🇫🇷 Fransa",
+    "jpn_tip": "🇯🇵 Japonya",
+    "chn_tip": "🇨🇳 Çin"
+  },
   "premium": {
     "title": "🧠 AI Gelişmiş Alışveriş Analizi",
     "btn": "🧠 AI Gelişmiş Analizini Görüntüle"

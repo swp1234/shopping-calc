@@ -110,6 +110,31 @@
     "won": "韩元",
     "dollar": "美元"
   },
+  "currency": {
+    "usd": "🇺🇸 美元 (USD)",
+    "eur": "🇪🇺 欧元 (EUR)",
+    "jpy": "🇯🇵 日元 (JPY)",
+    "cny": "🇨🇳 人民币 (CNY)",
+    "gbp": "🇬🇧 英镑 (GBP)",
+    "aud": "🇦🇺 澳元 (AUD)",
+    "cad": "🇨🇦 加元 (CAD)",
+    "thb": "🇹🇭 泰铢 (THB)",
+    "vnd": "🇻🇳 越南盾 (VND)",
+    "sgd": "🇸🇬 新加坡元 (SGD)",
+    "krw": "🇰🇷 韩元 (KRW)"
+  },
+  "country": {
+    "usa": "🇺🇸 美国",
+    "chn": "🇨🇳 中国",
+    "jpn": "🇯🇵 日本",
+    "eur": "🇪🇺 欧洲",
+    "usa_tip": "🇺🇸 美国",
+    "can_tip": "🇨🇦 加拿大",
+    "gbr_tip": "🇬🇧 英国",
+    "fra_tip": "🇫🇷 法国",
+    "jpn_tip": "🇯🇵 日本",
+    "chn_tip": "🇨🇳 中国"
+  },
   "premium": {
     "title": "🧠 AI高级购物分析",
     "btn": "🧠 查看AI高级分析"

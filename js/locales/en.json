@@ -118,6 +118,31 @@
     "won": "KRW",
     "dollar": "USD"
   },
+  "currency": {
+    "usd": "🇺🇸 US Dollar (USD)",
+    "eur": "🇪🇺 Euro (EUR)",
+    "jpy": "🇯🇵 Japanese Yen (JPY)",
+    "cny": "🇨🇳 Chinese Yuan (CNY)",
+    "gbp": "🇬🇧 British Pound (GBP)",
+    "aud": "🇦🇺 Australian Dollar (AUD)",
+    "cad": "🇨🇦 Canadian Dollar (CAD)",
+    "thb": "🇹🇭 Thai Baht (THB)",
+    "vnd": "🇻🇳 Vietnamese Dong (VND)",
+    "sgd": "🇸🇬 Singapore Dollar (SGD)",
+    "krw": "🇰🇷 Korean Won (KRW)"
+  },
+  "country": {
+    "usa": "🇺🇸 United States",
+    "chn": "🇨🇳 China",
+    "jpn": "🇯🇵 Japan",
+    "eur": "🇪🇺 Europe",
+    "usa_tip": "🇺🇸 United States",
+    "can_tip": "🇨🇦 Canada",
+    "gbr_tip": "🇬🇧 United Kingdom",
+    "fra_tip": "🇫🇷 France",
+    "jpn_tip": "🇯🇵 Japan",
+    "chn_tip": "🇨🇳 China"
+  },
   "premium": {
     "title": "🧠 AI Advanced Shopping Analysis",
     "btn": "🧠 View AI Advanced Analysis",

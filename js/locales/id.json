@@ -110,6 +110,31 @@
     "won": "KRW",
     "dollar": "USD"
   },
+  "currency": {
+    "usd": "🇺🇸 Dolar AS (USD)",
+    "eur": "🇪🇺 Euro (EUR)",
+    "jpy": "🇯🇵 Yen Jepang (JPY)",
+    "cny": "🇨🇳 Yuan Tiongkok (CNY)",
+    "gbp": "🇬🇧 Pound Inggris (GBP)",
+    "aud": "🇦🇺 Dolar Australia (AUD)",
+    "cad": "🇨🇦 Dolar Kanada (CAD)",
+    "thb": "🇹🇭 Baht Thailand (THB)",
+    "vnd": "🇻🇳 Dong Vietnam (VND)",
+    "sgd": "🇸🇬 Dolar Singapura (SGD)",
+    "krw": "🇰🇷 Won Korea (KRW)"
+  },
+  "country": {
+    "usa": "🇺🇸 Amerika Serikat",
+    "chn": "🇨🇳 Tiongkok",
+    "jpn": "🇯🇵 Jepang",
+    "eur": "🇪🇺 Eropa",
+    "usa_tip": "🇺🇸 Amerika Serikat",
+    "can_tip": "🇨🇦 Kanada",
+    "gbr_tip": "🇬🇧 Inggris",
+    "fra_tip": "🇫🇷 Prancis",
+    "jpn_tip": "🇯🇵 Jepang",
+    "chn_tip": "🇨🇳 Tiongkok"
+  },
   "premium": {
     "title": "🧠 Analisis Belanja AI Lanjutan",
     "btn": "🧠 Lihat Analisis AI Lanjutan"

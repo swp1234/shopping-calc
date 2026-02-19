@@ -110,6 +110,31 @@
     "won": "KRW",
     "dollar": "USD"
   },
+  "currency": {
+    "usd": "🇺🇸 米ドル (USD)",
+    "eur": "🇪🇺 ユーロ (EUR)",
+    "jpy": "🇯🇵 日本円 (JPY)",
+    "cny": "🇨🇳 中国人民元 (CNY)",
+    "gbp": "🇬🇧 英ポンド (GBP)",
+    "aud": "🇦🇺 豪ドル (AUD)",
+    "cad": "🇨🇦 カナダドル (CAD)",
+    "thb": "🇹🇭 タイバーツ (THB)",
+    "vnd": "🇻🇳 ベトナムドン (VND)",
+    "sgd": "🇸🇬 シンガポールドル (SGD)",
+    "krw": "🇰🇷 韓国ウォン (KRW)"
+  },
+  "country": {
+    "usa": "🇺🇸 アメリカ",
+    "chn": "🇨🇳 中国",
+    "jpn": "🇯🇵 日本",
+    "eur": "🇪🇺 ヨーロッパ",
+    "usa_tip": "🇺🇸 アメリカ",
+    "can_tip": "🇨🇦 カナダ",
+    "gbr_tip": "🇬🇧 イギリス",
+    "fra_tip": "🇫🇷 フランス",
+    "jpn_tip": "🇯🇵 日本",
+    "chn_tip": "🇨🇳 中国"
+  },
   "premium": {
     "title": "🧠 AI高度なショッピング分析",
     "btn": "🧠 AI高度な分析を表示"

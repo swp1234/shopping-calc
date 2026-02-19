@@ -110,6 +110,31 @@
     "won": "KRW",
     "dollar": "USD"
   },
+  "currency": {
+    "usd": "🇺🇸 Dólar estadounidense (USD)",
+    "eur": "🇪🇺 Euro (EUR)",
+    "jpy": "🇯🇵 Yen japonés (JPY)",
+    "cny": "🇨🇳 Yuan chino (CNY)",
+    "gbp": "🇬🇧 Libra esterlina (GBP)",
+    "aud": "🇦🇺 Dólar australiano (AUD)",
+    "cad": "🇨🇦 Dólar canadiense (CAD)",
+    "thb": "🇹🇭 Baht tailandés (THB)",
+    "vnd": "🇻🇳 Dong vietnamita (VND)",
+    "sgd": "🇸🇬 Dólar de Singapur (SGD)",
+    "krw": "🇰🇷 Won coreano (KRW)"
+  },
+  "country": {
+    "usa": "🇺🇸 Estados Unidos",
+    "chn": "🇨🇳 China",
+    "jpn": "🇯🇵 Japón",
+    "eur": "🇪🇺 Europa",
+    "usa_tip": "🇺🇸 Estados Unidos",
+    "can_tip": "🇨🇦 Canadá",
+    "gbr_tip": "🇬🇧 Reino Unido",
+    "fra_tip": "🇫🇷 Francia",
+    "jpn_tip": "🇯🇵 Japón",
+    "chn_tip": "🇨🇳 China"
+  },
   "premium": {
     "title": "🧠 Análisis Avanzado de Compras de IA",
     "btn": "🧠 Ver Análisis Avanzado de IA"
