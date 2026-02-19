@@ -92,6 +92,11 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link" data-i18n="accessibility.skipMain">Skip to main content</a>
+    <style>
+        .skip-link{position:absolute;top:-40px;left:0;background:#000;color:#fff;padding:8px 16px;text-decoration:none;z-index:10000;border-radius:0 0 4px 0;font-size:14px;transition:top 0.2s}
+        .skip-link:focus{top:0}
+    </style>
     <div class="app-loader" id="app-loader">
         <div class="loader-content">
             <div class="loader-emoji">🛍️</div>
@@ -134,7 +139,7 @@
         </header>
 
         <!-- 계산기 영역 -->
-        <main class="calculator-container">
+        <main class="calculator-container" id="main-content">
             <!-- 히어로 배지 -->
             <div class="hero-badge-section">
                 <span class="hero-badge" data-i18n="exchange.heroTitle">💱 실시간 환율 계산</span>
