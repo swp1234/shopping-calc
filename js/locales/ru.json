@@ -139,5 +139,12 @@
     "title": "🧠 Продвинутый анализ покупок AI",
     "btn": "🧠 Просмотр продвинутого анализа AI"
   },
-  "recommendations": "Попробуйте также"
+  "recommendations": "Попробуйте также",
+  "related": {
+    "title": "Ещё интересное",
+    "unitConverter": "Конвертер единиц",
+    "taxRefundPreview": "Предпросмотр возврата",
+    "sebatdonCalc": "Калькулятор себатдон",
+    "bmiCalculator": "Калькулятор ИМТ"
+  }
 }

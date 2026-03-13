@@ -175,5 +175,12 @@
     "tipEtiquette4": "Southeast Asia: Tourist areas 5-10%, local restaurants not required",
     "tipPaymentText": "For card payments, write the tip amount directly on the receipt. For cash, leave it on the table when you leave."
   },
-  "recommendations": "Try These Too"
+  "recommendations": "Try These Too",
+  "related": {
+    "title": "More to Explore",
+    "unitConverter": "Unit Converter",
+    "taxRefundPreview": "Tax Refund Preview",
+    "sebatdonCalc": "Sebatdon Calc",
+    "bmiCalculator": "BMI Calculator"
+  }
 }

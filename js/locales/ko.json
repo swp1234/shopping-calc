@@ -175,5 +175,12 @@
     "tipEtiquette4": "동남아: 관광지 5-10%, 현지 식당은 불필요",
     "tipPaymentText": "카드 결제 시 팁은 영수증에 직접 기재합니다. 현금 팁은 테이블 위에 놓고 나가면 됩니다."
   },
-  "recommendations": "이것도 해보세요"
+  "recommendations": "이것도 해보세요",
+  "related": {
+    "title": "더 많은 콘텐츠",
+    "unitConverter": "단위 변환기",
+    "taxRefundPreview": "세금 환급 미리보기",
+    "sebatdonCalc": "세뱃돈 계산기",
+    "bmiCalculator": "BMI 계산기"
+  }
 }

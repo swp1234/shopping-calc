@@ -139,5 +139,12 @@
     "title": "🧠 AI उन्नत शॉपिंग विश्लेषण",
     "btn": "🧠 AI उन्नत विश्लेषण देखें"
   },
-  "recommendations": "यह भी आजमाएं"
+  "recommendations": "यह भी आजमाएं",
+  "related": {
+    "title": "और खोजें",
+    "unitConverter": "यूनिट कनवर्टर",
+    "taxRefundPreview": "टैक्स रिफंड प्रीव्यू",
+    "sebatdonCalc": "सेबत्दोन कैलक",
+    "bmiCalculator": "BMI कैलकुलेटर"
+  }
 }

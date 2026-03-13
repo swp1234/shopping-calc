@@ -139,5 +139,12 @@
     "title": "🧠 Análisis Avanzado de Compras de IA",
     "btn": "🧠 Ver Análisis Avanzado de IA"
   },
-  "recommendations": "Prueba Estos También"
+  "recommendations": "Prueba Estos También",
+  "related": {
+    "title": "Explora más",
+    "unitConverter": "Conversor de unidades",
+    "taxRefundPreview": "Vista previa de reembolso",
+    "sebatdonCalc": "Calculadora Sebatdon",
+    "bmiCalculator": "Calculadora de IMC"
+  }
 }

@@ -139,5 +139,12 @@
     "title": "🧠 AI Gelişmiş Alışveriş Analizi",
     "btn": "🧠 AI Gelişmiş Analizini Görüntüle"
   },
-  "recommendations": "Bunları da Dene"
+  "recommendations": "Bunları da Dene",
+  "related": {
+    "title": "Daha fazla keşfet",
+    "unitConverter": "Birim Dönüştürücü",
+    "taxRefundPreview": "Vergi İadesi Önizleme",
+    "sebatdonCalc": "Sebatdon Hesap",
+    "bmiCalculator": "VKİ Hesaplayıcı"
+  }
 }

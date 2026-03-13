@@ -139,5 +139,12 @@
     "title": "🧠 AI高级购物分析",
     "btn": "🧠 查看AI高级分析"
   },
-  "recommendations": "也试试这些"
+  "recommendations": "也试试这些",
+  "related": {
+    "title": "探索更多",
+    "unitConverter": "单位转换",
+    "taxRefundPreview": "退税预览",
+    "sebatdonCalc": "压岁钱计算",
+    "bmiCalculator": "BMI计算器"
+  }
 }

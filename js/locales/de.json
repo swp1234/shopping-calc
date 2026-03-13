@@ -139,5 +139,12 @@
     "title": "🧠 KI-fortgeschrittene Shopping-Analyse",
     "btn": "🧠 KI-fortgeschrittene Analyse anzeigen"
   },
-  "recommendations": "Probiere auch diese"
+  "recommendations": "Probiere auch diese",
+  "related": {
+    "title": "Mehr entdecken",
+    "unitConverter": "Einheitenrechner",
+    "taxRefundPreview": "Steuererstattung-Vorschau",
+    "sebatdonCalc": "Sebatdon-Rechner",
+    "bmiCalculator": "BMI-Rechner"
+  }
 }

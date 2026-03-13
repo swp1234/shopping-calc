@@ -393,16 +393,15 @@
         }
     </script>
     <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button onclick="(async()=>{const u=location.href,t=document.title;if(typeof gtag==='function')gtag('event','share',{method:navigator.share?'native':'clipboard',app_name:'shopping-calc'});if(navigator.share){try{await navigator.share({title:t,url:u})}catch(e){}}else{await navigator.clipboard.writeText(u);this.textContent='✅';setTimeout(()=>this.textContent='📤',1500)}})()" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
-    <section class="related-games" style="margin:20px auto;padding:16px;max-width:480px;background:rgba(255,255,255,0.05);border-radius:12px;">
-      <p style="font-size:13px;color:#aaa;margin:0 0 8px 0;font-weight:600;">More Free Tools</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a href="/sebatdon-calc/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">💵 Sebatdon Calc</a>
-        <a href="/tax-refund-preview/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">💰 Tax Refund</a>
-        <a href="/unit-converter/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">📐 Unit Converter</a>
-        <a href="/bmi-calculator/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">⚖️ BMI Calculator</a>
-        <a href="/dday-counter/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">📅 D-Day Counter</a>
+    <div style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
+      <h3 data-i18n="related.title" style="font-size:16px;color:#a0a0b8;margin-bottom:12px;text-align:center;">More to Explore</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <a href="/unit-converter/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">🔄</span><span data-i18n="related.unitConverter" style="font-size:12px;font-weight:600;color:#a0a0b8;">Unit Converter</span></a>
+        <a href="/tax-refund-preview/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">💰</span><span data-i18n="related.taxRefundPreview" style="font-size:12px;font-weight:600;color:#a0a0b8;">Tax Refund Preview</span></a>
+        <a href="/sebatdon-calc/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">🏠</span><span data-i18n="related.sebatdonCalc" style="font-size:12px;font-weight:600;color:#a0a0b8;">Sebatdon Calc</span></a>
+        <a href="/bmi-calculator/" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">📊</span><span data-i18n="related.bmiCalculator" style="font-size:12px;font-weight:600;color:#a0a0b8;">BMI Calculator</span></a>
       </div>
-    </section>
+    </div>
     <script src="/portal/js/cross-promo.js" defer></script>
 </body>
 </html>

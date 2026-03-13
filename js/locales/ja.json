@@ -139,5 +139,12 @@
     "title": "🧠 AI高度なショッピング分析",
     "btn": "🧠 AI高度な分析を表示"
   },
-  "recommendations": "これも試してみてください"
+  "recommendations": "これも試してみてください",
+  "related": {
+    "title": "もっと楽しむ",
+    "unitConverter": "単位変換",
+    "taxRefundPreview": "税金還付プレビュー",
+    "sebatdonCalc": "お年玉計算",
+    "bmiCalculator": "BMI計算"
+  }
 }

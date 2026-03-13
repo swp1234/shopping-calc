@@ -139,5 +139,12 @@
     "title": "🧠 Analisis Belanja AI Lanjutan",
     "btn": "🧠 Lihat Analisis AI Lanjutan"
   },
-  "recommendations": "Coba Juga"
+  "recommendations": "Coba Juga",
+  "related": {
+    "title": "Jelajahi lainnya",
+    "unitConverter": "Konversi Satuan",
+    "taxRefundPreview": "Pratinjau Pengembalian Pajak",
+    "sebatdonCalc": "Kalkulator Sebatdon",
+    "bmiCalculator": "Kalkulator BMI"
+  }
 }
