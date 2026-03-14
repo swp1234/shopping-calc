@@ -146,5 +146,24 @@
     "taxRefundPreview": "Steuererstattung-Vorschau",
     "sebatdonCalc": "Sebatdon-Rechner",
     "bmiCalculator": "BMI-Rechner"
+  },
+  "about": {
+    "title": "Über den Shopping-Rechner",
+    "desc": "Der DopaBrain Shopping-Rechner kombiniert Währungsumrechnung, Zollschätzung und Trinkgeld-Guide. Völlig kostenlos.",
+    "howTitle": "So verwenden Sie den Rechner",
+    "howDesc": "Wählen Sie zwischen Wechselkurs, Zoll oder Trinkgeld-Tabs."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Sind die Wechselkurse in Echtzeit?",
+    "a1": "Ja, wir verwenden Echtzeit-Wechselkurs-APIs.",
+    "q2": "Wie werden Zollgebühren berechnet?",
+    "a2": "Basierend auf Produktpreis, Versand, Land und Kategorie berechnet.",
+    "q3": "Welche Währungen werden unterstützt?",
+    "a3": "Wichtige Währungen wie USD, EUR, JPY, CNY, GBP und mehr werden unterstützt.",
+    "q4": "Welche Länder unterstützt der Trinkgeld-Rechner?",
+    "a4": "Deckt wichtige Reiseziele ab: USA, Kanada, UK, Frankreich, Japan und China.",
+    "q5": "Ist dieser Rechner kostenlos?",
+    "a5": "Ja, alle Funktionen sind völlig kostenlos."
   }
 }

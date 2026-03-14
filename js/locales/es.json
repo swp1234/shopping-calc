@@ -146,5 +146,24 @@
     "taxRefundPreview": "Vista previa de reembolso",
     "sebatdonCalc": "Calculadora Sebatdon",
     "bmiCalculator": "Calculadora de IMC"
+  },
+  "about": {
+    "title": "Acerca de la Calculadora de Compras",
+    "desc": "La Calculadora de Compras DopaBrain combina conversión de divisas, estimación de aduanas y guía de propinas. Completamente gratis.",
+    "howTitle": "Cómo usar la Calculadora",
+    "howDesc": "Elige entre las pestañas de tipo de cambio, aduanas o propinas."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Los tipos de cambio son en tiempo real?",
+    "a1": "Sí, usamos APIs de tipos de cambio en tiempo real.",
+    "q2": "¿Cómo se calculan los aranceles?",
+    "a2": "Se calcula según precio, envío, país y categoría del producto.",
+    "q3": "¿Qué monedas se soportan?",
+    "a3": "Se soportan monedas principales incluyendo USD, EUR, JPY, CNY, GBP y más.",
+    "q4": "¿Qué países soporta la calculadora de propinas?",
+    "a4": "Cubre destinos principales: EE.UU., Canadá, Reino Unido, Francia, Japón y China.",
+    "q5": "¿Esta calculadora es gratis?",
+    "a5": "Sí, todas las funciones son completamente gratuitas."
   }
 }

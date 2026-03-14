@@ -146,5 +146,24 @@
     "taxRefundPreview": "Pratinjau Pengembalian Pajak",
     "sebatdonCalc": "Kalkulator Sebatdon",
     "bmiCalculator": "Kalkulator BMI"
+  },
+  "about": {
+    "title": "Tentang Kalkulator Belanja",
+    "desc": "Kalkulator Belanja DopaBrain menggabungkan konversi mata uang, estimasi bea cukai, dan panduan tip. Sepenuhnya gratis.",
+    "howTitle": "Cara Menggunakan Kalkulator",
+    "howDesc": "Pilih dari tab Kurs, Bea Cukai, atau Kalkulator Tip."
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "q1": "Apakah kurs mata uang real-time?",
+    "a1": "Ya, kami menggunakan API kurs real-time.",
+    "q2": "Bagaimana bea cukai dihitung?",
+    "a2": "Dihitung berdasarkan harga, ongkos kirim, negara, dan kategori produk.",
+    "q3": "Mata uang apa yang didukung?",
+    "a3": "Mata uang utama termasuk USD, EUR, JPY, CNY, GBP dan lainnya didukung.",
+    "q4": "Negara mana saja yang didukung kalkulator tip?",
+    "a4": "Mencakup tujuan wisata utama: AS, Kanada, Inggris, Prancis, Jepang, dan Tiongkok.",
+    "q5": "Apakah kalkulator ini gratis?",
+    "a5": "Ya, semua fitur sepenuhnya gratis."
   }
 }

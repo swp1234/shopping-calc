@@ -146,5 +146,24 @@
     "taxRefundPreview": "Aperçu remboursement",
     "sebatdonCalc": "Calculateur Sebatdon",
     "bmiCalculator": "Calculateur IMC"
+  },
+  "about": {
+    "title": "À propos du Calculateur d'Achats",
+    "desc": "Le Calculateur d'Achats DopaBrain combine conversion de devises, estimation des douanes et guide des pourboires. Entièrement gratuit.",
+    "howTitle": "Comment utiliser le Calculateur",
+    "howDesc": "Choisissez parmi les onglets taux de change, douanes ou pourboires."
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "q1": "Les taux de change sont-ils en temps réel ?",
+    "a1": "Oui, nous utilisons des API de taux de change en temps réel.",
+    "q2": "Comment les droits de douane sont-ils calculés ?",
+    "a2": "Calculé en fonction du prix, des frais de port, du pays et de la catégorie.",
+    "q3": "Quelles devises sont prises en charge ?",
+    "a3": "Les principales devises dont USD, EUR, JPY, CNY, GBP et plus sont prises en charge.",
+    "q4": "Quels pays le calculateur de pourboires prend-il en charge ?",
+    "a4": "Couvre les principales destinations : États-Unis, Canada, Royaume-Uni, France, Japon et Chine.",
+    "q5": "Ce calculateur est-il gratuit ?",
+    "a5": "Oui, toutes les fonctionnalités sont entièrement gratuites."
   }
 }

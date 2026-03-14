@@ -146,5 +146,24 @@
     "taxRefundPreview": "Prévia de reembolso",
     "sebatdonCalc": "Calculadora Sebatdon",
     "bmiCalculator": "Calculadora de IMC"
+  },
+  "about": {
+    "title": "Sobre a Calculadora de Compras",
+    "desc": "A Calculadora de Compras DopaBrain combina conversão de moedas, estimativa de impostos e guia de gorjetas. Totalmente grátis.",
+    "howTitle": "Como usar a Calculadora",
+    "howDesc": "Escolha entre as abas de câmbio, alfândega ou gorjetas."
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "q1": "As taxas de câmbio são em tempo real?",
+    "a1": "Sim, usamos APIs de taxas de câmbio em tempo real.",
+    "q2": "Como os impostos alfandegários são calculados?",
+    "a2": "Calculado com base no preço, frete, país e categoria do produto.",
+    "q3": "Quais moedas são suportadas?",
+    "a3": "Moedas principais incluindo USD, EUR, JPY, CNY, GBP e mais são suportadas.",
+    "q4": "Quais países a calculadora de gorjetas suporta?",
+    "a4": "Cobre destinos principais: EUA, Canadá, Reino Unido, França, Japão e China.",
+    "q5": "Esta calculadora é gratuita?",
+    "a5": "Sim, todas as funcionalidades são completamente gratuitas."
   }
 }

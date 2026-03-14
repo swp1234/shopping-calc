@@ -146,5 +146,24 @@
     "taxRefundPreview": "Vergi İadesi Önizleme",
     "sebatdonCalc": "Sebatdon Hesap",
     "bmiCalculator": "VKİ Hesaplayıcı"
+  },
+  "about": {
+    "title": "Alışveriş Hesaplayıcısı Hakkında",
+    "desc": "DopaBrain Alışveriş Hesaplayıcısı döviz, gümrük ve bahşiş rehberini birleştirir. Tamamen ücretsiz.",
+    "howTitle": "Hesaplayıcı Nasıl Kullanılır",
+    "howDesc": "Döviz, gümrük veya bahşiş sekmelerinden seçin."
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "q1": "Döviz kurları gerçek zamanlı mı?",
+    "a1": "Evet, gerçek zamanlı döviz kuru API'leri kullanıyoruz.",
+    "q2": "Gümrük vergileri nasıl hesaplanır?",
+    "a2": "Ürün fiyatı, kargo, ülke ve kategoriye göre hesaplanır.",
+    "q3": "Hangi para birimleri destekleniyor?",
+    "a3": "USD, EUR, JPY, CNY, GBP ve daha fazlası dahil ana para birimleri desteklenmektedir.",
+    "q4": "Bahşiş hesaplayıcısı hangi ülkeleri destekler?",
+    "a4": "ABD, Kanada, İngiltere, Fransa, Japonya ve Çin dahil başlıca seyahat destinasyonlarını kapsar.",
+    "q5": "Bu hesaplayıcı ücretsiz mi?",
+    "a5": "Evet, tüm özellikler tamamen ücretsizdir."
   }
 }

@@ -182,5 +182,24 @@
     "taxRefundPreview": "Tax Refund Preview",
     "sebatdonCalc": "Sebatdon Calc",
     "bmiCalculator": "BMI Calculator"
+  },
+  "about": {
+    "title": "About Shopping Calculator",
+    "desc": "DopaBrain Shopping Calculator combines real-time currency conversion, customs duty estimation, and country-specific tipping guide in one tool. Know your true cost when shopping internationally or traveling. Completely free.",
+    "howTitle": "How to Use the Shopping Calculator",
+    "howDesc": "Choose from Exchange Rate, Customs Duty, or Tip Calculator tabs. Convert currencies with real-time rates, estimate customs costs for international purchases, or calculate tips based on country-specific tipping customs."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Are exchange rates real-time?",
+    "a1": "Yes, we use real-time exchange rate APIs. If the API is unavailable, fallback fixed rates are used with a warning displayed.",
+    "q2": "How are customs duties calculated?",
+    "a2": "Based on product price, shipping cost, purchase country, and product category, customs duty and VAT (10%) are calculated. Items under $150 are duty-free.",
+    "q3": "Which currencies are supported?",
+    "a3": "Major currencies including USD, EUR, JPY, CNY, GBP, AUD, CAD, THB, VND, SGD, and KRW are supported.",
+    "q4": "Which countries does the tip calculator support?",
+    "a4": "The tip calculator covers major travel destinations including the USA, Canada, UK, France, Japan, and China, with country-specific tipping culture information.",
+    "q5": "Is this calculator free?",
+    "a5": "Yes, all features are completely free. Use currency conversion, customs duty estimation, and tip calculation unlimited times without registration or payment."
   }
 }

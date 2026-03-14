@@ -52,6 +52,32 @@
     <link rel="alternate" hreflang="de" href="https://dopabrain.com/shopping-calc/">
     <link rel="alternate" hreflang="fr" href="https://dopabrain.com/shopping-calc/">
     <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/shopping-calc/">
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dopabrain.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://dopabrain.com/portal/" },
+        { "@type": "ListItem", "position": 3, "name": "Shopping Calculator", "item": "https://dopabrain.com/shopping-calc/" }
+      ]
+    }
+    </script>
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Are exchange rates real-time?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we use real-time exchange rate APIs. If the API is unavailable, fallback fixed rates are used with a warning displayed." }},
+        { "@type": "Question", "name": "How are customs duties calculated?", "acceptedAnswer": { "@type": "Answer", "text": "Based on product price, shipping cost, purchase country, and product category, customs duty and VAT (10%) are calculated. Items under $150 are duty-free." }},
+        { "@type": "Question", "name": "Which currencies are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Major currencies including USD, EUR, JPY, CNY, GBP, AUD, CAD, THB, VND, SGD, and KRW are supported." }},
+        { "@type": "Question", "name": "Which countries does the tip calculator support?", "acceptedAnswer": { "@type": "Answer", "text": "The tip calculator covers major travel destinations including the USA, Canada, UK, France, Japan, and China, with country-specific tipping culture information." }},
+        { "@type": "Question", "name": "Is this calculator free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, all features are completely free. Use currency conversion, customs duty estimation, and tip calculation unlimited times without registration or payment." }}
+      ]
+    }
+    </script>
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
@@ -393,6 +419,24 @@
         }
     </script>
     <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button onclick="(async()=>{const u=location.href,t=document.title;if(typeof gtag==='function')gtag('event','share',{method:navigator.share?'native':'clipboard',app_name:'shopping-calc'});if(navigator.share){try{await navigator.share({title:t,url:u})}catch(e){}}else{await navigator.clipboard.writeText(u);this.textContent='✅';setTimeout(()=>this.textContent='📤',1500)}})()" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
+    <!-- About Section -->
+    <section style="max-width:640px;margin:32px auto;padding:0 16px;">
+      <h2 data-i18n="about.title" style="font-size:20px;margin-bottom:12px;">About Shopping Calculator</h2>
+      <p data-i18n="about.desc" style="font-size:14px;line-height:1.7;opacity:0.8;margin-bottom:20px;">DopaBrain Shopping Calculator combines real-time currency conversion, customs duty estimation, and country-specific tipping guide in one tool. Know your true cost when shopping internationally or traveling. Completely free.</p>
+      <h2 data-i18n="about.howTitle" style="font-size:18px;margin-bottom:10px;">How to Use the Shopping Calculator</h2>
+      <p data-i18n="about.howDesc" style="font-size:14px;line-height:1.7;opacity:0.8;margin-bottom:20px;">Choose from Exchange Rate, Customs Duty, or Tip Calculator tabs. Convert currencies with real-time rates, estimate customs costs for international purchases, or calculate tips based on country-specific tipping customs.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="max-width:640px;margin:24px auto;padding:0 16px;">
+      <h2 data-i18n="faq.title" style="font-size:20px;margin-bottom:16px;">Frequently Asked Questions</h2>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q1" style="cursor:pointer;font-weight:600;padding:10px 0;">Are exchange rates real-time?</summary><p data-i18n="faq.a1" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, we use real-time exchange rate APIs. If the API is unavailable, fallback fixed rates are used with a warning displayed.</p></details>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q2" style="cursor:pointer;font-weight:600;padding:10px 0;">How are customs duties calculated?</summary><p data-i18n="faq.a2" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Based on product price, shipping cost, purchase country, and product category. Items under $150 are duty-free.</p></details>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q3" style="cursor:pointer;font-weight:600;padding:10px 0;">Which currencies are supported?</summary><p data-i18n="faq.a3" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Major currencies including USD, EUR, JPY, CNY, GBP, AUD, CAD, THB, VND, SGD, and KRW.</p></details>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q4" style="cursor:pointer;font-weight:600;padding:10px 0;">Which countries does the tip calculator support?</summary><p data-i18n="faq.a4" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Major travel destinations including the USA, Canada, UK, France, Japan, and China.</p></details>
+      <details style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;">Is this calculator free?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, all features are completely free. No registration or payment required.</p></details>
+    </section>
+
     <div style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
       <h3 data-i18n="related.title" style="font-size:16px;color:#a0a0b8;margin-bottom:12px;text-align:center;">More to Explore</h3>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
