@@ -772,9 +772,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     registerServiceWorker();
 
-    document.getElementById('premium-analysis-btn').addEventListener('click', showPremiumAnalysis);
+    document.getElementById('premium-analysis-btn')?.addEventListener('click', showPremiumAnalysis);
 
-    document.getElementById('premium-close').addEventListener('click', () => {
-        document.getElementById('premium-modal').classList.add('hidden');
+    document.getElementById('premium-close')?.addEventListener('click', () => {
+        document.getElementById('premium-modal')?.classList.add('hidden');
     });
 });
