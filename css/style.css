@@ -364,11 +364,12 @@ body::after {
 }
 
 .input-group input,
-.input-group select {
+.input-group select,
+.currency-box select {
     width: 100%;
-    padding: 16px 20px;
+    padding: 14px 16px;
     min-height: 48px;
-    font-size: 16px;
+    font-size: 15px;
     border: 2px solid rgba(243, 156, 18, 0.3);
     border-radius: 16px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -379,6 +380,8 @@ body::after {
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 .input-group input::placeholder {
@@ -386,7 +389,8 @@ body::after {
 }
 
 .input-group input:focus,
-.input-group select:focus {
+.input-group select:focus,
+.currency-box select:focus {
     outline: none;
     border-color: #f39c12;
     background: rgba(243, 156, 18, 0.15);
@@ -1725,7 +1729,8 @@ button,a[href],input[type="button"],input[type="submit"],[role="button"]{min-wid
 }
 
 [data-theme="light"] .input-group input,
-[data-theme="light"] .input-group select {
+[data-theme="light"] .input-group select,
+[data-theme="light"] .currency-box select {
     background: rgba(255, 255, 255, 0.9);
     border-color: rgba(243, 156, 18, 0.2);
     color: var(--text-light);
