@@ -516,42 +516,6 @@ function clearHistory() {
     }
 }
 
-// ==================== 전면 광고 ====================
-
-function showInterstitialAd() {
-    return new Promise((resolve) => {
-        const adOverlay = document.getElementById('interstitial-ad');
-        const closeBtn = document.getElementById('close-ad');
-        const countdown = document.getElementById('countdown');
-
-        adOverlay.classList.remove('hidden');
-        closeBtn.disabled = true;
-
-        let seconds = 5;
-        countdown.textContent = seconds;
-        const closeLabel = window.i18n?.t('ads.closeBtn') || 'Close';
-        closeBtn.textContent = `${closeLabel} (${seconds})`;
-
-        const timer = setInterval(() => {
-            seconds--;
-            countdown.textContent = seconds;
-            closeBtn.textContent = `${closeLabel} (${seconds})`;
-
-            if (seconds <= 0) {
-                clearInterval(timer);
-                closeBtn.disabled = false;
-                closeBtn.textContent = closeLabel;
-
-                closeBtn.onclick = () => {
-                    adOverlay.classList.add('hidden');
-                    closeBtn.textContent = '닫기 (5)';
-                    resolve();
-                };
-            }
-        }, 1000);
-    });
-}
-
 // ==================== 프리미엄 콘텐츠 ====================
 
 let lastCalcType = '';
@@ -737,14 +701,14 @@ function generatePremiumContent() {
 }
 
 function showPremiumAnalysis() {
-    showInterstitialAd().then(() => {
-        const premiumModal = document.getElementById('premium-modal');
-        const premiumBody = document.getElementById('premium-body');
+    const premiumModal = document.getElementById('premium-modal');
+    const premiumBody = document.getElementById('premium-body');
+    if (premiumBody && premiumModal) {
         premiumBody.innerHTML = '';
         const content = generatePremiumContent();
         premiumBody.appendChild(content);
         premiumModal.classList.remove('hidden');
-    });
+    }
 }
 
 // ==================== Service Worker ====================
