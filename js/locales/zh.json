@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "全球购物计算器",
-    "description": "国际购物时一次性计算汇率、关税和小费。实时汇率！"
+    "description": "国际购物时一次性计算汇率、关税和小费。实时汇率！",
+    "loading": "加载中..."
   },
   "header": {
     "title": "💰 全球购物计算器",
@@ -96,7 +97,8 @@
     "clearBtn": "清除全部记录",
     "typeExchange": "💱 汇率",
     "typeCustoms": "📦 关税",
-    "typeTip": "💰 小费"
+    "typeTip": "💰 小费",
+    "cleared": "已清空所有计算记录。"
   },
   "language": {
     "select": "选择语言"
@@ -136,8 +138,9 @@
     "chn_tip": "🇨🇳 中国"
   },
   "premium": {
-    "title": "🧠 AI高级购物分析",
-    "btn": "🧠 查看AI高级分析"
+    "title": "📊 跨境购物与换汇省钱报告",
+    "btn": "📊 查看汇率与税费省钱攻略",
+    "badge": "实用指南"
   },
   "recommendations": "也试试这些",
   "related": {
@@ -165,5 +168,32 @@
     "a4": "小费计算器涵盖美国、加拿大、英国、法国、日本、中国等主要旅游目的地。",
     "q5": "这个计算器免费吗？",
     "a5": "是的，所有功能完全免费。无需注册或付费即可无限使用。"
+  },
+  "accessibility": {
+    "skipMain": "跳转到主要内容"
+  },
+  "game": {
+    "back": "DopaBrain 首页"
+  },
+  "share": {
+    "saveCard": "保存购物卡片",
+    "twitter": "分享到 X",
+    "copyUrl": "复制链接",
+    "shareApp": "分享计算器",
+    "copied": "链接已复制！",
+    "cardTitle": "跨境购物与汇率速查卡",
+    "cardSub": "实时换汇 · 免税额度 · 各国小费指南",
+    "downloadStarted": "已保存 1080×1920 购物攻略卡片！"
+  },
+  "curated": {
+    "badge": "精选好书",
+    "title": "消费心理与旅行理财推荐书籍",
+    "subtitle": "帮助理性规划日常支出与跨国旅行预算的经典好书",
+    "book1Title": "金钱心理学（The Psychology of Money）",
+    "book1Author": "Morgan Housel",
+    "book1Desc": "探讨消费决策、风险意识与财富观念的全球畅销理财经典。",
+    "book2Title": "漫游者指南（Vagabonding）",
+    "book2Author": "Rolf Potts",
+    "book2Desc": "如何在有限预算下规划高质量跨国长途旅行的实用指南。"
   }
 }

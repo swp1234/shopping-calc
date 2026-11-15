@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Calculatrice de Shopping Global",
-    "description": "Calcule les taux de change, les tarifs douaniers et les pourboires pour les achats internationaux. Taux de change en temps réel!"
+    "description": "Calcule les taux de change, les tarifs douaniers et les pourboires pour les achats internationaux. Taux de change en temps réel!",
+    "loading": "Chargement..."
   },
   "header": {
     "title": "💰 Calculatrice de Shopping Global",
@@ -96,7 +97,8 @@
     "clearBtn": "Effacer Tout l'Historique",
     "typeExchange": "💱 Change",
     "typeCustoms": "📦 Tarifs Douaniers",
-    "typeTip": "💰 Pourboire"
+    "typeTip": "💰 Pourboire",
+    "cleared": "Historique de calcul effacé."
   },
   "language": {
     "select": "Sélectionner la Langue"
@@ -136,8 +138,9 @@
     "chn_tip": "🇨🇳 Chine"
   },
   "premium": {
-    "title": "🧠 Analyse Shopping Avancée par IA",
-    "btn": "🧠 Voir l'Analyse Avancée par IA"
+    "title": "📊 Guide Malin Achats & Devises",
+    "btn": "📊 Voir le Guide Change & Douanes",
+    "badge": "CONSEILS"
   },
   "recommendations": "Essaie aussi",
   "related": {
@@ -165,5 +168,32 @@
     "a4": "Couvre les principales destinations : États-Unis, Canada, Royaume-Uni, France, Japon et Chine.",
     "q5": "Ce calculateur est-il gratuit ?",
     "a5": "Oui, toutes les fonctionnalités sont entièrement gratuites."
+  },
+  "accessibility": {
+    "skipMain": "Aller au contenu principal"
+  },
+  "game": {
+    "back": "Accueil DopaBrain"
+  },
+  "share": {
+    "saveCard": "Enregistrer la carte",
+    "twitter": "Partager sur X",
+    "copyUrl": "Copier le lien",
+    "shareApp": "Partager",
+    "copied": "Lien copié !",
+    "cardTitle": "Fiche Achats & Devises",
+    "cardSub": "Économies de change · Douanes · Pourboires",
+    "downloadStarted": "Carte 1080×1920 enregistrée !"
+  },
+  "curated": {
+    "badge": "LIVRE",
+    "title": "Livres Recommandés Finance & Voyage",
+    "subtitle": "Sélection de lectures sur la gestion de budget et les dépenses à l’étranger",
+    "book1Title": "La Psychologie de l’argent",
+    "book1Author": "Morgan Housel",
+    "book1Desc": "Des leçons intemporelles sur les comportements d’achat et la gestion financière.",
+    "book2Title": "Vagabonding",
+    "book2Author": "Rolf Potts",
+    "book2Desc": "Méthodes concrètes pour budgétiser et réussir ses longs voyages."
   }
 }

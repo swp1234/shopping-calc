@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Global Shopping Calculator",
-    "description": "Calculate exchange rates, customs, and tips for international shopping. Real-time exchange rates!"
+    "description": "Calculate exchange rates, customs, and tips for international shopping. Real-time exchange rates!",
+    "loading": "Loading..."
   },
   "header": {
     "title": "💰 Global Shopping Calculator",
@@ -104,7 +105,8 @@
     "clearConfirm": "Are you sure you want to delete all calculation history?",
     "typeExchange": "💱 Exchange",
     "typeCustoms": "📦 Customs",
-    "typeTip": "💰 Tip"
+    "typeTip": "💰 Tip",
+    "cleared": "Calculation history cleared."
   },
   "language": {
     "select": "Select Language"
@@ -144,8 +146,8 @@
     "chn_tip": "🇨🇳 China"
   },
   "premium": {
-    "title": "🧠 AI Advanced Shopping Analysis",
-    "btn": "🧠 View AI Advanced Analysis",
+    "title": "📊 Smart Exchange & Customs Breakdown",
+    "btn": "📊 View Tax & Exchange Breakdown",
     "exchangeAnalysis": "💹 Exchange Rate Trend Analysis",
     "exchangeTips": "📊 Exchange Tips",
     "exchangeTiming": "🔔 Optimal Exchange Timing",
@@ -173,7 +175,8 @@
     "tipEtiquette2": "Europe: Service charge typically included, leave small change",
     "tipEtiquette3": "Japan: Tipping not necessary, may be considered rude",
     "tipEtiquette4": "Southeast Asia: Tourist areas 5-10%, local restaurants not required",
-    "tipPaymentText": "For card payments, write the tip amount directly on the receipt. For cash, leave it on the table when you leave."
+    "tipPaymentText": "For card payments, write the tip amount directly on the receipt. For cash, leave it on the table when you leave.",
+    "badge": "INSIGHTS"
   },
   "recommendations": "Try These Too",
   "related": {
@@ -201,5 +204,32 @@
     "a4": "The tip calculator covers major travel destinations including the USA, Canada, UK, France, Japan, and China, with country-specific tipping culture information.",
     "q5": "Is this calculator free?",
     "a5": "Yes, all features are completely free. Use currency conversion, customs duty estimation, and tip calculation unlimited times without registration or payment."
+  },
+  "accessibility": {
+    "skipMain": "Skip to main content"
+  },
+  "game": {
+    "back": "DopaBrain Home"
+  },
+  "share": {
+    "saveCard": "Save Guide Card",
+    "twitter": "Share on X",
+    "copyUrl": "Copy Link",
+    "shareApp": "Share Calculator",
+    "copied": "Link copied to clipboard!",
+    "cardTitle": "Global Shopping Cheat Sheet",
+    "cardSub": "FX Savings · Customs Thresholds · Tipping Guide",
+    "downloadStarted": "Saved 1080×1920 shopping guide card!"
+  },
+  "curated": {
+    "badge": "BOOK PICK",
+    "title": "Recommended Finance & Travel Books",
+    "subtitle": "Curated reads on smart spending decisions and budgeting for international travel",
+    "book1Title": "The Psychology of Money",
+    "book1Author": "Morgan Housel",
+    "book1Desc": "Timeless lessons on spending behavior, financial judgment, and everyday money habits.",
+    "book2Title": "Vagabonding",
+    "book2Author": "Rolf Potts",
+    "book2Desc": "Practical strategies for budgeting, pacing costs, and preparing for long-term world travel."
   }
 }

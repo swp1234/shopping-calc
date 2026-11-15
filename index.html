@@ -7,7 +7,7 @@
     <meta name="robots" content="max-image-preview:large">
     <title>Shopping Calculator - Free Currency & Tax Tool | DopaBrain</title>
     <meta name="description" content="All-in-one shopping calculator with real-time currency conversion, customs duty estimation, and tipping guide by country. Know your true cost. Try free!">
-    <meta name="dateModified" content="2026-11-07">
+    <meta name="dateModified" content="2026-11-15">
     <meta name="keywords" content="환율 계산기, 관세 계산기, 해외직구, 팁 계산기, 쇼핑 계산기, 여행 계산기, 환율 변환, 실시간 환율, 글로벌 계산">
     <link rel="canonical" href="https://dopabrain.com/shopping-calc/">
     <meta name="theme-color" content="#f39c12">
@@ -40,18 +40,18 @@
     <meta name="twitter:image" content="https://dopabrain.com/portal/img/og/shopping-calc.png">
     <meta name="twitter:site" content="@dopabrain">
     <!-- hreflang for multilingual SEO -->
-    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="en" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="es" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="id" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="de" href="https://dopabrain.com/shopping-calc/">
-    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/shopping-calc/">
+    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/shopping-calc/?lang=ko">
+    <link rel="alternate" hreflang="en" href="https://dopabrain.com/shopping-calc/?lang=en">
+    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/shopping-calc/?lang=zh">
+    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/shopping-calc/?lang=hi">
+    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/shopping-calc/?lang=ru">
+    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/shopping-calc/?lang=ja">
+    <link rel="alternate" hreflang="es" href="https://dopabrain.com/shopping-calc/?lang=es">
+    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/shopping-calc/?lang=pt">
+    <link rel="alternate" hreflang="id" href="https://dopabrain.com/shopping-calc/?lang=id">
+    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/shopping-calc/?lang=tr">
+    <link rel="alternate" hreflang="de" href="https://dopabrain.com/shopping-calc/?lang=de">
+    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/shopping-calc/?lang=fr">
     <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/shopping-calc/">
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
@@ -360,38 +360,74 @@
                 </div>
                 <button class="btn btn-secondary" onclick="clearHistory()" style="margin-top: 1rem;" data-i18n="history.clearBtn">내역 전체 삭제</button>
             </div>
-            <!-- 프리미엄 분석 버튼 -->
+            <!-- 상세 분석 버튼 -->
             <div class="premium-section" id="premium-section" style="display:none;">
                 <button class="premium-btn" id="premium-analysis-btn">
-                    <span class="premium-badge">AI</span>
-                    <span data-i18n="premium.btn">🧠 AI 고급 분석 보기</span>
+                    <span class="premium-badge" data-i18n="premium.badge">INSIGHTS</span>
+                    <span data-i18n="premium.btn">📊 View Tax &amp; Exchange Breakdown</span>
                 </button>
             </div>
 
+            <!-- 공유 & 가이드 카드 -->
+            <div class="shop-share-bar">
+                <button type="button" class="shop-share-btn shop-card-btn" id="saveCardBtn">📸 <span data-i18n="share.saveCard">Save Guide Card</span></button>
+                <button type="button" class="shop-share-btn" id="shareTwitterBtn">𝕏 <span data-i18n="share.twitter">Share on X</span></button>
+                <button type="button" class="shop-share-btn" id="shareUrlBtn">🔗 <span data-i18n="share.copyUrl">Copy Link</span></button>
+            </div>
+            <canvas id="shareCanvas" width="1080" height="1920" style="display:none;" aria-hidden="true"></canvas>
+
+            <!-- 금융·여행 추천 도서 -->
+            <section class="curated-resources-card" id="curated-resources-card" aria-label="Recommended Finance and Travel Books">
+                <div class="curated-card-header">
+                    <span class="curated-badge" data-i18n="curated.badge">BOOK PICK</span>
+                    <h2 data-i18n="curated.title">Recommended Finance &amp; Travel Books</h2>
+                    <p data-i18n="curated.subtitle">Curated reads on smart spending decisions and budgeting for international travel</p>
+                </div>
+                <div class="curated-list">
+                    <a href="https://www.amazon.com/dp/0857197681?tag=dopabrain-20" target="_blank" rel="sponsored noopener noreferrer" class="curated-item" data-item-id="psychology-of-money" data-resource-type="book">
+                        <span class="curated-icon" aria-hidden="true">💳</span>
+                        <div class="curated-info">
+                            <strong data-i18n="curated.book1Title">The Psychology of Money</strong>
+                            <span class="curated-author" data-i18n="curated.book1Author">Morgan Housel</span>
+                            <span class="curated-desc" data-i18n="curated.book1Desc">Timeless lessons on spending behavior, financial judgment, and everyday money habits.</span>
+                        </div>
+                    </a>
+                    <a href="https://www.amazon.com/dp/0812992180?tag=dopabrain-20" target="_blank" rel="sponsored noopener noreferrer" class="curated-item" data-item-id="vagabonding-potts" data-resource-type="book">
+                        <span class="curated-icon" aria-hidden="true">🧳</span>
+                        <div class="curated-info">
+                            <strong data-i18n="curated.book2Title">Vagabonding</strong>
+                            <span class="curated-author" data-i18n="curated.book2Author">Rolf Potts</span>
+                            <span class="curated-desc" data-i18n="curated.book2Desc">Practical strategies for budgeting, pacing costs, and preparing for long-term world travel.</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
         <!-- DopaBrain 홈 링크 -->
         <footer class="game-footer">
-            <a href="https://dopabrain.com/portal/" class="back-link" data-i18n="game.back">
+            <a href="/portal/" class="back-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="m15 18-6-6 6-6"></path></svg>
-                DopaBrain 홈
+                <span data-i18n="game.back">DopaBrain Home</span>
             </a>
         </footer>
+    </div>
+
+    <!-- 인사이트 모달 -->
+    <div id="premium-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="premium-modal-title">
+        <div class="modal-content premium-modal-content">
+            <div class="modal-header">
+                <h3 id="premium-modal-title" data-i18n="premium.title">📊 Smart Exchange &amp; Customs Breakdown</h3>
+                <button type="button" id="premium-close" class="modal-close" aria-label="Close">✕</button>
+            </div>
+            <div id="premium-body" class="premium-body"></div>
+        </div>
     </div>
 
     <script src="js/i18n.js"></script>
     <script src="js/exchange-api.js"></script>
     <script src="js/app.js"></script>
 
-    <!-- Service Worker 등록 -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then(registration => console.log('Service Worker registered'))
-                    .catch(error => console.log('Service Worker registration failed:', error));
-            });
-        }
-    </script>
-    <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button onclick="(async()=>{const u=location.href,t=document.title;if(typeof gtag==='function')gtag('event','share',{method:navigator.share?'native':'clipboard',app_name:'shopping-calc'});if(navigator.share){try{await navigator.share({title:t,url:u})}catch(e){}}else{await navigator.clipboard.writeText(u);this.textContent='✅';setTimeout(()=>this.textContent='📤',1500)}})()" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
+    <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button type="button" id="share-float-btn" aria-label="Share calculator" style="width:48px;height:48px;min-width:48px;min-height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
     <!-- About Section -->
     <section style="max-width:640px;margin:32px auto;padding:0 16px;">
       <h2 data-i18n="about.title" style="font-size:20px;margin-bottom:12px;">About Shopping Calculator</h2>
@@ -403,11 +439,11 @@
     <!-- FAQ Section -->
     <section style="max-width:640px;margin:24px auto;padding:0 16px;">
       <h2 data-i18n="faq.title" style="font-size:20px;margin-bottom:16px;">Frequently Asked Questions</h2>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q1" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Are exchange rates real-time?</summary><p data-i18n="faq.a1" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, we use real-time exchange rate APIs. If the API is unavailable, fallback fixed rates are used with a warning displayed.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q2" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">How are customs duties calculated?</summary><p data-i18n="faq.a2" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Based on product price, shipping cost, purchase country, and product category. Items under $150 are duty-free.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q3" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Which currencies are supported?</summary><p data-i18n="faq.a3" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Major currencies including USD, EUR, JPY, CNY, GBP, AUD, CAD, THB, VND, SGD, and KRW.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q4" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Which countries does the tip calculator support?</summary><p data-i18n="faq.a4" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Major travel destinations including the USA, Canada, UK, France, Japan, and China.</p></details>
-      <details style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Is this calculator free?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, all features are completely free. No registration or payment required.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q1" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Are exchange rates real-time?</summary><p data-i18n="faq.a1" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, we use real-time exchange rate APIs. If the API is unavailable, fallback fixed rates are used with a warning displayed.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q2" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">How are customs duties calculated?</summary><p data-i18n="faq.a2" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Based on product price, shipping cost, purchase country, and product category. Items under $150 are duty-free.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q3" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Which currencies are supported?</summary><p data-i18n="faq.a3" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Major currencies including USD, EUR, JPY, CNY, GBP, AUD, CAD, THB, VND, SGD, and KRW.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q4" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Which countries does the tip calculator support?</summary><p data-i18n="faq.a4" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Major travel destinations including the USA, Canada, UK, France, Japan, and China.</p></details>
+      <details open style="margin-bottom:10px;"><summary data-i18n="faq.q5" style="cursor:pointer;font-weight:600;padding:10px 0;min-height:48px;display:flex;align-items:center;box-sizing:border-box;">Is this calculator free?</summary><p data-i18n="faq.a5" style="padding:8px 0 12px 16px;opacity:0.8;font-size:14px;line-height:1.6;">Yes, all features are completely free. No registration or payment required.</p></details>
     </section>
 
     <div class="related-tests" style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">

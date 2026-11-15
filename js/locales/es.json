@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Calculadora de Compras Global",
-    "description": "Calcula tasas de cambio, aranceles aduanales y propinas para compras internacionales. ¡Tasas de cambio en tiempo real!"
+    "description": "Calcula tasas de cambio, aranceles aduanales y propinas para compras internacionales. ¡Tasas de cambio en tiempo real!",
+    "loading": "Cargando..."
   },
   "header": {
     "title": "💰 Calculadora de Compras Global",
@@ -96,7 +97,8 @@
     "clearBtn": "Limpiar Todo el Historial",
     "typeExchange": "💱 Cambio",
     "typeCustoms": "📦 Aranceles",
-    "typeTip": "💰 Propina"
+    "typeTip": "💰 Propina",
+    "cleared": "Historial de cálculos borrado."
   },
   "language": {
     "select": "Seleccionar Idioma"
@@ -136,8 +138,9 @@
     "chn_tip": "🇨🇳 China"
   },
   "premium": {
-    "title": "🧠 Análisis Avanzado de Compras de IA",
-    "btn": "🧠 Ver Análisis Avanzado de IA"
+    "title": "📊 Guía Inteligente de Compras y Divisas",
+    "btn": "📊 Ver Desglose de Divisas e Impuestos",
+    "badge": "ANÁLISIS"
   },
   "recommendations": "Prueba Estos También",
   "related": {
@@ -165,5 +168,32 @@
     "a4": "Cubre destinos principales: EE.UU., Canadá, Reino Unido, Francia, Japón y China.",
     "q5": "¿Esta calculadora es gratis?",
     "a5": "Sí, todas las funciones son completamente gratuitas."
+  },
+  "accessibility": {
+    "skipMain": "Ir al contenido principal"
+  },
+  "game": {
+    "back": "Inicio DopaBrain"
+  },
+  "share": {
+    "saveCard": "Guardar Tarjeta",
+    "twitter": "Compartir en X",
+    "copyUrl": "Copiar Enlace",
+    "shareApp": "Compartir Calculadora",
+    "copied": "¡Enlace copiado!",
+    "cardTitle": "Guía Rápida de Compras Globales",
+    "cardSub": "Cambio de divisa · Aduanas · Etiqueta de propinas",
+    "downloadStarted": "¡Tarjeta 1080×1920 guardada!"
+  },
+  "curated": {
+    "badge": "LECTURA",
+    "title": "Libros Recomendados de Finanzas y Viajes",
+    "subtitle": "Lecturas seleccionadas sobre decisiones de gasto y presupuesto para viajar por el mundo",
+    "book1Title": "La psicología del dinero",
+    "book1Author": "Morgan Housel",
+    "book1Desc": "Lecciones atemporales sobre la psicología del gasto, el ahorro y la toma de decisiones.",
+    "book2Title": "Vagabonding",
+    "book2Author": "Rolf Potts",
+    "book2Desc": "Estrategias prácticas para planificar presupuesto y viajar durante largos periodos."
   }
 }

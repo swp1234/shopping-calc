@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     setupTabs();
     updateTipInfo();
     renderHistory();
+    initRelatedFunnels();
 
     const loader = document.getElementById('app-loader');
     if (loader) {
@@ -78,8 +79,9 @@ function setupLanguageSelector() {
 
             langMenu.classList.add('hidden');
 
-            // 히스토리 재렌더링
+            // 히스토리 재렌더링 & 퍼널 언어 동기화
             renderHistory();
+            initRelatedFunnels();
         });
     });
 }
@@ -149,7 +151,7 @@ async function calculateExchange() {
     const toCurrency = document.getElementById('to-currency').value;
 
     if (!amount || amount <= 0) {
-        alert(window.i18n?.t('exchange.alertNoAmount') || 'Please enter an amount');
+        showShopToast(window.i18n?.t('exchange.alertNoAmount') || 'Please enter an amount');
         return;
     }
 
@@ -201,6 +203,7 @@ async function calculateExchange() {
             rate: rate.toLocaleString('ko-KR', {maximumFractionDigits: 2}),
             result: `${convertedAmount.toLocaleString('ko-KR', {maximumFractionDigits: 0})} 원`
         });
+        recordCalcTelemetry('exchange');
 
     } catch (error) {
         console.error('Exchange calculation error:', error);
@@ -221,7 +224,7 @@ async function calculateCustoms() {
     const category = document.getElementById('product-category').value;
 
     if (!productPrice || productPrice <= 0) {
-        alert(window.i18n?.t('customs.alertNoPrice') || 'Please enter a product price');
+        showShopToast(window.i18n?.t('customs.alertNoPrice') || 'Please enter a product price');
         return;
     }
 
@@ -293,10 +296,11 @@ async function calculateCustoms() {
             totalUSD: totalUSD,
             finalTotal: Math.round(finalTotal)
         });
+        recordCalcTelemetry('customs');
 
     } catch (error) {
         console.error('Customs calculation error:', error);
-        alert(window.i18n?.t('customs.alertError') || 'An error occurred while calculating customs.');
+        showShopToast(window.i18n?.t('customs.alertError') || 'An error occurred while calculating customs.');
     }
 }
 
@@ -392,12 +396,12 @@ function calculateTip() {
     const culture = tipCultures[country];
 
     if (!mealAmount || mealAmount <= 0) {
-        alert(window.i18n?.t('tip.alertNoMeal') || 'Please enter a meal amount');
+        showShopToast(window.i18n?.t('tip.alertNoMeal') || 'Please enter a meal amount');
         return;
     }
 
     if (!partySize || partySize <= 0) {
-        alert(window.i18n?.t('tip.alertNoPartySize') || 'Please enter the party size');
+        showShopToast(window.i18n?.t('tip.alertNoPartySize') || 'Please enter the party size');
         return;
     }
 
@@ -437,6 +441,7 @@ function calculateTip() {
         rate: tipPercentage,
         total: totalAmount.toFixed(2)
     });
+    recordCalcTelemetry('tip');
 }
 
 // ==================== 히스토리 관리 ====================
@@ -508,12 +513,10 @@ function renderHistory() {
 }
 
 function clearHistory() {
-    const confirmMsg = window.i18n?.t('history.clearConfirm') || 'Are you sure you want to delete all calculation history?';
-    if (confirm(confirmMsg)) {
-        calcHistory = [];
-        localStorage.setItem('calc_history', JSON.stringify(calcHistory));
-        renderHistory();
-    }
+    calcHistory = [];
+    localStorage.setItem('calc_history', JSON.stringify(calcHistory));
+    renderHistory();
+    showShopToast(window.i18n?.t('history.cleared') || 'Calculation history cleared.');
 }
 
 // ==================== 프리미엄 콘텐츠 ====================
@@ -715,9 +718,7 @@ function showPremiumAnalysis() {
 
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js')
-            .then(() => console.log('Service Worker registered'))
-            .catch(err => console.log('SW registration failed:', err));
+        navigator.serviceWorker.register('sw.js').catch(() => {});
     }
 }
 
@@ -729,8 +730,174 @@ let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    console.log('PWA install prompt ready');
 });
+
+function showShopToast(message) {
+    document.querySelectorAll('.shop-toast').forEach(el => el.remove());
+    const toast = document.createElement('div');
+    toast.className = 'shop-toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2200);
+}
+
+let __shopTrackedStart = false;
+let __shopLastCompleteAt = 0;
+
+function trackShopEvent(name, params) {
+    if (typeof gtag === 'function') {
+        gtag('event', name, params || {});
+    }
+}
+
+function recordCalcTelemetry(mode) {
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    if (!__shopTrackedStart) {
+        __shopTrackedStart = true;
+        trackShopEvent('test_start', {
+            app_name: 'shopping-calc',
+            mode: mode || 'exchange',
+            lang
+        });
+    }
+    const now = Date.now();
+    if (now - __shopLastCompleteAt > 800) {
+        __shopLastCompleteAt = now;
+        trackShopEvent('test_complete', {
+            app_name: 'shopping-calc',
+            result_type: mode || 'exchange',
+            lang
+        });
+    }
+}
+
+function buildShopShareUrl() {
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    url.searchParams.set('utm_source', 'share');
+    return url.toString();
+}
+
+async function copyShopShareUrl(allowNative = false) {
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    const shareUrl = buildShopShareUrl();
+    if (allowNative && navigator.share) {
+        try {
+            await navigator.share({ title: document.title, url: shareUrl });
+            trackShopEvent('share', { method: 'native', app_name: 'shopping-calc', lang });
+            return;
+        } catch (e) {
+            if (e && e.name === 'AbortError') return;
+        }
+    }
+    try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(shareUrl);
+        }
+    } catch (e) {}
+    showShopToast(window.i18n?.t('share.copied') || 'Link copied to clipboard!');
+    trackShopEvent('share', { method: 'clipboard', app_name: 'shopping-calc', lang });
+}
+
+function shareShopTwitter() {
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    const shareUrl = buildShopShareUrl();
+    const title = window.i18n?.t('header.title') || 'Global Shopping Calculator';
+    window.open(
+        `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(shareUrl)}`,
+        '_blank',
+        'noopener,noreferrer'
+    );
+    trackShopEvent('share', { method: 'twitter', app_name: 'shopping-calc', lang });
+}
+
+function generateShoppingCard() {
+    const canvas = document.getElementById('shareCanvas');
+    if (!canvas || !canvas.getContext) return;
+    const ctx = canvas.getContext('2d');
+    const W = 1080;
+    const H = 1920;
+    canvas.width = W;
+    canvas.height = H;
+
+    const grad = ctx.createLinearGradient(0, 0, W, H);
+    grad.addColorStop(0, '#0f172a');
+    grad.addColorStop(0.5, '#2b1d0e');
+    grad.addColorStop(1, '#111827');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.fillStyle = 'rgba(243, 156, 18, 0.16)';
+    ctx.beginPath();
+    ctx.arc(540, 420, 380, 0, Math.PI * 2);
+    ctx.fill();
+
+    const lang = window.i18n?.getCurrentLanguage() || 'en';
+    const title = window.i18n?.t('share.cardTitle') || 'Global Shopping Cheat Sheet';
+    const sub = window.i18n?.t('share.cardSub') || 'FX Savings · Customs Thresholds · Tipping Guide';
+
+    ctx.fillStyle = '#f39c12';
+    ctx.font = 'bold 34px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('DOPABRAIN SMART SHOPPING', W / 2, 160);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 60px sans-serif';
+    ctx.fillText(title.slice(0, 32), W / 2, 260);
+
+    ctx.fillStyle = '#cbd5e1';
+    ctx.font = '32px sans-serif';
+    ctx.fillText(sub.slice(0, 50), W / 2, 325);
+
+    const tips = [
+        ['1. Card FX (Decline DCC)', 'Always pay in local currency at overseas POS / ATMs'],
+        ['2. Korea Customs Free Limit', 'General cargo under $150 USD; US Express list $200'],
+        ['3. Duty + VAT Brackets', 'Clothing & Shoes 13% duty | Electronics & Cosmetics 8%'],
+        ['4. North America Tipping', 'USA & Canada restaurants: 15% – 20% pre-tax'],
+        ['5. Europe & East Asia', 'Europe service charge often included; Japan no tipping']
+    ];
+
+    let y = 450;
+    tips.forEach(([label, desc]) => {
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+        ctx.beginPath();
+        ctx.roundRect(80, y, W - 160, 200, 26);
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(243, 156, 18, 0.35)';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.textAlign = 'left';
+        ctx.fillStyle = '#f39c12';
+        ctx.font = 'bold 32px sans-serif';
+        ctx.fillText(label, 120, y + 72);
+
+        ctx.fillStyle = '#f8fafc';
+        ctx.font = '28px sans-serif';
+        ctx.fillText(desc, 120, y + 136);
+        y += 235;
+    });
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#f39c12';
+    ctx.font = 'bold 34px sans-serif';
+    ctx.fillText(`dopabrain.com/shopping-calc/?lang=${lang}`, W / 2, 1780);
+
+    try {
+        const link = document.createElement('a');
+        link.download = `dopabrain-shopping-guide-${lang}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    } catch (e) {}
+
+    showShopToast(window.i18n?.t('share.downloadStarted') || 'Saved 1080×1920 shopping guide card!');
+    trackShopEvent('save_image', {
+        app_name: 'shopping-calc',
+        result_type: lastCalcType || 'exchange',
+        lang
+    });
+}
 
 // 프리미엄 및 SW 초기화
 document.addEventListener('DOMContentLoaded', () => {
@@ -741,21 +908,45 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('premium-close')?.addEventListener('click', () => {
         document.getElementById('premium-modal')?.classList.add('hidden');
     });
+
+    document.getElementById('premium-modal')?.addEventListener('click', (e) => {
+        if (e.target.id === 'premium-modal') {
+            document.getElementById('premium-modal')?.classList.add('hidden');
+        }
+    });
+
+    document.getElementById('saveCardBtn')?.addEventListener('click', generateShoppingCard);
+    document.getElementById('shareTwitterBtn')?.addEventListener('click', shareShopTwitter);
+    document.getElementById('shareUrlBtn')?.addEventListener('click', () => copyShopShareUrl(false));
+    document.getElementById('share-float-btn')?.addEventListener('click', () => copyShopShareUrl(true));
+
+    document.querySelectorAll('#curated-resources-card a.curated-item').forEach(link => {
+        link.addEventListener('click', () => {
+            trackShopEvent('curated_resource_click', {
+                app_name: 'shopping-calc',
+                resource_type: link.dataset.resourceType || 'book',
+                item_id: link.dataset.itemId || '',
+                lang: window.i18n?.getCurrentLanguage() || 'en'
+            });
+        });
+    });
 });
 
 
 // Funnel bridge & language preservation
 function initRelatedFunnels() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || (window.i18n ? window.i18n.currentLang : 'ko') || 'ko';
+    const getLang = () => (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'en';
+    const lang = getLang();
     const base = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : 'https://dopabrain.com';
-    document.querySelectorAll('.related-grid a').forEach(link => {
+    document.querySelectorAll('.related-grid a, .game-footer a.back-link').forEach(link => {
         const baseHref = link.getAttribute('data-base-href') || link.getAttribute('href');
         if (!baseHref || baseHref.startsWith('http') || baseHref.startsWith('#')) return;
         try {
             const url = new URL(baseHref, base);
             url.searchParams.set('lang', lang);
-            if (!url.searchParams.has('source')) url.searchParams.set('source', 'shopping_calc_result');
+            if (!url.pathname.startsWith('/portal') && !url.searchParams.has('source')) {
+                url.searchParams.set('source', 'shopping_calc_result');
+            }
             link.setAttribute('href', url.pathname + url.search);
         } catch(e) {}
         if (!link.dataset.trackedCta) {
@@ -766,7 +957,7 @@ function initRelatedFunnels() {
                         cta_surface: 'shopping_calc_related',
                         destination: link.getAttribute('href'),
                         source: 'shopping_calc',
-                        lang: lang
+                        lang: getLang()
                     });
                 }
             });

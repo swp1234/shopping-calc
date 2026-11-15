@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Kalkulator Belanja Global",
-    "description": "Hitung nilai tukar, bea cukai, dan tip untuk belanja internasional. Nilai tukar real-time!"
+    "description": "Hitung nilai tukar, bea cukai, dan tip untuk belanja internasional. Nilai tukar real-time!",
+    "loading": "Memuat..."
   },
   "header": {
     "title": "💰 Kalkulator Belanja Global",
@@ -96,7 +97,8 @@
     "clearBtn": "Hapus Semua Riwayat",
     "typeExchange": "💱 Pertukaran",
     "typeCustoms": "📦 Bea Cukai",
-    "typeTip": "💰 Tip"
+    "typeTip": "💰 Tip",
+    "cleared": "Riwayat perhitungan dihapus."
   },
   "language": {
     "select": "Pilih Bahasa"
@@ -136,8 +138,9 @@
     "chn_tip": "🇨🇳 Tiongkok"
   },
   "premium": {
-    "title": "🧠 Analisis Belanja AI Lanjutan",
-    "btn": "🧠 Lihat Analisis AI Lanjutan"
+    "title": "📊 Panduan Cerdas Belanja & Kurs",
+    "btn": "📊 Lihat Rincian Kurs & Bea Cukai",
+    "badge": "WAWASAN"
   },
   "recommendations": "Coba Juga",
   "related": {
@@ -165,5 +168,32 @@
     "a4": "Mencakup tujuan wisata utama: AS, Kanada, Inggris, Prancis, Jepang, dan Tiongkok.",
     "q5": "Apakah kalkulator ini gratis?",
     "a5": "Ya, semua fitur sepenuhnya gratis."
+  },
+  "accessibility": {
+    "skipMain": "Lompat ke konten utama"
+  },
+  "game": {
+    "back": "Beranda DopaBrain"
+  },
+  "share": {
+    "saveCard": "Simpan Kartu",
+    "twitter": "Bagikan ke X",
+    "copyUrl": "Salin Tautan",
+    "shareApp": "Bagikan Kalkulator",
+    "copied": "Tautan disalin!",
+    "cardTitle": "Kartu Panduan Belanja Global",
+    "cardSub": "Hemat Kurs · Batas Bea Cukai · Panduan Tip",
+    "downloadStarted": "Kartu panduan 1080×1920 tersimpan!"
+  },
+  "curated": {
+    "badge": "PILIHAN",
+    "title": "Buku Rekomendasi Keuangan & Perjalanan",
+    "subtitle": "Bacaan pilihan tentang keputusan belanja cerdas dan anggaran perjalanan internasional",
+    "book1Title": "The Psychology of Money",
+    "book1Author": "Morgan Housel",
+    "book1Desc": "Pelajaran abadi mengenai psikologi belanja, menabung, dan keputusan keuangan.",
+    "book2Title": "Vagabonding",
+    "book2Author": "Rolf Potts",
+    "book2Desc": "Strategi praktis mengatur anggaran dan biaya untuk perjalanan dunia jangka panjang."
   }
 }

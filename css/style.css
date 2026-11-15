@@ -861,18 +861,24 @@ body::after {
 }
 
 .modal-close {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
     border: none;
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-close:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.22);
 }
 
 .premium-analysis {
@@ -2026,13 +2032,15 @@ button,a[href],input[type="button"],input[type="submit"],[role="button"]{min-wid
 .theme-toggle {
     position: fixed;
     top: 12px;
-    right: 56px;
+    right: 64px;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -2054,4 +2062,186 @@ button,a[href],input[type="button"],input[type="submit"],[role="button"]{min-wid
 
 [data-theme="light"] .theme-toggle:hover {
     background: rgba(243, 156, 18, 0.15);
+}
+
+/* Share & Guide Card Actions */
+.shop-share-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 20px 16px;
+}
+
+.shop-share-btn {
+    flex: 1 1 100px;
+    min-height: 44px;
+    min-width: 44px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: transform 0.15s ease, border-color 0.2s ease;
+}
+
+.shop-share-btn:hover {
+    border-color: #f39c12;
+    transform: translateY(-1px);
+}
+
+.shop-card-btn {
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.26), rgba(230, 126, 34, 0.2));
+    border-color: rgba(243, 156, 18, 0.5);
+}
+
+/* Curated Finance & Travel Books */
+.curated-resources-card {
+    margin: 12px 20px 20px;
+    padding: 18px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.curated-card-header {
+    margin-bottom: 12px;
+}
+
+.curated-badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(243, 156, 18, 0.16);
+    color: #f39c12;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+}
+
+.curated-card-header h2 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.curated-card-header p {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.curated-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.curated-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    min-height: 44px;
+    min-width: 44px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: #fff;
+    transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.curated-item:hover {
+    border-color: #f39c12;
+    transform: translateY(-1px);
+}
+
+.curated-icon {
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.curated-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    text-align: left;
+}
+
+.curated-info strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.curated-author {
+    font-size: 12px;
+    font-weight: 600;
+    color: #f39c12;
+}
+
+.curated-desc {
+    font-size: 12px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.shop-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(243, 156, 18, 0.45);
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    z-index: 2000;
+    max-width: calc(100vw - 32px);
+    text-align: center;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 8px 14px;
+    box-sizing: border-box;
+    gap: 6px;
+}
+
+[data-theme="light"] .shop-share-btn,
+[data-theme="light"] .curated-item {
+    background: rgba(243, 156, 18, 0.08);
+    border-color: rgba(243, 156, 18, 0.25);
+    color: #1e293b;
+}
+
+[data-theme="light"] .curated-card-header h2,
+[data-theme="light"] .curated-info strong {
+    color: #1e293b;
+}
+
+[data-theme="light"] .curated-card-header p,
+[data-theme="light"] .curated-desc {
+    color: #475569;
 }

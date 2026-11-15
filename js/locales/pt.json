@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Calculadora de Compras Global",
-    "description": "Calcule taxas de câmbio, taxas alfandegárias e gorjetas para compras internacionais. Taxas de câmbio em tempo real!"
+    "description": "Calcule taxas de câmbio, taxas alfandegárias e gorjetas para compras internacionais. Taxas de câmbio em tempo real!",
+    "loading": "Carregando..."
   },
   "header": {
     "title": "💰 Calculadora de Compras Global",
@@ -96,7 +97,8 @@
     "clearBtn": "Limpar Todo Histórico",
     "typeExchange": "💱 Câmbio",
     "typeCustoms": "📦 Taxas",
-    "typeTip": "💰 Gorjeta"
+    "typeTip": "💰 Gorjeta",
+    "cleared": "Histórico de cálculos limpo."
   },
   "language": {
     "select": "Selecionar Idioma"
@@ -136,8 +138,9 @@
     "chn_tip": "🇨🇳 China"
   },
   "premium": {
-    "title": "🧠 Análise Avançada de Compras de IA",
-    "btn": "🧠 Ver Análise Avançada de IA"
+    "title": "📊 Guia Inteligente de Compras e Câmbio",
+    "btn": "📊 Ver Detalhes de Câmbio e Impostos",
+    "badge": "ANÁLISE"
   },
   "recommendations": "Experimente Também",
   "related": {
@@ -165,5 +168,32 @@
     "a4": "Cobre destinos principais: EUA, Canadá, Reino Unido, França, Japão e China.",
     "q5": "Esta calculadora é gratuita?",
     "a5": "Sim, todas as funcionalidades são completamente gratuitas."
+  },
+  "accessibility": {
+    "skipMain": "Pular para o conteúdo principal"
+  },
+  "game": {
+    "back": "Início DopaBrain"
+  },
+  "share": {
+    "saveCard": "Salvar Cartão",
+    "twitter": "Compartilhar no X",
+    "copyUrl": "Copiar Link",
+    "shareApp": "Compartilhar Calculadora",
+    "copied": "Link copiado!",
+    "cardTitle": "Cartão de Compras Internacionais",
+    "cardSub": "Câmbio · Alfândega · Guia de Gorjetas",
+    "downloadStarted": "Cartão 1080×1920 salvo!"
+  },
+  "curated": {
+    "badge": "RECOMENDADO",
+    "title": "Livros Recomendados de Finanças e Viagens",
+    "subtitle": "Leituras selecionadas sobre escolhas de consumo e orçamento para viagens internacionais",
+    "book1Title": "A Psicologia Financeira",
+    "book1Author": "Morgan Housel",
+    "book1Desc": "Lições atemporais sobre comportamento de gastos e decisões financeiras cotidianas.",
+    "book2Title": "Vagabonding",
+    "book2Author": "Rolf Potts",
+    "book2Desc": "Guia prático para planejar orçamento e aproveitar viagens internacionais de longo prazo."
   }
 }

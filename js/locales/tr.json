@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Küresel Alışveriş Hesaplayıcısı",
-    "description": "Uluslararası alışveriş için döviz kuru, gümrük ve bahşiş hesapla. Gerçek zamanlı döviz kurları!"
+    "description": "Uluslararası alışveriş için döviz kuru, gümrük ve bahşiş hesapla. Gerçek zamanlı döviz kurları!",
+    "loading": "Yükleniyor..."
   },
   "header": {
     "title": "💰 Küresel Alışveriş Hesaplayıcısı",
@@ -96,7 +97,8 @@
     "clearBtn": "Tüm Geçmişi Temizle",
     "typeExchange": "💱 Döviz",
     "typeCustoms": "📦 Gümrük",
-    "typeTip": "💰 Bahşiş"
+    "typeTip": "💰 Bahşiş",
+    "cleared": "Hesaplama geçmişi temizlendi."
   },
   "language": {
     "select": "Dil Seç"
@@ -136,8 +138,9 @@
     "chn_tip": "🇨🇳 Çin"
   },
   "premium": {
-    "title": "🧠 AI Gelişmiş Alışveriş Analizi",
-    "btn": "🧠 AI Gelişmiş Analizini Görüntüle"
+    "title": "📊 Akıllı Alışveriş ve Döviz Özeti",
+    "btn": "📊 Döviz ve Gümrük Tasarruf Rehberi",
+    "badge": "REHBER"
   },
   "recommendations": "Bunları da Dene",
   "related": {
@@ -165,5 +168,32 @@
     "a4": "ABD, Kanada, İngiltere, Fransa, Japonya ve Çin dahil başlıca seyahat destinasyonlarını kapsar.",
     "q5": "Bu hesaplayıcı ücretsiz mi?",
     "a5": "Evet, tüm özellikler tamamen ücretsizdir."
+  },
+  "accessibility": {
+    "skipMain": "Ana içeriğe geç"
+  },
+  "game": {
+    "back": "DopaBrain Ana Sayfa"
+  },
+  "share": {
+    "saveCard": "Kartı Kaydet",
+    "twitter": "X'te Paylaş",
+    "copyUrl": "Bağlantıyı Kopyala",
+    "shareApp": "Hesaplayıcıyı Paylaş",
+    "copied": "Bağlantı kopyalandı!",
+    "cardTitle": "Küresel Alışveriş & Döviz Kartı",
+    "cardSub": "Döviz İpuçları · Gümrük Muafiyeti · Bahşiş",
+    "downloadStarted": "1080×1920 alışveriş kartı indirildi!"
+  },
+  "curated": {
+    "badge": "KİTAP",
+    "title": "Önerilen Finans ve Seyahat Kitapları",
+    "subtitle": "Bilinçli harcama ve yurt dışı seyahat bütçesi yönetimi için seçkin kitaplar",
+    "book1Title": "Paranın Psikolojisi",
+    "book1Author": "Morgan Housel",
+    "book1Desc": "Harcama alışkanlıkları ve finansal kararlar üzerine zamansız dersler.",
+    "book2Title": "Vagabonding",
+    "book2Author": "Rolf Potts",
+    "book2Desc": "Dünya seyahatlerini akıllı bütçeyle planlamanın pratik yolları."
   }
 }

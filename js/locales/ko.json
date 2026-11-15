@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "글로벌 쇼핑 계산기",
-    "description": "해외 쇼핑 시 환율, 관세, 팁을 한 번에 계산하세요. 실시간 환율 적용!"
+    "description": "해외 쇼핑 시 환율, 관세, 팁을 한 번에 계산하세요. 실시간 환율 적용!",
+    "loading": "로딩 중..."
   },
   "header": {
     "title": "💰 글로벌 쇼핑 계산기",
@@ -104,7 +105,8 @@
     "clearConfirm": "모든 계산 내역을 삭제하시겠습니까?",
     "typeExchange": "💱 환율",
     "typeCustoms": "📦 관세",
-    "typeTip": "💰 팁"
+    "typeTip": "💰 팁",
+    "cleared": "계산 내역을 모두 삭제했습니다."
   },
   "language": {
     "select": "언어 선택"
@@ -144,8 +146,8 @@
     "chn_tip": "🇨🇳 중국"
   },
   "premium": {
-    "title": "🧠 AI 고급 쇼핑 분석",
-    "btn": "🧠 AI 고급 분석 보기",
+    "title": "📊 글로벌 쇼핑 & 환율 절세 리포트",
+    "btn": "📊 환율·관세 절세 가이드 보기",
     "exchangeAnalysis": "💹 환율 트렌드 분석",
     "exchangeTips": "📊 환전 팁",
     "exchangeTiming": "🔔 환전 최적 타이밍",
@@ -173,7 +175,8 @@
     "tipEtiquette2": "유럽: 서비스료 포함이 일반적, 소액 거스름돈 남기기",
     "tipEtiquette3": "일본: 팁 불필요, 오히려 무례하게 느낄 수 있음",
     "tipEtiquette4": "동남아: 관광지 5-10%, 현지 식당은 불필요",
-    "tipPaymentText": "카드 결제 시 팁은 영수증에 직접 기재합니다. 현금 팁은 테이블 위에 놓고 나가면 됩니다."
+    "tipPaymentText": "카드 결제 시 팁은 영수증에 직접 기재합니다. 현금 팁은 테이블 위에 놓고 나가면 됩니다.",
+    "badge": "인사이트"
   },
   "recommendations": "이것도 해보세요",
   "related": {
@@ -201,5 +204,32 @@
     "a4": "미국, 캐나다, 영국, 프랑스, 일본, 중국 등 주요 여행 국가의 팁 문화 정보를 제공합니다.",
     "q5": "이 계산기는 무료인가요?",
     "a5": "네, 모든 기능이 완전 무료입니다. 회원가입이나 결제 없이 환율, 관세, 팁 계산을 무제한으로 이용할 수 있습니다."
+  },
+  "accessibility": {
+    "skipMain": "본문으로 건너뛰기"
+  },
+  "game": {
+    "back": "DopaBrain 홈"
+  },
+  "share": {
+    "saveCard": "쇼핑 카드 저장",
+    "twitter": "트위터 공유",
+    "copyUrl": "링크 복사",
+    "shareApp": "계산기 공유",
+    "copied": "링크를 복사했습니다!",
+    "cardTitle": "글로벌 쇼핑 & 환율 가이드 카드",
+    "cardSub": "해외직구 면세 · 환율 절약 · 국가별 팁 요약",
+    "downloadStarted": "1080×1920 쇼핑 가이드 카드를 저장했습니다!"
+  },
+  "curated": {
+    "badge": "추천 도서",
+    "title": "스마트 소비·해외여행 추천 도서",
+    "subtitle": "똑똑한 소비 습관과 장기 해외여행 예산 관리를 돕는 엄선 가이드북",
+    "book1Title": "돈의 심리학 (The Psychology of Money)",
+    "book1Author": "Morgan Housel",
+    "book1Desc": "소비·저축·투자를 좌우하는 인간의 심리와 부의 원칙을 명쾌하게 풀어낸 스테디셀러",
+    "book2Title": "배가본딩 (Vagabonding)",
+    "book2Author": "Rolf Potts",
+    "book2Desc": "합리적인 예산과 준비로 세계 장기 여행을 실현하는 실전 가이드"
   }
 }

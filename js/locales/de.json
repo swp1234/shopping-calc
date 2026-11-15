@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Globaler Shopping Rechner",
-    "description": "Berechne Wechselkurse, Zölle und Trinkgelder für internationales Einkaufen. Echtzeit-Wechselkurse!"
+    "description": "Berechne Wechselkurse, Zölle und Trinkgelder für internationales Einkaufen. Echtzeit-Wechselkurse!",
+    "loading": "Wird geladen..."
   },
   "header": {
     "title": "💰 Globaler Shopping Rechner",
@@ -96,7 +97,8 @@
     "clearBtn": "Gesamten Verlauf löschen",
     "typeExchange": "💱 Wechselkurs",
     "typeCustoms": "📦 Zoll",
-    "typeTip": "💰 Trinkgeld"
+    "typeTip": "💰 Trinkgeld",
+    "cleared": "Berechnungsverlauf gelöscht."
   },
   "language": {
     "select": "Sprache auswählen"
@@ -136,8 +138,9 @@
     "chn_tip": "🇨🇳 China"
   },
   "premium": {
-    "title": "🧠 KI-fortgeschrittene Shopping-Analyse",
-    "btn": "🧠 KI-fortgeschrittene Analyse anzeigen"
+    "title": "📊 Smarter Einkaufs- & Wechselkurs-Guide",
+    "btn": "📊 Wechselkurs- & Zoll-Tipps ansehen",
+    "badge": "ANALYSE"
   },
   "recommendations": "Probiere auch diese",
   "related": {
@@ -165,5 +168,32 @@
     "a4": "Deckt wichtige Reiseziele ab: USA, Kanada, UK, Frankreich, Japan und China.",
     "q5": "Ist dieser Rechner kostenlos?",
     "a5": "Ja, alle Funktionen sind völlig kostenlos."
+  },
+  "accessibility": {
+    "skipMain": "Zum Hauptinhalt springen"
+  },
+  "game": {
+    "back": "DopaBrain Startseite"
+  },
+  "share": {
+    "saveCard": "Karte speichern",
+    "twitter": "Auf X teilen",
+    "copyUrl": "Link kopieren",
+    "shareApp": "Rechner teilen",
+    "copied": "Link kopiert!",
+    "cardTitle": "Global Shopping Kurzleitfaden",
+    "cardSub": "Wechselkurs-Tipps · Zollgrenzen · Trinkgeld",
+    "downloadStarted": "1080×1920 Einkaufskarte gespeichert!"
+  },
+  "curated": {
+    "badge": "BUCHTIPP",
+    "title": "Empfohlene Finanz- & Reisebücher",
+    "subtitle": "Ausgewählte Bücher über kluge Ausgaben und Budgetplanung auf Reisen",
+    "book1Title": "Über die Psychologie des Geldes",
+    "book1Author": "Morgan Housel",
+    "book1Desc": "Zeitlose Einsichten darüber, wie Psychologie unsere täglichen Ausgaben prägt.",
+    "book2Title": "Vagabonding",
+    "book2Author": "Rolf Potts",
+    "book2Desc": "Praxisnahe Strategien für Budgetplanung und längere Auslandsreisen."
   }
 }

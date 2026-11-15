@@ -70,12 +70,18 @@ class I18n {
     updateUI() {
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
-            element.textContent = this.t(key);
+            const val = this.t(key);
+            if (val && val !== key && typeof val === 'string') {
+                element.textContent = val;
+            }
         });
 
         document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
             const key = element.getAttribute('data-i18n-placeholder');
-            element.placeholder = this.t(key);
+            const val = this.t(key);
+            if (val && val !== key && typeof val === 'string') {
+                element.placeholder = val;
+            }
         });
 
         const title = this.t('app.title');
