@@ -27,7 +27,10 @@
     "error": "❌ Ocurrió un Error",
     "warningMessage": "⚠️ No se puede obtener los datos de tasa de cambio. Por favor, verifica tu conexión a internet e intenta de nuevo.",
     "fallbackWarning": "⚠️ No se puede obtener tasas en tiempo real. Usando tasas aproximadas. Solo para referencia.",
-    "heroTitle": "💱 실시간 환율 계산"
+    "heroTitle": "💱 Tipo de cambio en tiempo real",
+    "alertNoAmount": "Por favor ingresa un monto",
+    "rateLabel": "Tipo de cambio:",
+    "baseDateLabel": "Al día:"
   },
   "customs": {
     "title": "Calculadora de Arancel Aduanal",
@@ -49,7 +52,9 @@
     "customsDuty": "Arancel Aduanal",
     "vat": "IVA",
     "finalTotal": "Total Final (KRW)",
-    "dutyFreeNotice": "💡 Los artículos por debajo de $150 están libres de derechos"
+    "dutyFreeNotice": "💡 Los artículos por debajo de $150 están libres de derechos",
+    "alertNoPrice": "Por favor ingresa el precio del producto",
+    "alertError": "Ocurrió un error al calcular los aranceles."
   },
   "tip": {
     "title": "Calculadora de Propina",
@@ -89,7 +94,9 @@
         "name": "China",
         "info": "La propina no es obligatoria, pero 10% es aceptable en restaurantes de lujo"
       }
-    }
+    },
+    "alertNoMeal": "Por favor ingresa el monto de la comida",
+    "alertNoPartySize": "Por favor ingresa el número de personas"
   },
   "history": {
     "title": "📋 Cálculos Recientes",
@@ -98,7 +105,8 @@
     "typeExchange": "💱 Cambio",
     "typeCustoms": "📦 Aranceles",
     "typeTip": "💰 Propina",
-    "cleared": "Historial de cálculos borrado."
+    "cleared": "Historial de cálculos borrado.",
+    "clearConfirm": "¿Seguro que deseas borrar todo el historial de cálculos?"
   },
   "language": {
     "select": "Seleccionar Idioma"
@@ -140,7 +148,35 @@
   "premium": {
     "title": "📊 Guía Inteligente de Compras y Divisas",
     "btn": "📊 Ver Desglose de Divisas e Impuestos",
-    "badge": "ANÁLISIS"
+    "badge": "ANÁLISIS",
+    "exchangeAnalysis": "💹 Análisis de tendencia cambiaria",
+    "exchangeTips": "📊 Consejos de cambio de divisa",
+    "exchangeTiming": "🔔 Momento óptimo para cambiar",
+    "exchangeTip1": "El cambio en línea/móvil ofrece tasas 50–80% mejores que en ventanilla",
+    "exchangeTip2": "Divisas principales (USD, EUR, JPY) convienen más en bancos locales que en aeropuertos",
+    "exchangeTip3": "Al pagar con tarjeta, elige la moneda local (rechaza DCC)",
+    "exchangeTip4": "Para montos altos, usa cupones de tipo de cambio preferencial",
+    "exchangeTimingText": "Las tasas suelen ser más estables a inicio de mes y semana. Se recomienda dividir el cambio 2–3 semanas antes de viajar.",
+    "customsAnalysis": "📦 Análisis detallado de aduanas",
+    "customsTaxTips": "💡 Consejos para ahorrar impuestos",
+    "customsReference": "📋 Arancel de referencia por categoría",
+    "dutyfreeTarget": "✅ Libre de arancel (Menor a $150)",
+    "dutySubject": "⚠️ Sujeto a arancel (Mayor a $150)",
+    "customsTip1": "Actualmente dentro del rango libre de arancel. Verifica al sumar compras.",
+    "customsTip1Alternative": "Si es posible, divide tus pedidos por debajo de $150 cada uno.",
+    "customsTip2": "Los productos de países con TLC pueden tener tasas distintas",
+    "customsTip3": "Los artículos de despacho simplificado están exentos hasta $200",
+    "customsTip4": "Cosméticos y suplementos pueden tener límites de cantidad",
+    "customsRateRef": "Ropa/Calzado/General: 13% | Electrónica/Cosméticos/Alimentos: 8%",
+    "customsRateNote": "※ Las tasas reales pueden variar según el código arancelario (HS).",
+    "tipAnalysis": "💰 Análisis detallado de propina",
+    "tipEtiquette": "🌍 Guía internacional de propinas",
+    "tipPayment": "💳 Consejos de pago",
+    "tipEtiquette1": "EE. UU./Canadá: Restaurante 15–20%, Bar $1/bebida, Taxi 15%, Hotel $1–2/maleta",
+    "tipEtiquette2": "Europa: El servicio suele estar incluido; deja cambio pequeño",
+    "tipEtiquette3": "Japón: No es necesario dejar propina y puede considerarse descortés",
+    "tipEtiquette4": "Sudeste Asiático: Zonas turísticas 5–10%, restaurantes locales no requerida",
+    "tipPaymentText": "Con tarjeta, anota la propina en el recibo. En efectivo, déjala en la mesa al salir."
   },
   "recommendations": "Prueba Estos También",
   "related": {

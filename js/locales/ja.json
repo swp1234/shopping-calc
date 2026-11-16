@@ -27,7 +27,10 @@
     "error": "❌ エラーが発生しました",
     "warningMessage": "⚠️ 為替レートデータを取得できません。インターネット接続を確認してもう一度試してください。",
     "fallbackWarning": "⚠️ リアルタイムレートを取得できません。おおよそのレートを使用しています。参考までに。",
-    "heroTitle": "💱 실시간 환율 계산"
+    "heroTitle": "💱 リアルタイム為替レート",
+    "alertNoAmount": "金額を入力してください",
+    "rateLabel": "為替レート:",
+    "baseDateLabel": "基準日:"
   },
   "customs": {
     "title": "関税計算機",
@@ -49,7 +52,9 @@
     "customsDuty": "関税",
     "vat": "付加価値税",
     "finalTotal": "最終合計（KRW）",
-    "dutyFreeNotice": "💡 150ドル以下の商品は関税が免除されます"
+    "dutyFreeNotice": "💡 150ドル以下の商品は関税が免除されます",
+    "alertNoPrice": "商品価格を入力してください",
+    "alertError": "関税の計算中にエラーが発生しました。"
   },
   "tip": {
     "title": "チップ計算機",
@@ -89,7 +94,9 @@
         "name": "中国",
         "info": "チップは不要ですが、高級レストランでは10％まで受け入れられます"
       }
-    }
+    },
+    "alertNoMeal": "食事代を入力してください",
+    "alertNoPartySize": "人数を入力してください"
   },
   "history": {
     "title": "📋 最近の計算",
@@ -98,7 +105,8 @@
     "typeExchange": "💱 為替",
     "typeCustoms": "📦 関税",
     "typeTip": "💰 チップ",
-    "cleared": "計算履歴をすべて削除しました。"
+    "cleared": "計算履歴をすべて削除しました。",
+    "clearConfirm": "すべての計算履歴を削除してもよろしいですか？"
   },
   "language": {
     "select": "言語を選択"
@@ -140,7 +148,35 @@
   "premium": {
     "title": "📊 海外ショッピング＆為替節約ガイド",
     "btn": "📊 為替・関税の節約ポイントを見る",
-    "badge": "インサイト"
+    "badge": "インサイト",
+    "exchangeAnalysis": "💹 為替トレンド分析",
+    "exchangeTips": "📊 両替のコツ",
+    "exchangeTiming": "🔔 最適な両替タイミング",
+    "exchangeTip1": "ネット・アプリ両替は窓口より50〜80%手数料がお得なことが多いです",
+    "exchangeTip2": "主要通貨（USD、EUR、JPY）は空港より街中の銀行がお得です",
+    "exchangeTip3": "カード決済時は現地通貨建てを選択すると為替損を防げます（DCC拒否）",
+    "exchangeTip4": "高額両替では為替優遇クーポンの活用がおすすめです",
+    "exchangeTimingText": "月初や週初は為替が比較的安定しやすい傾向があります。旅行2〜3週間前から分割両替するのがおすすめです。",
+    "customsAnalysis": "📦 関税詳細分析",
+    "customsTaxTips": "💡 節税のヒント",
+    "customsReference": "📋 品目別の参考関税率",
+    "dutyfreeTarget": "✅ 免税対象（$150以下）",
+    "dutySubject": "⚠️ 課税対象（$150超過）",
+    "customsTip1": "現在は免税範囲内です。追加購入時は合算金額にご注意ください。",
+    "customsTip1Alternative": "可能であれば1注文$150以下に分割すると関税を抑えられます。",
+    "customsTip2": "FTA協定対象国の製品は関税率が異なる場合があります",
+    "customsTip3": "簡易通関対象品目は$200まで免税となります",
+    "customsTip4": "化粧品やサプリメントには数量制限がある場合があります",
+    "customsRateRef": "衣類・靴・雑貨: 13% | 家電・化粧品・食品: 8%",
+    "customsRateNote": "※ 実際の関税率はHSコードにより異なる場合があります。",
+    "tipAnalysis": "💰 チップ詳細分析",
+    "tipEtiquette": "🌍 各国のチップマナーガイド",
+    "tipPayment": "💳 支払いのヒント",
+    "tipEtiquette1": "米国・カナダ: レストラン15〜20%、バー$1/杯、タクシー15%、ホテル$1〜2/荷物",
+    "tipEtiquette2": "欧州: サービス料込みが多く、端数の小銭程度で十分です",
+    "tipEtiquette3": "日本: チップ文化はなく、渡すと失礼と受け取られる場合があります",
+    "tipEtiquette4": "東南アジア: 観光地は5〜10%、ローカル店では不要なことが多いです",
+    "tipPaymentText": "カード払いはレシートのTip欄に記入、現金払いは席を立つ際にテーブルへ置きます。"
   },
   "recommendations": "これも試してみてください",
   "related": {

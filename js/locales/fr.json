@@ -27,7 +27,10 @@
     "error": "❌ Erreur Survenue",
     "warningMessage": "⚠️ Impossible de récupérer les données de taux de change. S'il te plaît, vérifie ta connexion Internet et réessaie.",
     "fallbackWarning": "⚠️ Impossible de récupérer les taux en temps réel. Utilisation des taux approximatifs. Pour référence seulement.",
-    "heroTitle": "💱 실시간 환율 계산"
+    "heroTitle": "💱 Taux de change en temps réel",
+    "alertNoAmount": "Veuillez saisir un montant",
+    "rateLabel": "Taux de change :",
+    "baseDateLabel": "En date du :"
   },
   "customs": {
     "title": "Calculatrice de Tarif Douanier",
@@ -49,7 +52,9 @@
     "customsDuty": "Tarif Douanier",
     "vat": "TVA",
     "finalTotal": "Total Final (KRW)",
-    "dutyFreeNotice": "💡 Les articles sous $150 sont en franchise de droits"
+    "dutyFreeNotice": "💡 Les articles sous $150 sont en franchise de droits",
+    "alertNoPrice": "Veuillez saisir le prix du produit",
+    "alertError": "Une erreur est survenue lors du calcul des droits de douane."
   },
   "tip": {
     "title": "Calculatrice de Pourboire",
@@ -89,7 +94,9 @@
         "name": "Chine",
         "info": "Les pourboires ne sont pas obligatoires, mais 10% acceptable dans les restaurants haut de gamme"
       }
-    }
+    },
+    "alertNoMeal": "Veuillez saisir le montant du repas",
+    "alertNoPartySize": "Veuillez saisir le nombre de personnes"
   },
   "history": {
     "title": "📋 Calculs Récents",
@@ -98,7 +105,8 @@
     "typeExchange": "💱 Change",
     "typeCustoms": "📦 Tarifs Douaniers",
     "typeTip": "💰 Pourboire",
-    "cleared": "Historique de calcul effacé."
+    "cleared": "Historique de calcul effacé.",
+    "clearConfirm": "Voulez-vous vraiment supprimer tout l’historique des calculs ?"
   },
   "language": {
     "select": "Sélectionner la Langue"
@@ -140,7 +148,35 @@
   "premium": {
     "title": "📊 Guide Malin Achats & Devises",
     "btn": "📊 Voir le Guide Change & Douanes",
-    "badge": "CONSEILS"
+    "badge": "CONSEILS",
+    "exchangeAnalysis": "💹 Analyse de tendance des devises",
+    "exchangeTips": "📊 Conseils de change",
+    "exchangeTiming": "🔔 Meilleur moment pour changer",
+    "exchangeTip1": "Le change en ligne/mobile offre des taux 50 à 80 % meilleurs qu’au guichet",
+    "exchangeTip2": "Les grandes devises (USD, EUR, JPY) sont plus avantageuses en banque locale qu’à l’aéroport",
+    "exchangeTip3": "Par carte, choisissez toujours la devise locale (refusez la conversion DCC)",
+    "exchangeTip4": "Pour de gros montants, utilisez les coupons de taux préférentiel",
+    "exchangeTimingText": "Les taux sont souvent plus stables en début de mois et de semaine. Il est conseillé d’échelonner le change 2 à 3 semaines avant le départ.",
+    "customsAnalysis": "📦 Analyse douanière détaillée",
+    "customsTaxTips": "💡 Astuces d’économie fiscale",
+    "customsReference": "📋 Taux de douane par catégorie",
+    "dutyfreeTarget": "✅ Franchise douanière (Moins de $150)",
+    "dutySubject": "⚠️ Soumis aux droits (Plus de $150)",
+    "customsTip1": "Actuellement sous le seuil de franchise. Vérifiez en cas d’achats supplémentaires.",
+    "customsTip1Alternative": "Si possible, fractionnez vos commandes sous $150 chacune.",
+    "customsTip2": "Les produits issus de pays avec accord de libre-échange peuvent avoir d’autres taux",
+    "customsTip3": "Les articles en dédouanement simplifié sont exonérés jusqu’à $200",
+    "customsTip4": "Les cosmétiques et compléments peuvent être soumis à des limites de quantité",
+    "customsRateRef": "Vêtements/Chaussures/Général : 13 % | Électronique/Cosmétiques/Alimentation : 8 %",
+    "customsRateNote": "※ Les taux réels peuvent varier selon le code SH (HS).",
+    "tipAnalysis": "💰 Analyse détaillée du pourboire",
+    "tipEtiquette": "🌍 Guide international du pourboire",
+    "tipPayment": "💳 Conseils de paiement",
+    "tipEtiquette1": "États-Unis/Canada : Restaurant 15–20 %, Bar $1/verre, Taxi 15 %, Hôtel $1–2/bagage",
+    "tipEtiquette2": "Europe : Service souvent inclus, laissez un peu de monnaie",
+    "tipEtiquette3": "Japon : Le pourboire n’est pas d’usage et peut être mal perçu",
+    "tipEtiquette4": "Asie du Sud-Est : Zones touristiques 5–10 %, non requis dans les adresses locales",
+    "tipPaymentText": "Par carte, inscrivez le pourboire sur le reçu. En espèces, laissez-le sur la table en partant."
   },
   "recommendations": "Essaie aussi",
   "related": {

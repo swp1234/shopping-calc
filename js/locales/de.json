@@ -27,7 +27,10 @@
     "error": "❌ Fehler aufgetreten",
     "warningMessage": "⚠️ Wechselkurs-Daten können nicht abgerufen werden. Überprüfe deine Internetverbindung und versuche es erneut.",
     "fallbackWarning": "⚠️ Echtzeit-Kurse können nicht abgerufen werden. Verwende ungefähre Kurse. Nur zur Information.",
-    "heroTitle": "💱 실시간 환율 계산"
+    "heroTitle": "💱 Echtzeit-Wechselkurs",
+    "alertNoAmount": "Bitte geben Sie einen Betrag ein",
+    "rateLabel": "Wechselkurs:",
+    "baseDateLabel": "Stand:"
   },
   "customs": {
     "title": "Zoll Rechner",
@@ -49,7 +52,9 @@
     "customsDuty": "Zoll",
     "vat": "Mehrwertsteuer",
     "finalTotal": "Endsumme (KRW)",
-    "dutyFreeNotice": "💡 Artikel unter $150 sind zollfrei"
+    "dutyFreeNotice": "💡 Artikel unter $150 sind zollfrei",
+    "alertNoPrice": "Bitte geben Sie einen Produktpreis ein",
+    "alertError": "Bei der Zollberechnung ist ein Fehler aufgetreten."
   },
   "tip": {
     "title": "Trinkgeld Rechner",
@@ -89,7 +94,9 @@
         "name": "China",
         "info": "Trinkgeld ist nicht erforderlich, aber 10% akzeptabel in gehobenen Restaurants"
       }
-    }
+    },
+    "alertNoMeal": "Bitte geben Sie den Rechnungsbetrag ein",
+    "alertNoPartySize": "Bitte geben Sie die Personenanzahl ein"
   },
   "history": {
     "title": "📋 Kürzliche Berechnungen",
@@ -98,7 +105,8 @@
     "typeExchange": "💱 Wechselkurs",
     "typeCustoms": "📦 Zoll",
     "typeTip": "💰 Trinkgeld",
-    "cleared": "Berechnungsverlauf gelöscht."
+    "cleared": "Berechnungsverlauf gelöscht.",
+    "clearConfirm": "Möchten Sie wirklich den gesamten Berechnungsverlauf löschen?"
   },
   "language": {
     "select": "Sprache auswählen"
@@ -140,7 +148,35 @@
   "premium": {
     "title": "📊 Smarter Einkaufs- & Wechselkurs-Guide",
     "btn": "📊 Wechselkurs- & Zoll-Tipps ansehen",
-    "badge": "ANALYSE"
+    "badge": "ANALYSE",
+    "exchangeAnalysis": "💹 Wechselkurstrend-Analyse",
+    "exchangeTips": "📊 Tipps zum Geldwechseln",
+    "exchangeTiming": "🔔 Bester Zeitpunkt zum Wechseln",
+    "exchangeTip1": "Online-/Mobile-Wechsel bietet oft 50–80 % bessere Kurse als der Bankschalter",
+    "exchangeTip2": "Hauptwährungen (USD, EUR, JPY) sind bei lokalen Banken günstiger als am Flughafen",
+    "exchangeTip3": "Bei Kartenzahlung stets die Landeswährung wählen (DCC ablehnen)",
+    "exchangeTip4": "Bei größeren Beträgen Wechselkurs-Gutscheine Ihrer Bank nutzen",
+    "exchangeTimingText": "Zu Monats- und Wochenbeginn sind Kurse oft stabiler. Ein gestaffelter Umtausch 2–3 Wochen vor Reiseantritt ist empfehlenswert.",
+    "customsAnalysis": "📦 Detaillierte Zollanalyse",
+    "customsTaxTips": "💡 Steuerspartipps",
+    "customsReference": "📋 Zollsätze nach Kategorie",
+    "dutyfreeTarget": "✅ Zollfrei (Unter $150)",
+    "dutySubject": "⚠️ Zollpflichtig (Über $150)",
+    "customsTip1": "Aktuell innerhalb der Freigrenze. Bei weiteren Einkäufen Gesamtsumme prüfen.",
+    "customsTip1Alternative": "Bestellungen nach Möglichkeit unter $150 aufteilen, um Abgaben zu vermeiden.",
+    "customsTip2": "Für Produkte aus Freihandelsabkommen können andere Sätze gelten",
+    "customsTip3": "Gelistete Express-Sendungen sind bis $200 zollfrei",
+    "customsTip4": "Für Kosmetik und Nahrungsergänzungsmittel gelten teils Mengenbegrenzungen",
+    "customsRateRef": "Kleidung/Schuhe/Allgemein: 13 % | Elektronik/Kosmetik/Lebensmittel: 8 %",
+    "customsRateNote": "※ Tatsächliche Zollsätze können je nach HS-Code variieren.",
+    "tipAnalysis": "💰 Detaillierte Trinkgeldanalyse",
+    "tipEtiquette": "🌍 Internationaler Trinkgeld-Knigge",
+    "tipPayment": "💳 Zahlungstipps",
+    "tipEtiquette1": "USA/Kanada: Restaurant 15–20 %, Bar $1/Drink, Taxi 15 %, Hotel $1–2/Gepäckstück",
+    "tipEtiquette2": "Europa: Servicegebühr oft enthalten, kleines Wechselgeld genügt",
+    "tipEtiquette3": "Japan: Trinkgeld ist unüblich und kann als unhöflich gelten",
+    "tipEtiquette4": "Südostasien: Touristengebiete 5–10 %, lokale Lokale ohne Trinkgeld",
+    "tipPaymentText": "Bei Kartenzahlung Trinkgeld direkt auf dem Beleg eintragen; Bargeld beim Gehen auf dem Tisch lassen."
   },
   "recommendations": "Probiere auch diese",
   "related": {

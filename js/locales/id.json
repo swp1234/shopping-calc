@@ -27,7 +27,10 @@
     "error": "❌ Kesalahan Terjadi",
     "warningMessage": "⚠️ Tidak dapat mengambil data nilai tukar. Silakan periksa koneksi internet Anda dan coba lagi.",
     "fallbackWarning": "⚠️ Tidak dapat mengambil nilai real-time. Menggunakan nilai perkiraan. Hanya untuk referensi.",
-    "heroTitle": "💱 실시간 환율 계산"
+    "heroTitle": "💱 Kurs Mata Uang Real-time",
+    "alertNoAmount": "Silakan masukkan jumlah",
+    "rateLabel": "Nilai Tukar:",
+    "baseDateLabel": "Per tanggal:"
   },
   "customs": {
     "title": "Kalkulator Bea Cukai",
@@ -49,7 +52,9 @@
     "customsDuty": "Bea Cukai",
     "vat": "PPN",
     "finalTotal": "Total Akhir (KRW)",
-    "dutyFreeNotice": "💡 Barang di bawah $150 bebas bea cukai"
+    "dutyFreeNotice": "💡 Barang di bawah $150 bebas bea cukai",
+    "alertNoPrice": "Silakan masukkan harga produk",
+    "alertError": "Terjadi kesalahan saat menghitung bea masuk."
   },
   "tip": {
     "title": "Kalkulator Tip",
@@ -89,7 +94,9 @@
         "name": "Cina",
         "info": "Pemberian tip tidak diperlukan, tetapi 10% dapat diterima di restoran mewah"
       }
-    }
+    },
+    "alertNoMeal": "Silakan masukkan total tagihan makan",
+    "alertNoPartySize": "Silakan masukkan jumlah orang"
   },
   "history": {
     "title": "📋 Perhitungan Terbaru",
@@ -98,7 +105,8 @@
     "typeExchange": "💱 Pertukaran",
     "typeCustoms": "📦 Bea Cukai",
     "typeTip": "💰 Tip",
-    "cleared": "Riwayat perhitungan dihapus."
+    "cleared": "Riwayat perhitungan dihapus.",
+    "clearConfirm": "Yakin ingin menghapus semua riwayat perhitungan?"
   },
   "language": {
     "select": "Pilih Bahasa"
@@ -140,7 +148,35 @@
   "premium": {
     "title": "📊 Panduan Cerdas Belanja & Kurs",
     "btn": "📊 Lihat Rincian Kurs & Bea Cukai",
-    "badge": "WAWASAN"
+    "badge": "WAWASAN",
+    "exchangeAnalysis": "💹 Analisis Tren Nilai Tukar",
+    "exchangeTips": "📊 Tips Tukar Mata Uang",
+    "exchangeTiming": "🔔 Waktu Terbaik Menukar Uang",
+    "exchangeTip1": "Penukaran online/mobile memberi kurs 50–80% lebih baik daripada loket bank",
+    "exchangeTip2": "Mata uang utama (USD, EUR, JPY) lebih menguntungkan di bank lokal daripada bandara",
+    "exchangeTip3": "Saat membayar dengan kartu, pilih mata uang lokal (tolak DCC)",
+    "exchangeTip4": "Untuk jumlah besar, gunakan kupon kurs dari bank Anda",
+    "exchangeTimingText": "Nilai tukar cenderung stabil di awal bulan dan awal minggu. Disarankan menukar secara bertahap 2–3 minggu sebelum berangkat.",
+    "customsAnalysis": "📦 Analisis Bea Cukai Terperinci",
+    "customsTaxTips": "💡 Tips Hemat Pajak",
+    "customsReference": "📋 Tarif Bea Masuk per Kategori",
+    "dutyfreeTarget": "✅ Bebas Bea (Di bawah $150)",
+    "dutySubject": "⚠️ Kena Bea Masuk (Di atas $150)",
+    "customsTip1": "Saat ini berada dalam batas bebas bea. Periksa kembali jika menambah belanjaan.",
+    "customsTip1Alternative": "Jika memungkinkan, pisahkan pesanan di bawah $150 agar bebas bea.",
+    "customsTip2": "Produk dari negara perjanjian FTA mungkin memiliki tarif berbeda",
+    "customsTip3": "Barang daftar jalur cepat bebas bea hingga $200",
+    "customsTip4": "Kosmetik dan suplemen mungkin memiliki batas jumlah tambahan",
+    "customsRateRef": "Pakaian/Sepatu/Umum: 13% | Elektronik/Kosmetik/Makanan: 8%",
+    "customsRateNote": "※ Tarif bea masuk aktual dapat berbeda tergantung kode HS.",
+    "tipAnalysis": "💰 Analisis Tip Terperinci",
+    "tipEtiquette": "🌍 Panduan Etika Tip Internasional",
+    "tipPayment": "💳 Tips Pembayaran",
+    "tipEtiquette1": "AS/Kanada: Restoran 15–20%, Bar $1/minuman, Taksi 15%, Hotel $1–2/tas",
+    "tipEtiquette2": "Eropa: Biaya layanan biasanya sudah termasuk, tinggalkan uang kembalian kecil",
+    "tipEtiquette3": "Jepang: Tidak perlu memberi tip, bahkan bisa dianggap kurang sopan",
+    "tipEtiquette4": "Asia Tenggara: Area wisata 5–10%, restoran lokal tidak wajib",
+    "tipPaymentText": "Untuk pembayaran kartu, tulis jumlah tip pada struk. Untuk tunai, tinggalkan di meja saat pergi."
   },
   "recommendations": "Coba Juga",
   "related": {

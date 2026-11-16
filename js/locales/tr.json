@@ -27,7 +27,10 @@
     "error": "❌ Hata Oluştu",
     "warningMessage": "⚠️ Döviz kuru verilerine ulaşılamıyor. İnternet bağlantını kontrol et ve tekrar dene.",
     "fallbackWarning": "⚠️ Gerçek zamanlı kurlar alınamıyor. Yaklaşık kurları kullanılıyor. Sadece referans amaçlıdır.",
-    "heroTitle": "💱 실시간 환율 계산"
+    "heroTitle": "💱 Gerçek Zamanlı Döviz Kuru",
+    "alertNoAmount": "Lütfen bir tutar girin",
+    "rateLabel": "Döviz Kuru:",
+    "baseDateLabel": "Tarih itibarıyla:"
   },
   "customs": {
     "title": "Gümrük Vergisi Hesaplayıcı",
@@ -49,7 +52,9 @@
     "customsDuty": "Gümrük Vergisi",
     "vat": "KDV",
     "finalTotal": "Final Toplam (TRY)",
-    "dutyFreeNotice": "💡 $150 altındaki ürünler gümrük vergisizdir"
+    "dutyFreeNotice": "💡 $150 altındaki ürünler gümrük vergisizdir",
+    "alertNoPrice": "Lütfen ürün fiyatını girin",
+    "alertError": "Gümrük vergisi hesaplanırken bir hata oluştu."
   },
   "tip": {
     "title": "Bahşiş Hesaplayıcı",
@@ -89,7 +94,9 @@
         "name": "Çin",
         "info": "Bahşiş gerekli değildir, lüks restoranlarda %10 kabul edilebilir"
       }
-    }
+    },
+    "alertNoMeal": "Lütfen yemek tutarını girin",
+    "alertNoPartySize": "Lütfen kişi sayısını girin"
   },
   "history": {
     "title": "📋 Son Hesaplamalar",
@@ -98,7 +105,8 @@
     "typeExchange": "💱 Döviz",
     "typeCustoms": "📦 Gümrük",
     "typeTip": "💰 Bahşiş",
-    "cleared": "Hesaplama geçmişi temizlendi."
+    "cleared": "Hesaplama geçmişi temizlendi.",
+    "clearConfirm": "Tüm hesaplama geçmişini silmek istediğinizden emin misiniz?"
   },
   "language": {
     "select": "Dil Seç"
@@ -140,7 +148,35 @@
   "premium": {
     "title": "📊 Akıllı Alışveriş ve Döviz Özeti",
     "btn": "📊 Döviz ve Gümrük Tasarruf Rehberi",
-    "badge": "REHBER"
+    "badge": "REHBER",
+    "exchangeAnalysis": "💹 Döviz Kuru Trend Analizi",
+    "exchangeTips": "📊 Döviz Bozdurma İpuçları",
+    "exchangeTiming": "🔔 En Uygun Döviz Zamanı",
+    "exchangeTip1": "İnternet/mobil döviz işlemleri banka gişelerinden %50–80 daha avantajlıdır",
+    "exchangeTip2": "Ana para birimleri (USD, EUR, JPY) havalimanı yerine yerel bankalarda daha uygundur",
+    "exchangeTip3": "Kartla öderken yerel para birimini seçin (DCC’yi reddedin)",
+    "exchangeTip4": "Büyük tutarlarda özel kur kuponlarından yararlanın",
+    "exchangeTimingText": "Kurlar genellikle ay ve hafta başlarında daha stabildir. Seyahatten 2–3 hafta önce kademeli alım önerilir.",
+    "customsAnalysis": "📦 Detaylı Gümrük Analizi",
+    "customsTaxTips": "💡 Vergi Tasarrufu İpuçları",
+    "customsReference": "📋 Kategoriye Göre Gümrük Oranı",
+    "dutyfreeTarget": "✅ Gümrükten Muaf ($150 altı)",
+    "dutySubject": "⚠️ Gümrük Vergisine Tabi ($150 üzeri)",
+    "customsTip1": "Şu anda muafiyet sınırındasınız. Ek alışverişlerde toplamı kontrol edin.",
+    "customsTip1Alternative": "Mümkünse vergiden kaçınmak için siparişleri $150 altında bölün.",
+    "customsTip2": "STA (serbest ticaret) ülkelerinden gelen ürünlerde oran değişebilir",
+    "customsTip3": "Basitleştirilmiş gümrük listesindeki ürünler $200’a kadar muaftır",
+    "customsTip4": "Kozmetik ve takviyelerde ek adet kısıtlamaları olabilir",
+    "customsRateRef": "Giyim/Ayakkabı/Genel: %13 | Elektronik/Kozmetik/Gıda: %8",
+    "customsRateNote": "※ Gerçek gümrük oranları HS koduna göre değişebilir.",
+    "tipAnalysis": "💰 Detaylı Bahşiş Analizi",
+    "tipEtiquette": "🌍 Uluslararası Bahşiş Rehberi",
+    "tipPayment": "💳 Ödeme İpuçları",
+    "tipEtiquette1": "ABD/Kanada: Restoran %15–20, Bar $1/içecek, Taksi %15, Otel $1–2/çanta",
+    "tipEtiquette2": "Avrupa: Servis ücreti genelde dahildir, küçük bozukluk bırakılabilir",
+    "tipEtiquette3": "Japonya: Bahşiş gerekmez, kaba karşılanabilir",
+    "tipEtiquette4": "Güneydoğu Asya: Turistik bölgeler %5–10, yerel yerlerde gerekmez",
+    "tipPaymentText": "Kartlı ödemede bahşişi fişe yazın; nakitte masada bırakın."
   },
   "recommendations": "Bunları da Dene",
   "related": {

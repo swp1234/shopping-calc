@@ -27,7 +27,10 @@
     "error": "❌ 发生错误",
     "warningMessage": "⚠️ 无法获取汇率信息。请检查网络连接后重试。",
     "fallbackWarning": "⚠️ 无法获取实时汇率，使用大致汇率。仅供参考。",
-    "heroTitle": "💱 실시간 환율 계산"
+    "heroTitle": "💱 实时汇率计算",
+    "alertNoAmount": "请输入金额",
+    "rateLabel": "汇率：",
+    "baseDateLabel": "基准日："
   },
   "customs": {
     "title": "关税计算器",
@@ -49,7 +52,9 @@
     "customsDuty": "关税",
     "vat": "增值税",
     "finalTotal": "最终总额（韩元）",
-    "dutyFreeNotice": "💡 150美元以下免税"
+    "dutyFreeNotice": "💡 150美元以下免税",
+    "alertNoPrice": "请输入商品价格",
+    "alertError": "计算关税时发生错误。"
   },
   "tip": {
     "title": "小费计算器",
@@ -89,7 +94,9 @@
         "name": "中国",
         "info": "大多数情况不需小费，高级餐厅可给10%左右"
       }
-    }
+    },
+    "alertNoMeal": "请输入用餐金额",
+    "alertNoPartySize": "请输入人数"
   },
   "history": {
     "title": "📋 最近计算记录",
@@ -98,7 +105,8 @@
     "typeExchange": "💱 汇率",
     "typeCustoms": "📦 关税",
     "typeTip": "💰 小费",
-    "cleared": "已清空所有计算记录。"
+    "cleared": "已清空所有计算记录。",
+    "clearConfirm": "确定要删除所有计算记录吗？"
   },
   "language": {
     "select": "选择语言"
@@ -140,7 +148,35 @@
   "premium": {
     "title": "📊 跨境购物与换汇省钱报告",
     "btn": "📊 查看汇率与税费省钱攻略",
-    "badge": "实用指南"
+    "badge": "实用指南",
+    "exchangeAnalysis": "💹 汇率趋势分析",
+    "exchangeTips": "📊 换汇技巧",
+    "exchangeTiming": "🔔 最佳换汇时机",
+    "exchangeTip1": "网上银行或手机换汇通常比柜台优惠50%–80%",
+    "exchangeTip2": "主要货币（USD、EUR、JPY）在本地银行兑换比机场更划算",
+    "exchangeTip3": "刷卡时选择当地货币结算（拒绝DCC动态货币转换）更省钱",
+    "exchangeTip4": "大额换汇可使用银行汇率优惠券进一步降低成本",
+    "exchangeTimingText": "通常月初和周初汇率波动相对平稳，若无剧烈波动，建议出行前2–3周分批换汇。",
+    "customsAnalysis": "📦 关税明细分析",
+    "customsTaxTips": "💡 节税技巧",
+    "customsReference": "📋 各类别参考税率",
+    "dutyfreeTarget": "✅ 免税范围（$150以下）",
+    "dutySubject": "⚠️ 需缴纳税费（超过$150）",
+    "customsTip1": "当前处于免税额度内，追加购买时请注意合并金额。",
+    "customsTip1Alternative": "如条件允许，将单笔订单控制在$150以下分单购买可避免关税。",
+    "customsTip2": "享受FTA自贸协定国家的商品税率可能有所不同",
+    "customsTip3": "符合快速清关清单的商品免税额度最高可达$200",
+    "customsTip4": "化妆品和保健品可能存在数量或品目限制",
+    "customsRateRef": "服装/鞋包/百货：13% | 电子/化妆品/食品：8%",
+    "customsRateNote": "※ 实际适用税率可能因HS编码不同而有所差异。",
+    "tipAnalysis": "💰 小费详细分析",
+    "tipEtiquette": "🌍 各国小费礼仪指南",
+    "tipPayment": "💳 支付提示",
+    "tipEtiquette1": "美国/加拿大：餐厅15–20%，酒吧$1/杯，出租车15%，酒店行李$1–2/件",
+    "tipEtiquette2": "欧洲：账单多已含服务费，可酌情留下零钱",
+    "tipEtiquette3": "日本：通常无需小费，额外给付可能被视为失礼",
+    "tipEtiquette4": "东南亚：旅游区约5–10%，本地平价餐厅一般无需小费",
+    "tipPaymentText": "刷卡支付时可在小票Tip栏填写金额；现金支付可在离席时留在桌上。"
   },
   "recommendations": "也试试这些",
   "related": {

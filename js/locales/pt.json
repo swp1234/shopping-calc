@@ -27,7 +27,10 @@
     "error": "❌ Erro Ocorreu",
     "warningMessage": "⚠️ Não foi possível buscar dados de taxa de câmbio. Verifique sua conexão com a internet e tente novamente.",
     "fallbackWarning": "⚠️ Não foi possível buscar taxas em tempo real. Usando taxas aproximadas. Apenas para referência.",
-    "heroTitle": "💱 실시간 환율 계산"
+    "heroTitle": "💱 Taxa de câmbio em tempo real",
+    "alertNoAmount": "Por favor, insira um valor",
+    "rateLabel": "Taxa de câmbio:",
+    "baseDateLabel": "Em:"
   },
   "customs": {
     "title": "Calculadora de Tarifa Alfandegária",
@@ -49,7 +52,9 @@
     "customsDuty": "Tarifa Alfandegária",
     "vat": "IVA",
     "finalTotal": "Total Final (KRW)",
-    "dutyFreeNotice": "💡 Itens abaixo de $150 estão livres de tarifa"
+    "dutyFreeNotice": "💡 Itens abaixo de $150 estão livres de tarifa",
+    "alertNoPrice": "Por favor, insira o preço do produto",
+    "alertError": "Ocorreu um erro ao calcular os impostos alfandegários."
   },
   "tip": {
     "title": "Calculadora de Gorjeta",
@@ -89,7 +94,9 @@
         "name": "China",
         "info": "Gorjeta não é necessária, mas 10% aceitável em restaurantes requintados"
       }
-    }
+    },
+    "alertNoMeal": "Por favor, insira o valor da refeição",
+    "alertNoPartySize": "Por favor, insira o número de pessoas"
   },
   "history": {
     "title": "📋 Cálculos Recentes",
@@ -98,7 +105,8 @@
     "typeExchange": "💱 Câmbio",
     "typeCustoms": "📦 Taxas",
     "typeTip": "💰 Gorjeta",
-    "cleared": "Histórico de cálculos limpo."
+    "cleared": "Histórico de cálculos limpo.",
+    "clearConfirm": "Tem certeza de que deseja apagar todo o histórico de cálculos?"
   },
   "language": {
     "select": "Selecionar Idioma"
@@ -140,7 +148,35 @@
   "premium": {
     "title": "📊 Guia Inteligente de Compras e Câmbio",
     "btn": "📊 Ver Detalhes de Câmbio e Impostos",
-    "badge": "ANÁLISE"
+    "badge": "ANÁLISE",
+    "exchangeAnalysis": "💹 Análise de tendência cambial",
+    "exchangeTips": "📊 Dicas de câmbio",
+    "exchangeTiming": "🔔 Melhor momento para trocar",
+    "exchangeTip1": "Câmbio online/app oferece taxas 50–80% melhores que no balcão",
+    "exchangeTip2": "Moedas principais (USD, EUR, JPY) são mais vantajosas em bancos locais do que em aeroportos",
+    "exchangeTip3": "No cartão, escolha sempre pagar na moeda local (recuse DCC)",
+    "exchangeTip4": "Para valores altos, use cupons de desconto na taxa de câmbio",
+    "exchangeTimingText": "As taxas costumam ser mais estáveis no início do mês e da semana. Recomenda-se trocar aos poucos 2–3 semanas antes da viagem.",
+    "customsAnalysis": "📦 Análise detalhada da alfândega",
+    "customsTaxTips": "💡 Dicas para economizar em impostos",
+    "customsReference": "📋 Alíquota por categoria",
+    "dutyfreeTarget": "✅ Isento de taxa (Abaixo de $150)",
+    "dutySubject": "⚠️ Sujeito a imposto (Acima de $150)",
+    "customsTip1": "Atualmente dentro da cota isenta. Atenção ao somar novas compras.",
+    "customsTip1Alternative": "Se possível, divida pedidos abaixo de $150 cada para evitar taxas.",
+    "customsTip2": "Produtos de países com acordo comercial podem ter taxas diferentes",
+    "customsTip3": "Itens em lista simplificada têm isenção até $200",
+    "customsTip4": "Cosméticos e suplementos podem ter restrições extras de quantidade",
+    "customsRateRef": "Roupas/Calçados/Geral: 13% | Eletrônicos/Cosméticos/Alimentos: 8%",
+    "customsRateNote": "※ As alíquotas reais podem variar conforme o código HS.",
+    "tipAnalysis": "💰 Análise detalhada de gorjeta",
+    "tipEtiquette": "🌍 Guia internacional de gorjetas",
+    "tipPayment": "💳 Dicas de pagamento",
+    "tipEtiquette1": "EUA/Canadá: Restaurante 15–20%, Bar $1/bebida, Táxi 15%, Hotel $1–2/mala",
+    "tipEtiquette2": "Europa: Taxa de serviço geralmente incluída; deixe troco pequeno",
+    "tipEtiquette3": "Japão: Gorjeta não é necessária e pode ser vista como falta de educação",
+    "tipEtiquette4": "Sudeste Asiático: Áreas turísticas 5–10%, restaurantes locais não exigem",
+    "tipPaymentText": "No cartão, anote o valor da gorjeta no recibo. Em dinheiro, deixe na mesa ao sair."
   },
   "recommendations": "Experimente Também",
   "related": {
