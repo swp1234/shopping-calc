@@ -231,5 +231,11 @@
     "book2Title": "Vagabonding",
     "book2Author": "Rolf Potts",
     "book2Desc": "Dünya seyahatlerini akıllı bütçeyle planlamanın pratik yolları."
+  },
+  "nextStep": {
+    "label": "Önerilen Sonraki Adım",
+    "title": "10 Yıllık Gelecekteki Ben",
+    "desc": "Bugünkü önceliklerini 8 soruda 10 yıllık net bir yol haritasına dönüştür.",
+    "cta": "Gelecekteki Ben’i Keşfet →"
   }
 }

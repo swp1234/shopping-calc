@@ -231,5 +231,11 @@
     "book2Title": "Vagabonding",
     "book2Author": "Rolf Potts",
     "book2Desc": "Estrategias prácticas para planificar presupuesto y viajar durante largos periodos."
+  },
+  "nextStep": {
+    "label": "Siguiente paso recomendado",
+    "title": "Arquetipo de tu Yo Futuro",
+    "desc": "Convierte tus prioridades de hoy en un mapa claro a 10 años en 8 preguntas.",
+    "cta": "Explorar Yo Futuro →"
   }
 }

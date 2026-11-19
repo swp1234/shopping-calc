@@ -231,5 +231,11 @@
     "book2Title": "Vagabonding",
     "book2Author": "Rolf Potts",
     "book2Desc": "Strategi praktis mengatur anggaran dan biaya untuk perjalanan dunia jangka panjang."
+  },
+  "nextStep": {
+    "label": "Langkah Berikutnya",
+    "title": "Arketipe Diri Masa Depan",
+    "desc": "Ubah prioritas hari ini menjadi peta arah 10 tahun dalam 8 pertanyaan.",
+    "cta": "Jelajahi Diri Masa Depan →"
   }
 }

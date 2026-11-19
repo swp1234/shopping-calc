@@ -231,5 +231,11 @@
     "book2Title": "漫游者指南（Vagabonding）",
     "book2Author": "Rolf Potts",
     "book2Desc": "如何在有限预算下规划高质量跨国长途旅行的实用指南。"
+  },
+  "nextStep": {
+    "label": "推荐下一步",
+    "title": "10年后的未来自我原型",
+    "desc": "通过8道题梳理你的10年长期优先级与精力方向。",
+    "cta": "探索未来自我 →"
   }
 }

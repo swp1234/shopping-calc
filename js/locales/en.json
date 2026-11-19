@@ -231,5 +231,11 @@
     "book2Title": "Vagabonding",
     "book2Author": "Rolf Potts",
     "book2Desc": "Practical strategies for budgeting, pacing costs, and preparing for long-term world travel."
+  },
+  "nextStep": {
+    "label": "Recommended Next Step",
+    "title": "10-Year Future Self Archetype",
+    "desc": "Turn today’s priorities into a clear 10-year roadmap of energy and direction in 8 questions.",
+    "cta": "Explore Future Self →"
   }
 }
